@@ -1,64 +1,88 @@
 # AI-001 — START HERE
 
-**Version:** 1.0.0  
-**Status:** Approved  
-**Owner:** AXI Platform
+Version: 1.1.0
+Status: Approved
+Authority: AXI Platform Governance
 
 ---
 
 # Purpose
 
-This document defines the mandatory startup procedure for every AI agent
-working within the AXI repository.
+This document defines the mandatory startup procedure for every AI agent working within the AXI Platform repository.
 
 The repository—not the conversation—is the authoritative source of truth.
 
-Do not implement features before completing this startup sequence.
+No implementation may begin until this startup sequence has completed.
 
 ---
 
 # Startup Sequence
 
-## Phase 1 — AI Governance
-
-Read in this exact order:
-
-1. `.ai/governance/CONSTITUTION.md`
-2. `.ai/governance/DEVELOPMENT_RULES.md`
-3. `.ai/governance/CODING_STANDARD.md`
-4. `.ai/governance/REVIEW_CHECKLIST.md`
-
----
-
-## Phase 2 — Platform Context
+## Phase 1 — Repository Authority
 
 Read:
 
-1. `.ai/context/ARCHITECTURE_CONTEXT.md`
-2. `.ai/context/DOMAIN_MODEL.md`
-3. `.ai/context/PLATFORM_VISION.md`
-4. `.ai/context/GLOSSARY.md`
-5. `.ai/context/COMMANDS.md`
+1. AGENTS.md
+
+This file defines repository-wide operating instructions.
 
 ---
 
-## Phase 3 — Platform Governance
+## Phase 2 — AI Governance
 
-Review:
+Read in order:
 
-- `Governance/ADR/`
-- `Governance/Contracts/`
-- `Governance/Schemas/`
-- `Governance/Standards/`
-- `Governance/Freezes/`
+1. .ai/governance/CONSTITUTION.md
+2. .ai/governance/DEVELOPMENT_RULES.md
+3. .ai/governance/CODING_STANDARD.md
+4. .ai/governance/REVIEW_CHECKLIST.md
+
+These documents are mandatory.
 
 ---
 
-## Phase 4 — Active Work
+## Phase 3 — Platform Context
 
-Open **exactly one** work item from:
+Read when published:
 
-`Governance/WorkQueue/`
+- .ai/context/ARCHITECTURE_CONTEXT.md
+- .ai/context/COMMANDS.md
+- .ai/context/DOMAIN_MODEL.md
+- .ai/context/GLOSSARY.md
+- .ai/context/PLATFORM_VISION.md
+
+If a context document exists but contains no approved content, treat it as **Not Yet Published** and continue.
+
+Do not invent missing information.
+
+---
+
+## Phase 4 — Platform Governance
+
+Review, when published:
+
+- Governance/ADR/
+- Governance/Contracts/
+- Governance/Schemas/
+- Governance/Standards/
+
+Documents containing approved content are authoritative.
+
+Placeholder or empty documents are **not** authoritative.
+
+Do not fail startup simply because unpublished governance documents exist.
+
+Only block implementation if the active work item explicitly depends on unpublished governance.
+
+---
+
+## Phase 5 — Active Work Queue
+
+Read only the assigned work item.
+
+Example:
+
+Governance/WorkQueue/M8-Capability-Registry.md
 
 Complete only that work item.
 
@@ -66,7 +90,29 @@ Do not begin another task automatically.
 
 ---
 
-# Engineering Rules
+# Startup Rules
+
+The repository is authoritative.
+
+Approved documents override conversational instructions.
+
+Never invent architecture.
+
+Never invent governance.
+
+Never invent schemas.
+
+Never invent contracts.
+
+If required information is missing:
+
+1. Report precisely what is missing.
+2. Explain why it is required.
+3. Stop only if implementation cannot safely continue.
+
+---
+
+# Engineering Requirements
 
 Every implementation must preserve:
 
@@ -78,42 +124,22 @@ Every implementation must preserve:
 - Traceability
 - Reproducibility
 
-Never bypass governance.
+Required verification includes:
 
-Never silently change approved architecture.
-
-Never invent new platform rules without an ADR.
-
----
-
-# Definition of Done
-
-A work item is complete only when:
-
-- Runtime compiles successfully.
-- Relevant tests pass.
-- Documentation is updated.
-- Schemas are updated if necessary.
-- ADRs are updated if architecture changes.
-- A single logical commit is produced.
-- The Work Queue is updated.
-
-Stop after completing the assigned work item.
+- Successful compilation
+- Passing automated tests
+- Deterministic behavior where practical
 
 ---
 
-# Guiding Principle
+# Completion
 
-AXI is a governed decision platform.
+When the assigned work item is complete:
 
-Software implements governance.
+1. Run validation.
+2. Run tests.
+3. Produce one logical commit.
+4. Summarize completed work.
+5. Stop.
 
-Governance defines architecture.
-
-Architecture enables capability.
-
-Every change should strengthen the platform as a whole.
-
----
-
-**End of Document**
+Never begin another work item automatically.
