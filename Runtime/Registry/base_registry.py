@@ -63,6 +63,19 @@ class BaseRegistry(Generic[T]):
         """
         return self._items.get(key)
 
+    def update(self, key: str, item: T) -> None:
+        """
+        Replace an existing registry entry.
+
+        Raises:
+            KeyError:
+                If the key does not exist.
+        """
+        if key not in self._items:
+            raise KeyError(key)
+
+        self._items[key] = item
+
     def exists(self, key: str) -> bool:
         """
         Determine whether a key exists.

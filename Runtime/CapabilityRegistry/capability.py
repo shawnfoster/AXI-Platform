@@ -12,6 +12,9 @@ implemented by one or more PlatformObjects.
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from typing import Any
+
+from Runtime.ObjectModel.platform_object import PlatformObject
 
 
 @dataclass(slots=True)
@@ -34,7 +37,7 @@ class Capability:
 
     depends_on: set[str] = field(default_factory=set)
 
-    metadata: dict[str, object] = field(default_factory=dict)
+    metadata: dict[str, Any] = field(default_factory=dict)
 
     def add_object(self, object_id: str) -> None:
         """
@@ -42,11 +45,23 @@ class Capability:
         """
         self.implements.add(object_id)
 
+    def add_implementation(self, obj: PlatformObject) -> None:
+        """
+        Register a PlatformObject implementation by object.
+        """
+        self.add_object(obj.object_id)
+
     def remove_object(self, object_id: str) -> None:
         """
         Remove a PlatformObject implementation.
         """
         self.implements.discard(object_id)
+
+    def remove_implementation(self, obj: PlatformObject) -> None:
+        """
+        Remove a PlatformObject implementation by object.
+        """
+        self.remove_object(obj.object_id)
 
     def add_dependency(self, capability_id: str) -> None:
         """
@@ -60,7 +75,7 @@ class Capability:
         """
         self.depends_on.discard(capability_id)
 
-    def to_dict(self) -> dict[str, object]:
+    def to_dict(self) -> dict[str, Any]:
         """
         Serialize the capability.
         """
@@ -76,7 +91,7 @@ class Capability:
         }
 
     @classmethod
-    def from_dict(cls, data: dict[str, object]) -> "Capability":
+    def from_dict(cls, data: dict[str, Any]) -> "Capability":
         """
         Deserialize a capability.
         """
