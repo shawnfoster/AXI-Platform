@@ -1,6 +1,6 @@
-# WQ-004 — Plugin Loader
+# WQ-006 — Plugin Loader
 
-**Work Item:** M11
+**Work Item:** M13
 **Title:** Plugin Loader
 **Status:** Approved
 **Priority:** High
@@ -14,23 +14,25 @@ Implement the AXI Plugin Loader.
 
 The Plugin Loader discovers, validates, loads, unloads, and manages runtime plugins while preserving the AXI Platform architecture and governance.
 
-The implementation shall integrate with the Registry Foundation, Capability Registry, Service Registry, Event Bus, and Object Model without introducing architectural changes.
+The implementation shall integrate with the Registry Foundation, Capability Registry, Service Registry, Event Bus, Dependency Resolver, Validation Framework, and Object Model.
 
 ---
 
 # Background
 
-The AXI Platform is designed as a modular, extensible system.
+The AXI Platform is designed as a modular system.
 
-Rather than modifying the core platform whenever new functionality is introduced, extensions shall be implemented as plugins that can be discovered and loaded dynamically.
+Rather than modifying core runtime code whenever new functionality is introduced, extensions shall be implemented as plugins.
 
-The Plugin Loader is responsible for managing those extensions while preserving platform governance, lifecycle management, and dependency integrity.
+The Plugin Loader is responsible for discovering those plugins, validating them, resolving dependencies, and registering them with the platform.
+
+This subsystem establishes the platform's extensibility model.
 
 ---
 
 # Existing Components
 
-Reuse existing infrastructure where appropriate.
+Reuse existing infrastructure.
 
 Examples include:
 
@@ -40,6 +42,8 @@ Examples include:
 - Runtime/CapabilityRegistry
 - Runtime/ServiceRegistry
 - Runtime/EventBus
+- Runtime/DependencyResolver
+- Runtime/Validation
 
 Do not duplicate existing functionality.
 
@@ -51,17 +55,11 @@ Implement:
 
 ```
 Runtime/
-    PluginLoader/
-```
-
-Expected files:
-
-```
-Runtime/
 └── PluginLoader/
     ├── __init__.py
     ├── loader.py
     ├── plugin.py
+    ├── manifest.py
     └── README.md
 ```
 
@@ -71,7 +69,7 @@ Update package exports where appropriate.
 
 # Functional Requirements
 
-The Plugin Loader shall provide:
+The Plugin Loader shall support:
 
 - discover_plugins()
 - load_plugin()
@@ -82,12 +80,27 @@ The Plugin Loader shall provide:
 
 The implementation shall:
 
-- support plugin metadata
-- register loaded plugins
-- prevent duplicate identifiers
-- expose plugin lifecycle state
-- preserve provenance metadata
-- support future dependency resolution
+- register plugins
+- preserve plugin metadata
+- expose lifecycle state
+- support future hot reload
+- support dependency resolution
+- support validation before loading
+
+---
+
+# Plugin Manifest
+
+Each plugin shall expose metadata including:
+
+- plugin_id
+- name
+- version
+- author
+- description
+- capabilities
+- dependencies
+- lifecycle state
 
 ---
 
@@ -100,6 +113,8 @@ Integrate with:
 - Capability Registry
 - Service Registry
 - Event Bus
+- Dependency Resolver
+- Validation Framework
 
 No circular dependencies may be introduced.
 
@@ -119,7 +134,7 @@ Implementation shall preserve:
 
 Architectural changes require an approved ADR.
 
-Do not modify unrelated subsystems.
+Do not modify unrelated runtime systems.
 
 ---
 
@@ -128,9 +143,10 @@ Do not modify unrelated subsystems.
 Reject:
 
 - duplicate plugin identifiers
-- invalid plugin definitions
-- missing required metadata
-- invalid lifecycle transitions
+- invalid manifests
+- missing metadata
+- unresolved dependencies
+- validation failures
 
 Raise existing platform exceptions whenever appropriate.
 
@@ -140,13 +156,13 @@ Raise existing platform exceptions whenever appropriate.
 
 Create or update automated tests covering:
 
-- plugin discovery
-- successful loading
+- discovery
+- loading
 - unloading
-- reload operations
+- reload
+- dependency validation
+- manifest validation
 - duplicate detection
-- validation failures
-- lifecycle transitions
 
 All existing runtime tests must continue to pass.
 
@@ -157,6 +173,7 @@ All existing runtime tests must continue to pass.
 Expected outputs:
 
 - Plugin Loader implementation
+- Manifest model
 - Updated package exports
 - Documentation updates
 - Automated unit tests
@@ -169,23 +186,19 @@ Implementation is complete when:
 
 ✓ Plugins can be discovered
 
+✓ Plugins can be validated
+
 ✓ Plugins can be loaded
 
 ✓ Plugins can be unloaded
 
-✓ Plugins can be reloaded
+✓ Dependencies are resolved
 
 ✓ Validation succeeds
 
-✓ Duplicate protection works
+✓ Existing runtime tests pass
 
-✓ Lifecycle state is preserved
-
-✓ Existing architecture remains intact
-
-✓ Existing tests pass
-
-✓ New tests pass
+✓ New runtime tests pass
 
 ---
 
@@ -210,4 +223,4 @@ Stop after completion.
 
 # Suggested Commit Message
 
-AI-023: Implement Plugin Loader
+AI-025: Implement Plugin Loader
