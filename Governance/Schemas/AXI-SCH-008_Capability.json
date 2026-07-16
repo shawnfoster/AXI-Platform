@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "AXI-SCH-008",
+  "title": "AXI Capability",
+  "description": "Canonical definition of an AXI platform capability.",
+
+  "type": "object",
+
+  "required": [
+    "capability_id",
+    "name",
+    "version",
+    "status"
+  ],
+
+  "properties": {
+
+    "capability_id": {
+      "type": "string",
+      "pattern": "^CAP-[0-9]{3}$"
+    },
+
+    "name": {
+      "type": "string"
+    },
+
+    "description": {
+      "type": "string"
+    },
+
+    "version": {
+      "type": "string"
+    },
+
+    "status": {
+      "type": "string",
+      "enum": [
+        "Draft",
+        "Proposed",
+        "Approved",
+        "Frozen",
+        "Deprecated",
+        "Superseded",
+        "Archived"
+      ]
+    },
+
+    "implements": {
+      "type": "array",
+      "description": "Platform Objects implementing this capability.",
+
+      "items": {
+        "type": "string",
+        "pattern": "^OBJ-[0-9]{6}$"
+      },
+
+      "uniqueItems": true
+    },
+
+    "depends_on": {
+      "type": "array",
+
+      "items": {
+        "type": "string",
+        "pattern": "^CAP-[0-9]{3}$"
+      },
+
+      "uniqueItems": true
+    },
+
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    }
+
+  },
+
+  "additionalProperties": false
+}

@@ -1,0 +1,65 @@
+[
+  {
+    "duplicate_group": "d62b7c433e89",
+    "recommended_artifact": "AXI-ART-000038",
+    "confidence": 50,
+    "classification": "Data",
+    "relative_path": "Releases/F1-Reconstruction-Engine-v2.0/engine_manifest.freeze.json",
+    "reason": "Highest evidence score",
+    "status": "Recommended"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "recommended_artifact": "AXI-ART-000116",
+    "confidence": 80,
+    "classification": "Review",
+    "relative_path": "Governance/Reconstruction/Phase_3/Canon/.gitkeep",
+    "reason": "Highest evidence score",
+    "status": "Recommended"
+  },
+  {
+    "duplicate_group": "13a0e9b4202c",
+    "recommended_artifact": "AXI-ART-000060",
+    "confidence": 50,
+    "classification": "Image",
+    "relative_path": "Archive/ssdd.png",
+    "reason": "Highest evidence score",
+    "status": "Recommended"
+  },
+  {
+    "duplicate_group": "99a83d925a55",
+    "recommended_artifact": "AXI-ART-000062",
+    "confidence": 50,
+    "classification": "Image",
+    "relative_path": "Archive/6im.png",
+    "reason": "Highest evidence score",
+    "status": "Recommended"
+  },
+  {
+    "duplicate_group": "4f53cda18c2b",
+    "recommended_artifact": "AXI-ART-000075",
+    "confidence": 50,
+    "classification": "Review",
+    "relative_path": ".pytest_cache/v/cache/nodeids",
+    "reason": "Highest evidence score",
+    "status": "Recommended"
+  },
+  {
+    "duplicate_group": "34dec379723a",
+    "recommended_artifact": "AXI-ART-000084",
+    "confidence": 50,
+    "classification": "Script",
+    "relative_path": "Engines/Reconstruction/reconstruction_engine.py",
+    "reason": "Highest evidence score",
+    "status": "Recommended"
+  },
+  {
+    "duplicate_group": "3ea73fd8077b",
+    "recommended_artifact": "AXI-ART-000102",
+    "confidence": 30,
+    "classification": "Data",
+    "relative_path": "Governance/Reconstruction/Archive/Manifest_History/engine_manifest.pre-eng003.json",
+    "reason": "Highest evidence score",
+    "status": "Recommended"
+  }
+]

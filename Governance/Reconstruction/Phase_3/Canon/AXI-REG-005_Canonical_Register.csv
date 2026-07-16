@@ -1,0 +1,8 @@
+duplicate_group,recommended_artifact,confidence,classification,relative_path,reason,status
+d62b7c433e89,AXI-ART-000038,50,Data,Releases/F1-Reconstruction-Engine-v2.0/engine_manifest.freeze.json,Highest evidence score,Recommended
+e3b0c44298fc,AXI-ART-000116,80,Review,Governance/Reconstruction/Phase_3/Canon/.gitkeep,Highest evidence score,Recommended
+13a0e9b4202c,AXI-ART-000060,50,Image,Archive/ssdd.png,Highest evidence score,Recommended
+99a83d925a55,AXI-ART-000062,50,Image,Archive/6im.png,Highest evidence score,Recommended
+4f53cda18c2b,AXI-ART-000075,50,Review,.pytest_cache/v/cache/nodeids,Highest evidence score,Recommended
+34dec379723a,AXI-ART-000084,50,Script,Engines/Reconstruction/reconstruction_engine.py,Highest evidence score,Recommended
+3ea73fd8077b,AXI-ART-000102,30,Data,Governance/Reconstruction/Archive/Manifest_History/engine_manifest.pre-eng003.json,Highest evidence score,Recommended

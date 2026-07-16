@@ -1,0 +1,359 @@
+[
+  {
+    "duplicate_group": "d62b7c433e89",
+    "sha256": "d62b7c433e89903c8e4c00fc470c8f82b33a18c8ecce708db212403a8c936abf",
+    "artifact_id": "AXI-ART-000038",
+    "filename": "engine_manifest.freeze.json",
+    "relative_path": "Releases/F1-Reconstruction-Engine-v2.0/engine_manifest.freeze.json"
+  },
+  {
+    "duplicate_group": "d62b7c433e89",
+    "sha256": "d62b7c433e89903c8e4c00fc470c8f82b33a18c8ecce708db212403a8c936abf",
+    "artifact_id": "AXI-ART-000099",
+    "filename": "engine_manifest.json",
+    "relative_path": "Governance/Reconstruction/engine_manifest.json"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000040",
+    "filename": "axi.py",
+    "relative_path": "Core/CLI/axi.py"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000041",
+    "filename": "project_service.py",
+    "relative_path": "Core/Services/project_service.py"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000042",
+    "filename": "decision_service.py",
+    "relative_path": "Core/Services/decision_service.py"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000043",
+    "filename": "rules_service.py",
+    "relative_path": "Core/Services/rules_service.py"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000044",
+    "filename": "audit_service.py",
+    "relative_path": "Core/Services/audit_service.py"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000045",
+    "filename": "command_router.py",
+    "relative_path": "Core/Services/command_router.py"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000046",
+    "filename": "selection_service.py",
+    "relative_path": "Core/Services/selection_service.py"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000077",
+    "filename": "PLATFORM_ROADMAP.md",
+    "relative_path": "Docs/Roadmap/PLATFORM_ROADMAP.md"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000078",
+    "filename": "AXI_PLATFORM_v2.md",
+    "relative_path": "Docs/Architecture/AXI_PLATFORM_v2.md"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000079",
+    "filename": "PLATFORM_STANDARDS.md",
+    "relative_path": "Docs/Standards/PLATFORM_STANDARDS.md"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000080",
+    "filename": "AXI_Decision_Register_v1.0.md",
+    "relative_path": "Canon/Decision_Register/AXI_Decision_Register_v1.0.md"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000081",
+    "filename": "AXI_Operating_System_v1.0.md",
+    "relative_path": "Canon/Operating_System/AXI_Operating_System_v1.0.md"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000082",
+    "filename": "AXI_Constitution_v1.0.md",
+    "relative_path": "Canon/Constitution/AXI_Constitution_v1.0.md"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000083",
+    "filename": "AXI_Knowledge_Base_v1.0.md",
+    "relative_path": "Canon/Knowledge_Base/AXI_Knowledge_Base_v1.0.md"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000091",
+    "filename": "requirements.txt",
+    "relative_path": "Scripts/Inventory/requirements.txt"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000092",
+    "filename": "__init__.py",
+    "relative_path": "Scripts/Inventory/__init__.py"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000095",
+    "filename": "README.md",
+    "relative_path": "Scripts/Inventory/README.md"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000098",
+    "filename": "AXI_Roadmap_v1.0.md",
+    "relative_path": "Governance/Roadmap/AXI_Roadmap_v1.0.md"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000108",
+    "filename": ".gitkeep",
+    "relative_path": "Governance/Reconstruction/Phase_3/Normalization/.gitkeep"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000109",
+    "filename": "test_duplicate_engine.py",
+    "relative_path": "Governance/Reconstruction/Phase_3/Tests/test_duplicate_engine.py"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000111",
+    "filename": "test_canonical_engine.py",
+    "relative_path": "Governance/Reconstruction/Phase_3/Tests/test_canonical_engine.py"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000112",
+    "filename": "test_provenance_engine.py",
+    "relative_path": "Governance/Reconstruction/Phase_3/Tests/test_provenance_engine.py"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000113",
+    "filename": ".gitkeep",
+    "relative_path": "Governance/Reconstruction/Phase_3/Status/.gitkeep"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000116",
+    "filename": ".gitkeep",
+    "relative_path": "Governance/Reconstruction/Phase_3/Canon/.gitkeep"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000121",
+    "filename": ".gitkeep",
+    "relative_path": "Governance/Reconstruction/Phase_3/Provenance/.gitkeep"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000124",
+    "filename": ".gitkeep",
+    "relative_path": "Governance/Reconstruction/Phase_3/Review_Queue/.gitkeep"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000127",
+    "filename": "canonical_models.py",
+    "relative_path": "Governance/Reconstruction/Phase_3/Engine/canonical_models.py"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000133",
+    "filename": "duplicate_rules.py",
+    "relative_path": "Governance/Reconstruction/Phase_3/Engine/duplicate_rules.py"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000134",
+    "filename": "__init__.py",
+    "relative_path": "Governance/Reconstruction/Phase_3/Engine/__init__.py"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000135",
+    "filename": "duplicate_models.py",
+    "relative_path": "Governance/Reconstruction/Phase_3/Engine/duplicate_models.py"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000142",
+    "filename": "provenance_models.py",
+    "relative_path": "Governance/Reconstruction/Phase_3/Engine/provenance_models.py"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000144",
+    "filename": "provenance_rules.py",
+    "relative_path": "Governance/Reconstruction/Phase_3/Engine/provenance_rules.py"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000147",
+    "filename": "canonical_rules.py",
+    "relative_path": "Governance/Reconstruction/Phase_3/Engine/canonical_rules.py"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000150",
+    "filename": ".gitkeep",
+    "relative_path": "Governance/Reconstruction/Phase_3/Duplicates/.gitkeep"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000183",
+    "filename": "AXI_Open_Decisions.md",
+    "relative_path": "Governance/Reviews/AXI_Open_Decisions.md"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000185",
+    "filename": "AXI_Source_Map_v1.0.csv",
+    "relative_path": "Governance/Source_Control/AXI_Source_Map_v1.0.csv"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000186",
+    "filename": "AXI_Master_Index_v1.0.md",
+    "relative_path": "Governance/Source_Control/AXI_Master_Index_v1.0.md"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000187",
+    "filename": "AXI_Standards_Index_v1.0.md",
+    "relative_path": "Governance/Standards/AXI_Standards_Index_v1.0.md"
+  },
+  {
+    "duplicate_group": "e3b0c44298fc",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifact_id": "AXI-ART-000216",
+    "filename": "AXI_Publication_Roadmap_v1.docx",
+    "relative_path": "AXI-Publication-Library/00_Roadmaps/AXI_Publication_Roadmap_v1.docx"
+  },
+  {
+    "duplicate_group": "13a0e9b4202c",
+    "sha256": "13a0e9b4202c1a2184be333aa4690a1b48dc4c9d5cef0e77968cbae19d014029",
+    "artifact_id": "AXI-ART-000060",
+    "filename": "ssdd.png",
+    "relative_path": "Archive/ssdd.png"
+  },
+  {
+    "duplicate_group": "13a0e9b4202c",
+    "sha256": "13a0e9b4202c1a2184be333aa4690a1b48dc4c9d5cef0e77968cbae19d014029",
+    "artifact_id": "AXI-ART-000070",
+    "filename": "s.png",
+    "relative_path": "Archive/s.png"
+  },
+  {
+    "duplicate_group": "99a83d925a55",
+    "sha256": "99a83d925a55532e1a2a3a319bd043bf0e260db15cbe45376c4a118d3e344451",
+    "artifact_id": "AXI-ART-000062",
+    "filename": "6im.png",
+    "relative_path": "Archive/6im.png"
+  },
+  {
+    "duplicate_group": "99a83d925a55",
+    "sha256": "99a83d925a55532e1a2a3a319bd043bf0e260db15cbe45376c4a118d3e344451",
+    "artifact_id": "AXI-ART-000066",
+    "filename": "5image.png",
+    "relative_path": "Archive/5image.png"
+  },
+  {
+    "duplicate_group": "4f53cda18c2b",
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "artifact_id": "AXI-ART-000075",
+    "filename": "nodeids",
+    "relative_path": ".pytest_cache/v/cache/nodeids"
+  },
+  {
+    "duplicate_group": "4f53cda18c2b",
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "artifact_id": "AXI-ART-000076",
+    "filename": "stepwise",
+    "relative_path": ".pytest_cache/v/cache/stepwise"
+  },
+  {
+    "duplicate_group": "34dec379723a",
+    "sha256": "34dec379723a3cecd8171f2d15d311d5dc2c77635f85157891c771696dd9330b",
+    "artifact_id": "AXI-ART-000084",
+    "filename": "reconstruction_engine.py",
+    "relative_path": "Engines/Reconstruction/reconstruction_engine.py"
+  },
+  {
+    "duplicate_group": "34dec379723a",
+    "sha256": "34dec379723a3cecd8171f2d15d311d5dc2c77635f85157891c771696dd9330b",
+    "artifact_id": "AXI-ART-000086",
+    "filename": "reconstruction_engine.pre-m3.py",
+    "relative_path": "Engines/Reconstruction/reconstruction_engine.pre-m3.py"
+  },
+  {
+    "duplicate_group": "3ea73fd8077b",
+    "sha256": "3ea73fd8077b2299ec7eec9f071f357e1a794f85cc640badb27c95c80d6731f1",
+    "artifact_id": "AXI-ART-000102",
+    "filename": "engine_manifest.pre-eng003.json",
+    "relative_path": "Governance/Reconstruction/Archive/Manifest_History/engine_manifest.pre-eng003.json"
+  },
+  {
+    "duplicate_group": "3ea73fd8077b",
+    "sha256": "3ea73fd8077b2299ec7eec9f071f357e1a794f85cc640badb27c95c80d6731f1",
+    "artifact_id": "AXI-ART-000103",
+    "filename": "engine_manifest.backup.json",
+    "relative_path": "Governance/Reconstruction/Archive/Manifest_History/engine_manifest.backup.json"
+  }
+]

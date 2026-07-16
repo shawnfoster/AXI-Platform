@@ -1,0 +1,39 @@
+{
+  "engines": [
+    {
+      "id": "AXI-ENG-001",
+      "name": "Inventory",
+      "entry": "Governance/Reconstruction/Phase_3/Engine/inventory_engine.py",
+      "enabled": true,
+      "version": "1.0.0"
+    },
+    {
+      "id": "AXI-ENG-002",
+      "name": "Classification",
+      "entry": "Governance/Reconstruction/Phase_3/Engine/classification_engine.py",
+      "enabled": true,
+      "version": "1.0.0"
+    },
+    {
+      "id": "AXI-ENG-003",
+      "name": "Duplicate Resolution",
+      "entry": "Governance/Reconstruction/Phase_3/Engine/duplicate_engine.py",
+      "enabled": true,
+      "version": "1.0.0"
+    },
+    {
+     "id": "AXI-ENG-004",
+     "name": "Provenance",
+     "entry": "Governance/Reconstruction/Phase_3/Engine/provenance_engine.py",
+     "enabled": true,
+     "version": "1.0.0"
+    },
+    {
+      "id": "AXI-ENG-005",
+      "name": "Canonical Selection",
+      "entry": "Governance/Reconstruction/Phase_3/Engine/canonical_engine.py",
+      "enabled": true,
+      "version": "1.0.0"
+}
+  ]
+}
