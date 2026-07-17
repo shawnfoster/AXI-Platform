@@ -16,10 +16,6 @@ The Runtime CLI shall expose governed local command access to the
 published runtime foundation completed through `M16 Pipeline Runtime`
 without replacing any existing runtime boundary.
 
-This milestone publishes planning only. Implementation may not begin
-until the CLI-specific ADR, contract, and schema placeholders are
-replaced with approved governance content.
-
 ---
 
 # Background
@@ -83,9 +79,11 @@ The Runtime CLI shall:
 - preserve published runtime ordering, validation, and lifecycle rules
 - return deterministic command results and errors
 
-This work item does not publish exact command names, flags, or exit-code
-behavior. Those boundaries remain reserved for milestone-specific
-governance.
+The exact command vocabulary and command payload boundary are published
+in:
+
+- `Governance/Contracts/CLI_CONTRACT.md`
+- `Governance/Schemas/AXI-SCH-013_CLI_Command.json`
 
 ---
 
