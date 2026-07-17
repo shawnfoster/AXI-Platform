@@ -53,13 +53,14 @@ active work queue:
 5. The repository now implements `M12 Validation Framework`.
 6. `Runtime/PluginLoader` is now implemented with runtime code,
    documentation, and tests.
-7. `Runtime/ApplicationRegistry`, `Runtime/EngineRegistry`, and
-   `Runtime/Pipeline` remain placeholders.
-8. `M14 Application Registry` is now the first governed runtime
-   milestone that is defined, dependency-ready, and not yet
-   implemented.
-9. `M16 Pipeline Runtime` remains blocked by the absence of implemented
-   and validated upstream runtime subsystems from `M14` and `M15`.
+7. `Runtime/ApplicationRegistry` is now implemented with runtime code,
+   documentation, and tests.
+8. `M15 Engine Registry` remains blocked because its engine-specific
+   governance is not fully published: `Governance/Contracts/ENGINE_CONTRACT.md`
+   is an empty placeholder, and no approved engine ADR or engine schema
+   is published in the repository.
+9. `M16 Pipeline Runtime` remains blocked by missing and unimplemented
+   upstream `M15` governance and runtime subsystems.
 
 ---
 
@@ -88,9 +89,9 @@ active work queue:
 | M11 | `Governance/WorkQueue/M11-Dependency-Resolver.md` | Dependency resolver | Registry Foundation, Capability Registry, Service Registry, Event Bus, Object Model | `Runtime/DependencyResolver/` | `dependency.py`, `resolver.py`, `__init__.py`, and `Tests/Runtime/test_dependency_resolver.py` exist | M12, M13, M14, M15, M16 | Implemented |
 | M12 | `Governance/WorkQueue/M12-Validation-Framework.md` | Validation framework | Registry Foundation, Capability Registry, Service Registry, Event Bus, Dependency Resolver, Object Model | `Runtime/Validation/` | `__init__.py`, `validator.py`, `rules.py`, `result.py`, `README.md`, and `Tests/Runtime/test_validation_framework.py` exist | M13, M14, M15, M16 | Implemented |
 | M13 | `Governance/WorkQueue/M13-Plugin-Loader.md` | Plugin loader | Registry Foundation, Capability Registry, Service Registry, Event Bus, Dependency Resolver, Validation Framework, Object Model | `Runtime/PluginLoader/` | `__init__.py`, `loader.py`, `manifest.py`, `plugin.py`, `README.md`, and `Tests/Runtime/test_plugin_loader.py` exist | M14, M15, M16 | Implemented |
-| M14 | `Governance/WorkQueue/M14-Application-Registry.md` | Application registry | Registry Foundation, Capability Registry, Service Registry, Event Bus, Dependency Resolver, Validation Framework, Plugin Loader, Platform Object Model | `Runtime/ApplicationRegistry/` | Directory exists with empty `README.md` only | M15, M16 | Ready |
-| M15 | `Governance/WorkQueue/M15-Engine-Registry.md` | Engine registry | Registry Foundation, Capability Registry, Service Registry, Event Bus, Dependency Resolver, Validation Framework, Plugin Loader, Application Registry, Platform Object Model | `Runtime/EngineRegistry/` | Directory exists with empty `README.md` only | M16 | Blocked by M14 |
-| M16 | `Governance/WorkQueue/M16-Pipeline-Runtime.md` | Pipeline runtime | Registry Foundation, Capability Registry, Service Registry, Event Bus, Dependency Resolver, Validation Framework, Plugin Loader, Application Registry, Engine Registry, Platform Object Model | `Runtime/Pipeline/` | Directory exists with empty `README.md` only | Future runtime CLI and API milestones | Blocked by M14 and M15 |
+| M14 | `Governance/WorkQueue/M14-Application-Registry.md` | Application registry | Registry Foundation, Capability Registry, Service Registry, Event Bus, Dependency Resolver, Validation Framework, Plugin Loader, Platform Object Model | `Runtime/ApplicationRegistry/` | `__init__.py`, `application.py`, `lifecycle.py`, `registry.py`, `README.md`, and `Tests/Runtime/test_application_registry.py` exist | M15, M16 | Implemented |
+| M15 | `Governance/WorkQueue/M15-Engine-Registry.md` | Engine registry | Registry Foundation, Capability Registry, Service Registry, Event Bus, Dependency Resolver, Validation Framework, Plugin Loader, Application Registry, Platform Object Model | `Runtime/EngineRegistry/` | Directory exists with empty `README.md` only; `Governance/Contracts/ENGINE_CONTRACT.md` is empty; no approved engine ADR or schema is published | M16 | Blocked by unpublished governance |
+| M16 | `Governance/WorkQueue/M16-Pipeline-Runtime.md` | Pipeline runtime | Registry Foundation, Capability Registry, Service Registry, Event Bus, Dependency Resolver, Validation Framework, Plugin Loader, Application Registry, Engine Registry, Platform Object Model | `Runtime/Pipeline/` | Directory exists with empty `README.md` only | Future runtime CLI and API milestones | Blocked by M15 |
 
 ---
 
@@ -100,7 +101,9 @@ active work queue:
    implementations.
 2. Use repository implementation evidence, not milestone intent, as the
    readiness gate for runtime work.
-3. Keep `M16` unchanged until every upstream runtime dependency is
+3. Keep `M15` blocked until its engine-specific ADR, contract, and
+   schema are published in addition to the runtime implementation.
+4. Keep `M16` unchanged until every upstream runtime dependency is
    implemented, validated, and committed.
-4. Preserve the current work queue filenames until a separate governance
+5. Preserve the current work queue filenames until a separate governance
    change explicitly resolves numbering drift.
