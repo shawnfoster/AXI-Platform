@@ -31,24 +31,28 @@ The repository is the authoritative source of truth.
 
 Current Repository State
 
-- Runtime foundation is complete through `M11 Dependency Resolver`.
+- Runtime is implemented through `M12 Validation Framework`.
 - Implemented runtime foundation components:
   `PlatformObject`, Registry Foundation, `M8 Capability Registry`,
-  `M9 Service Registry`, `M10 Event Bus`, and
-  `M11 Dependency Resolver`.
+  `M9 Service Registry`, `M10 Event Bus`,
+  `M11 Dependency Resolver`, and `M12 Validation Framework`.
 - Current runtime architecture:
   `PlatformObject` -> Registry Foundation -> `CapabilityRegistry` ->
-  `ServiceRegistry`; `EventBus` and `DependencyResolver` integrate with
-  those foundations without replacing them.
+  `ServiceRegistry`; `EventBus`, `DependencyResolver`, and
+  `Validation Framework` integrate with those foundations without
+  replacing them.
 - Governance status:
-  `M11` is accepted, `M12 Validation Framework` is `Ready`, and `M13`
-  through `M16` remain blocked by published prerequisites.
-- Repository freeze recommendation:
-  runtime foundation is stable enough to freeze; recommended tag
-  `Runtime-v1.1`.
+  `ADR-0006` and `ADR-0007` are accepted, `REGISTER_CONTRACT`,
+  `SERVICE_CONTRACT`, and `SCHEMA_REGISTRY` are published, `M12
+  Validation Framework` is implemented and validated, `M13 Plugin
+  Loader` is `Ready`, and `M14` through `M16` remain blocked by
+  published prerequisites.
+- Runtime freeze status:
+  `Runtime-v1.1` remains the accepted freeze tag for the runtime
+  foundation baseline before `M12`.
 - Next governed milestone:
-  `Governance/WorkQueue/M12-Validation-Framework.md`.
-- `M12 Validation Framework` implementation has not begun.
+  `Governance/WorkQueue/M13-Plugin-Loader.md`.
+- `M13 Plugin Loader` implementation has not begun.
 
 ---
 
