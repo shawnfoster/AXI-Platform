@@ -24,6 +24,7 @@ Published schema files with approved content:
 | --- | --- | --- | --- |
 | `AXI-SCH-007` | Platform Object | `Governance/Schemas/AXI-SCH-007_Platform_Object.json` | Published |
 | `AXI-SCH-008` | Capability | `Governance/Schemas/AXI-SCH-008_Capability.json` | Published |
+| `AXI-SCH-009` | Plugin Manifest | `Governance/Schemas/AXI-SCH-009_Plugin_Manifest.json` | Published |
 
 ---
 
