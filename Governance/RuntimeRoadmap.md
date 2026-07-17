@@ -25,7 +25,8 @@ required upstream module is only a placeholder.
 - Capability registry is implemented and tested.
 - Service registry is implemented and tested.
 - Event bus is implemented and tested.
-- Dependency resolver through pipeline runtime are defined in governance
+- Dependency resolver is implemented and tested.
+- Validation framework through pipeline runtime are defined in governance
   but not implemented in the runtime package.
 
 ---
@@ -59,8 +60,8 @@ upstream dependency in the matrix is implemented and validated.
 | 1 | Runtime dependency audit | Complete | Repository evidence collected | `Governance/DependencyMatrix.md` and this roadmap published |
 | 2 | M9 Service Registry | Complete | Registry Foundation, Platform Object Model, and Capability Registry implemented | Runtime module, tests, and validation pass |
 | 3 | M10 Event Bus | Complete | M9 complete | Runtime module, tests, and validation pass |
-| 4 | M11 Dependency Resolver | Ready | M9 and M10 complete | Runtime module, tests, and validation pass |
-| 5 | M12 Validation Framework | Blocked | M9, M10, and M11 complete | Runtime module, tests, and validation pass |
+| 4 | M11 Dependency Resolver | Complete | M9 and M10 complete | Runtime module, tests, and validation pass |
+| 5 | M12 Validation Framework | Ready | M9, M10, and M11 complete | Runtime module, tests, and validation pass |
 | 6 | M13 Plugin Loader | Blocked | M9 through M12 complete | Runtime module, tests, and validation pass |
 | 7 | M14 Application Registry | Blocked | M9 through M13 complete | Runtime module, tests, and validation pass |
 | 8 | M15 Engine Registry | Blocked | M9 through M14 complete | Runtime module, tests, and validation pass |
