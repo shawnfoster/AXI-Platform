@@ -90,6 +90,21 @@ No circular dependencies may be introduced.
 
 ---
 
+# Dependency Audit
+
+Record the dependency audit for this milestone.
+
+- Produces:
+- Published governance prerequisites:
+- Required implemented runtime modules:
+- Downstream consumers:
+- Repository readiness gate:
+
+Readiness may not rely on placeholder directories, empty files, or
+intended future work.
+
+---
+
 # Constraints
 
 Implementation shall:
