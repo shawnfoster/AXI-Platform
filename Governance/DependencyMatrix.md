@@ -45,15 +45,17 @@ active work queue:
 1. Work queue numbering has drifted from published references. `ADR-0006`
    cites `M6 Platform Object Model` and `M7 Capability Registry`, while
    the active runtime work queue begins at `M8`.
-2. The repository implements the runtime foundations required to start
-   `M9 Service Registry`: `PlatformObject`, `BaseRegistry`,
-   `ObjectRegistry`, and `CapabilityRegistry`.
-3. `Runtime/ServiceRegistry`, `Runtime/EventBus`,
+2. The repository now implements `M9 Service Registry` in addition to
+   the runtime foundations it depends on: `PlatformObject`,
+   `BaseRegistry`, `ObjectRegistry`, and `CapabilityRegistry`.
+3. `Runtime/EventBus`,
    `Runtime/DependencyResolver`, `Runtime/Validation`,
    `Runtime/PluginLoader`, `Runtime/ApplicationRegistry`,
    `Runtime/EngineRegistry`, and `Runtime/Pipeline` remain placeholders.
-4. `M16 Pipeline Runtime` is blocked by the absence of implemented and
-   validated upstream runtime subsystems from `M9` through `M15`.
+4. `M10 Event Bus` is now the first governed runtime milestone that is
+   defined but not yet implemented.
+5. `M16 Pipeline Runtime` remains blocked by the absence of implemented
+   and validated upstream runtime subsystems from `M10` through `M15`.
 
 ---
 
@@ -77,14 +79,14 @@ active work queue:
 | M6 reference | No active work queue artifact | Platform Object Model | AXI-SCH-007 | `Runtime/ObjectModel/` | `platform_object.py` and `Tests/Runtime/test_object_model.py` exist | M9, M10, M11, M12, M13, M14, M15, M16 | Implemented |
 | Registry Foundation | No active work queue artifact | Generic registry behavior and object registry | ADR-0006 | `Runtime/Registry/`, `Runtime/ObjectRegistry/` | `base_registry.py`, `registry.py`, and `Tests/Runtime/test_object_registry.py` exist | M8, M9, M10, M11, M12, M13, M14, M15, M16 | Implemented / Undocumented |
 | M8 in current repository | `Governance/WorkQueue/M8-Capability-Registry.md` | Capability registry | Registry Foundation, Platform Object Model | `Runtime/CapabilityRegistry/` | `registry.py`, `capability.py`, and `Tests/Runtime/test_capability_registry.py` exist | M9, M10, M11, M12, M13, M14, M15, M16 | Implemented |
-| M9 | `Governance/WorkQueue/M9-Service-Registry.md` | Service registry | Registry Foundation, Capability Registry, Platform Object Model | `Runtime/ServiceRegistry/` | Directory exists with empty `README.md` only | M10, M11, M12, M13, M14, M15, M16 | Ready |
-| M10 | `Governance/WorkQueue/M10-Event-Bus.md` | Event bus | Registry Foundation, Capability Registry, Service Registry, Object Registry, Platform Object Model | `Runtime/EventBus/` | Directory exists with empty `README.md` only | M11, M12, M13, M14, M15, M16 | Blocked by M9 |
-| M11 | `Governance/WorkQueue/M11-Dependency-Resolver.md` | Dependency resolver | Registry Foundation, Capability Registry, Service Registry, Event Bus, Object Model | `Runtime/DependencyResolver/` | Directory exists with empty `README.md` only | M12, M13, M14, M15, M16 | Blocked by M9 and M10 |
-| M12 | `Governance/WorkQueue/M12-Validation-Framework.md` | Validation framework | Registry Foundation, Capability Registry, Service Registry, Event Bus, Dependency Resolver, Object Model | `Runtime/Validation/` | Directory exists with empty `README.md` only | M13, M14, M15, M16 | Blocked by M9, M10, and M11 |
-| M13 | `Governance/WorkQueue/M13-Plugin-Loader.md` | Plugin loader | Registry Foundation, Capability Registry, Service Registry, Event Bus, Dependency Resolver, Validation Framework, Object Model | `Runtime/PluginLoader/` | Directory exists with empty `README.md` only | M14, M15, M16 | Blocked by M9, M10, M11, and M12 |
-| M14 | `Governance/WorkQueue/M14-Application-Registry.md` | Application registry | Registry Foundation, Capability Registry, Service Registry, Event Bus, Dependency Resolver, Validation Framework, Plugin Loader, Platform Object Model | `Runtime/ApplicationRegistry/` | Directory exists with empty `README.md` only | M15, M16 | Blocked by M9, M10, M11, M12, and M13 |
-| M15 | `Governance/WorkQueue/M15-Engine-Registry.md` | Engine registry | Registry Foundation, Capability Registry, Service Registry, Event Bus, Dependency Resolver, Validation Framework, Plugin Loader, Application Registry, Platform Object Model | `Runtime/EngineRegistry/` | Directory exists with empty `README.md` only | M16 | Blocked by M9, M10, M11, M12, M13, and M14 |
-| M16 | `Governance/WorkQueue/M16-Pipeline-Runtime.md` | Pipeline runtime | Registry Foundation, Capability Registry, Service Registry, Event Bus, Dependency Resolver, Validation Framework, Plugin Loader, Application Registry, Engine Registry, Platform Object Model | `Runtime/Pipeline/` | Directory exists with empty `README.md` only | Future runtime CLI and API milestones | Blocked by M9 through M15 |
+| M9 | `Governance/WorkQueue/M9-Service-Registry.md` | Service registry | Registry Foundation, Capability Registry, Platform Object Model | `Runtime/ServiceRegistry/` | `service.py`, `registry.py`, `__init__.py`, and `Tests/Runtime/test_service_registry.py` exist | M10, M11, M12, M13, M14, M15, M16 | Implemented |
+| M10 | `Governance/WorkQueue/M10-Event-Bus.md` | Event bus | Registry Foundation, Capability Registry, Service Registry, Object Registry, Platform Object Model | `Runtime/EventBus/` | Directory exists with empty `README.md` only | M11, M12, M13, M14, M15, M16 | Ready |
+| M11 | `Governance/WorkQueue/M11-Dependency-Resolver.md` | Dependency resolver | Registry Foundation, Capability Registry, Service Registry, Event Bus, Object Model | `Runtime/DependencyResolver/` | Directory exists with empty `README.md` only | M12, M13, M14, M15, M16 | Blocked by M10 |
+| M12 | `Governance/WorkQueue/M12-Validation-Framework.md` | Validation framework | Registry Foundation, Capability Registry, Service Registry, Event Bus, Dependency Resolver, Object Model | `Runtime/Validation/` | Directory exists with empty `README.md` only | M13, M14, M15, M16 | Blocked by M10 and M11 |
+| M13 | `Governance/WorkQueue/M13-Plugin-Loader.md` | Plugin loader | Registry Foundation, Capability Registry, Service Registry, Event Bus, Dependency Resolver, Validation Framework, Object Model | `Runtime/PluginLoader/` | Directory exists with empty `README.md` only | M14, M15, M16 | Blocked by M10, M11, and M12 |
+| M14 | `Governance/WorkQueue/M14-Application-Registry.md` | Application registry | Registry Foundation, Capability Registry, Service Registry, Event Bus, Dependency Resolver, Validation Framework, Plugin Loader, Platform Object Model | `Runtime/ApplicationRegistry/` | Directory exists with empty `README.md` only | M15, M16 | Blocked by M10, M11, M12, and M13 |
+| M15 | `Governance/WorkQueue/M15-Engine-Registry.md` | Engine registry | Registry Foundation, Capability Registry, Service Registry, Event Bus, Dependency Resolver, Validation Framework, Plugin Loader, Application Registry, Platform Object Model | `Runtime/EngineRegistry/` | Directory exists with empty `README.md` only | M16 | Blocked by M10, M11, M12, M13, and M14 |
+| M16 | `Governance/WorkQueue/M16-Pipeline-Runtime.md` | Pipeline runtime | Registry Foundation, Capability Registry, Service Registry, Event Bus, Dependency Resolver, Validation Framework, Plugin Loader, Application Registry, Engine Registry, Platform Object Model | `Runtime/Pipeline/` | Directory exists with empty `README.md` only | Future runtime CLI and API milestones | Blocked by M10 through M15 |
 
 ---
 
