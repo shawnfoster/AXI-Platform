@@ -43,20 +43,21 @@ Current Repository State
   `Validation Framework`, and `Plugin Loader` integrate with those
   foundations without replacing them.
 - Governance status:
-  `ADR-0006`, `ADR-0007`, and `ADR-0008` are accepted,
-  `REGISTER_CONTRACT`, `SERVICE_CONTRACT`, `PLUGIN_CONTRACT`, and
-  `SCHEMA_REGISTRY` are published, `AXI-SCH-009 Plugin Manifest` is
+  `ADR-0006`, `ADR-0007`, `ADR-0008`, and `ADR-0009` are accepted,
+  `REGISTER_CONTRACT`, `SERVICE_CONTRACT`, `PLUGIN_CONTRACT`,
+  `APPLICATION_CONTRACT`, and `SCHEMA_REGISTRY` are published,
+  `AXI-SCH-009 Plugin Manifest` and `AXI-SCH-010 Application` are
   published, `M13 Plugin Loader` is implemented and validated,
-  `M14 Application Registry` is ready, and `M15` through `M16` remain
-  blocked by published prerequisites.
+  `M14 Application Registry` governance is published and the milestone
+  is ready, and `M15` through `M16` remain blocked by published
+  prerequisites.
 - Runtime freeze status:
-  `Runtime-v1.1` remains the accepted freeze tag for the runtime
-  foundation baseline before `M12`.
+  `Runtime-v1.2` is the accepted freeze tag through `M13`.
 - Next governed milestone:
   `Governance/WorkQueue/M14-Application-Registry.md`.
 - Runtime milestone progression:
-  `M9` through `M13` are complete, `M14` is ready, and `M15` through
-  `M16` remain blocked by published prerequisites.
+  `M9` through `M13` are complete, `M14` is ready for implementation,
+  and `M15` through `M16` remain blocked by published prerequisites.
 
 ---
 

@@ -1,0 +1,145 @@
+# ADR-0009 — Adopt Application Registry Boundary
+
+## Status
+
+Accepted
+
+---
+
+## Purpose
+
+Define the minimum architectural policy required before implementing
+`M14 Application Registry`.
+
+---
+
+## Repository Evidence
+
+`Governance/WorkQueue/M14-Application-Registry.md` requires a runtime
+subsystem that:
+
+- registers applications
+- unregisters applications
+- looks up applications
+- lists applications
+- updates applications
+- starts applications
+- stops applications
+- restarts applications
+- preserves metadata
+- preserves lifecycle state
+- exposes capabilities
+- integrates with dependency resolution
+- integrates with validation
+
+`M14` requires integration with:
+
+- `BaseRegistry`
+- `PlatformObject`
+- `CapabilityRegistry`
+- `ServiceRegistry`
+- `EventBus`
+- `DependencyResolver`
+- `Validation Framework`
+- `PluginLoader`
+
+Before publication of this ADR, the repository already published the
+following related governance and runtime evidence:
+
+- `ADR-0006` governs generic runtime registries.
+- `ADR-0007` governs the runtime validation framework.
+- `ADR-0008` governs the Plugin Loader boundary.
+- `REGISTER_CONTRACT` governs shared registry behavior.
+- `SERVICE_CONTRACT` governs services and the service registry.
+- `PLUGIN_CONTRACT` governs the Plugin Loader public boundary.
+- `AXI-SCH-007 Platform Object` publishes the `AXI-APP` namespace and
+  the `Application` object type.
+- `Runtime/ObjectModel/platform_object.py` publishes the shared object
+  model reused by existing runtime components.
+- `Runtime/ApplicationRegistry/README.md` is a placeholder and no
+  approved Application Registry implementation currently exists.
+
+Before publication of this ADR, the repository did not publish:
+
+- an Application Registry architectural boundary
+- an approved application lifecycle boundary
+- an approved application registration boundary
+- an approved application validation boundary
+
+---
+
+## Architectural Policy
+
+Adopt a dedicated Application Registry boundary for `M14` with the
+following constraints:
+
+- The Application Registry is a runtime subsystem implemented in
+  `Runtime/ApplicationRegistry/`.
+- Under `ADR-0006`, the Application Registry shall reuse
+  `BaseRegistry` as its registry foundation unless a later approved ADR
+  documents an exception.
+- The Application Registry shall reuse the published `PlatformObject`
+  model for shared object fields where appropriate and shall not replace
+  the existing object model.
+- The public registration boundary is limited to application records
+  governed by the `application_id` field required by `M14`.
+- The Application Registry reuses the existing `AXI-APP` namespace and
+  `Application` object type already published by `AXI-SCH-007`; this
+  ADR does not authorize a new namespace or object taxonomy.
+- Lifecycle management is limited to the `register`, `update`,
+  `unregister`, `start`, `stop`, and `restart` boundaries required by
+  `M14`.
+- Validation is limited to published governance artifacts and the public
+  runtime validation interfaces governed by `ADR-0007`.
+- Service integration is limited to application references to services
+  governed by the existing `ServiceRegistry` boundary.
+- Plugin integration is limited to application references to plugins
+  governed by the existing Plugin Loader boundary.
+- Event integration is limited to the existing `EventBus` boundary.
+  This ADR does not publish event names, payload schemas, or delivery
+  policies for applications.
+- Dependency handling is limited to the published `DependencyResolver`
+  boundary and does not authorize a new dependency model.
+
+---
+
+## Future Guidance
+
+Future governance may extend application behavior, but this ADR does
+not define:
+
+- process orchestration or scheduling algorithms
+- engine orchestration semantics
+- deployment or distribution behavior
+- cross-process or remote application management
+- persistence or replay semantics
+- event contracts for application lifecycle notifications
+- runtime behavior beyond `M14 Application Registry`
+
+---
+
+## Non-Goals
+
+This ADR does not approve:
+
+- an Engine Registry
+- a new registry inheritance pattern
+- a new object model
+- a new dependency model
+- a new validation model
+- plugin discovery, packaging, or marketplace behavior
+- workflow or pipeline orchestration responsibilities assigned to later
+  milestones
+
+---
+
+## Related
+
+- `ADR-0006`
+- `ADR-0007`
+- `ADR-0008`
+- `Governance/WorkQueue/M14-Application-Registry.md`
+- `Governance/Contracts/REGISTER_CONTRACT.md`
+- `Governance/Contracts/SERVICE_CONTRACT.md`
+- `Governance/Contracts/PLUGIN_CONTRACT.md`
+- `Governance/Schemas/AXI-SCH-007_Platform_Object.json`

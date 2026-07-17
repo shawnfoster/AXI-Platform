@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "AXI-SCH-010",
+  "title": "AXI Application",
+  "description": "Application definition for governed runtime applications in the AXI Platform.",
+  "type": "object",
+  "required": [
+    "application_id",
+    "name",
+    "version",
+    "description",
+    "owner",
+    "capabilities",
+    "dependencies",
+    "services",
+    "plugins",
+    "lifecycle_state",
+    "metadata"
+  ],
+  "properties": {
+    "application_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^CAP-[0-9]{3}$"
+      },
+      "uniqueItems": true
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^OBJ-[0-9]{6}$"
+      },
+      "uniqueItems": true
+    },
+    "services": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^OBJ-[0-9]{6}$"
+      },
+      "uniqueItems": true
+    },
+    "plugins": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "lifecycle_state": {
+      "type": "string"
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

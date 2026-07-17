@@ -11,8 +11,7 @@
 Record which schema artifacts in `Governance/Schemas/` are currently
 published repository evidence and which remain placeholders.
 
-This registry is derived from the repository state frozen at
-`Runtime-v1.1`.
+This registry is derived from the currently published repository state.
 
 ---
 
@@ -25,6 +24,7 @@ Published schema files with approved content:
 | `AXI-SCH-007` | Platform Object | `Governance/Schemas/AXI-SCH-007_Platform_Object.json` | Published |
 | `AXI-SCH-008` | Capability | `Governance/Schemas/AXI-SCH-008_Capability.json` | Published |
 | `AXI-SCH-009` | Plugin Manifest | `Governance/Schemas/AXI-SCH-009_Plugin_Manifest.json` | Published |
+| `AXI-SCH-010` | Application | `Governance/Schemas/AXI-SCH-010_Application.json` | Published |
 
 ---
 
