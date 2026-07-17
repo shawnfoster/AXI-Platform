@@ -7,6 +7,7 @@ import pytest
 
 from Runtime.CapabilityRegistry import Capability, CapabilityRegistry
 from Runtime.DependencyResolver import Dependency, DependencyResolver
+from Runtime.EngineRegistry import Engine, EngineRegistry
 from Runtime.EventBus import EventBus, Subscriber
 from Runtime.ObjectModel import PlatformObject
 from Runtime.ObjectRegistry import ObjectRegistry
@@ -70,6 +71,32 @@ def build_service(
             else {
                 "lifecycle_state": "Registered",
                 "transport": "in-process",
+            }
+        ),
+    )
+
+
+def build_engine(
+    i: int,
+    *,
+    capabilities: list[str] | None = None,
+    metadata: dict[str, object] | None = None,
+) -> Engine:
+    return Engine(
+        object_id=f"OBJ-{i:06d}",
+        namespace="AXI-ENG",
+        object_type="Engine",
+        name=f"Engine {i}",
+        version="1.0",
+        status="Approved",
+        owner="Platform",
+        capabilities=capabilities or [],
+        metadata=(
+            metadata
+            if metadata is not None
+            else {
+                "lifecycle_state": "Registered",
+                "runtime": "local",
             }
         ),
     )
@@ -277,7 +304,7 @@ def test_validate_schema_uses_only_published_schema_registry_entries() -> None:
     assert_has_invalid_rule(results, "schema.published")
 
 
-def test_validate_contract_supports_register_and_service_contracts() -> None:
+def test_validate_contract_supports_register_service_and_engine_contracts() -> None:
     object_registry = ObjectRegistry()
     object_registry.register(build_object(30))
 
@@ -290,6 +317,14 @@ def test_validate_contract_supports_register_and_service_contracts() -> None:
         capabilities=[capability.capability_id],
     )
     service_registry.register_service(service)
+    engine_registry = EngineRegistry(
+        capability_registry=capability_registry,
+    )
+    engine = build_engine(
+        33,
+        capabilities=[capability.capability_id],
+    )
+    engine_registry.register_engine(engine)
 
     assert_no_invalid(
         validate_contract(object_registry, "REGISTER_CONTRACT")
@@ -308,13 +343,27 @@ def test_validate_contract_supports_register_and_service_contracts() -> None:
             capability_registry=capability_registry,
         )
     )
+    assert_no_invalid(
+        validate_contract(
+            engine,
+            "ENGINE_CONTRACT",
+            capability_registry=capability_registry,
+        )
+    )
+    assert_no_invalid(
+        validate_contract(
+            engine_registry,
+            "ENGINE_CONTRACT",
+            capability_registry=capability_registry,
+        )
+    )
 
-    invalid_service = build_service(33, metadata={})
+    invalid_service = build_service(34, metadata={})
     results = validate_contract(invalid_service, "SERVICE_CONTRACT")
     assert_has_invalid_rule(results, "contract.service")
 
     results = validate_contract(object_registry, "ENGINE_CONTRACT")
-    assert_has_invalid_rule(results, "contract.published")
+    assert_has_invalid_rule(results, "contract.engine")
 
 
 def test_validate_dependencies_reports_dependency_failures() -> None:

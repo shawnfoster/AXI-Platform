@@ -45,6 +45,9 @@ CONTRACT_PATHS = {
     "SERVICE_CONTRACT": GOVERNANCE_ROOT
     / "Contracts"
     / "SERVICE_CONTRACT.md",
+    "ENGINE_CONTRACT": GOVERNANCE_ROOT
+    / "Contracts"
+    / "ENGINE_CONTRACT.md",
 }
 
 
@@ -309,6 +312,12 @@ class Validator:
                 order=50,
             ),
             ValidationRule(
+                "object.engine_contract",
+                RULE_TARGET_OBJECT,
+                self._rule_object_engine_contract,
+                order=60,
+            ),
+            ValidationRule(
                 "metadata.mapping",
                 RULE_TARGET_METADATA,
                 self._rule_metadata_mapping,
@@ -349,6 +358,12 @@ class Validator:
                 RULE_TARGET_CONTRACT,
                 self._rule_contract_service,
                 order=30,
+            ),
+            ValidationRule(
+                "contract.engine",
+                RULE_TARGET_CONTRACT,
+                self._rule_contract_engine,
+                order=40,
             ),
             ValidationRule(
                 "dependencies.target",
@@ -510,6 +525,30 @@ class Validator:
         return validator.validate_contract(
             obj,
             "SERVICE_CONTRACT",
+            capability_registry=(
+                capability_registry
+                if isinstance(capability_registry, CapabilityRegistry)
+                else None
+            ),
+        )
+
+    def _rule_object_engine_contract(
+        self,
+        payload: dict[str, object],
+        validator: Validator,
+    ) -> list[ValidationResult]:
+        """
+        Validate engine-specific object rules when applicable.
+        """
+        obj = payload["object"]
+        capability_registry = payload["capability_registry"]
+
+        if not self._is_engine_target(obj):
+            return []
+
+        return validator.validate_contract(
+            obj,
+            "ENGINE_CONTRACT",
             capability_registry=(
                 capability_registry
                 if isinstance(capability_registry, CapabilityRegistry)
@@ -754,6 +793,35 @@ class Validator:
             return []
 
         return self._validate_service_contract_target(
+            target,
+            source,
+            capability_registry=(
+                capability_registry
+                if isinstance(capability_registry, CapabilityRegistry)
+                else None
+            ),
+        )
+
+    def _rule_contract_engine(
+        self,
+        payload: dict[str, object],
+        validator: Validator,
+    ) -> list[ValidationResult]:
+        """
+        Validate ENGINE_CONTRACT.
+        """
+        target = payload["target"]
+        source = str(payload["source"])
+        contract_name = self._resolve_contract_name(
+            target,
+            payload["contract_name"],
+        )
+        capability_registry = payload["capability_registry"]
+
+        if contract_name != "ENGINE_CONTRACT":
+            return []
+
+        return self._validate_engine_contract_target(
             target,
             source,
             capability_registry=(
@@ -1293,6 +1361,151 @@ class Validator:
             )
         ]
 
+    def _validate_engine_contract_target(
+        self,
+        target: object,
+        source: str,
+        *,
+        capability_registry: CapabilityRegistry | None = None,
+    ) -> list[ValidationResult]:
+        """
+        Validate published engine contract behavior.
+        """
+        if self._is_engine_target(target):
+            errors: list[ValidationResult] = []
+
+            if target.namespace != "AXI-ENG":
+                errors.append(
+                    self._invalid_result(
+                        "contract.engine",
+                        "Engine namespace must be 'AXI-ENG'",
+                        source,
+                    )
+                )
+
+            if target.object_type != "Engine":
+                errors.append(
+                    self._invalid_result(
+                        "contract.engine",
+                        "Engine object_type must be 'Engine'",
+                        source,
+                    )
+                )
+
+            if target.engine_id != target.object_id:
+                errors.append(
+                    self._invalid_result(
+                        "contract.engine",
+                        "engine_id must map to object_id",
+                        source,
+                    )
+                )
+
+            if not isinstance(target.metadata, Mapping) or not target.metadata:
+                errors.append(
+                    self._invalid_result(
+                        "contract.engine",
+                        "Engine metadata is required",
+                        source,
+                    )
+                )
+
+            if not target.lifecycle_state:
+                errors.append(
+                    self._invalid_result(
+                        "contract.engine",
+                        "Engine lifecycle_state is required",
+                        source,
+                    )
+                )
+
+            if capability_registry is not None:
+                for capability_id in target.capabilities:
+                    if not capability_registry.exists(capability_id):
+                        errors.append(
+                            self._invalid_result(
+                                "contract.engine",
+                                (
+                                    "Engine capability reference does not "
+                                    f"resolve: {capability_id}"
+                                ),
+                                source,
+                            )
+                        )
+
+            if errors:
+                return errors
+
+            return [
+                self._valid_result(
+                    "contract.engine",
+                    "ENGINE_CONTRACT validation passed",
+                    source,
+                )
+            ]
+
+        required_methods = (
+            "register_engine",
+            "unregister_engine",
+            "lookup_engine",
+            "list_engines",
+            "update_engine",
+            "start_engine",
+            "stop_engine",
+            "restart_engine",
+        )
+
+        if (
+            isinstance(target, BaseRegistry)
+            and all(
+                callable(getattr(target, method_name, None))
+                for method_name in required_methods
+            )
+        ):
+            results = self._validate_register_contract_target(
+                target,
+                source,
+            )
+            listed_engines = target.list_engines()
+            engine_ids = [engine.engine_id for engine in listed_engines]
+
+            if engine_ids != sorted(engine_ids):
+                results.append(
+                    self._invalid_result(
+                        "contract.engine",
+                        "EngineRegistry engine order is not deterministic",
+                        source,
+                    )
+                )
+
+            if target.count() != len(engine_ids):
+                results.append(
+                    self._invalid_result(
+                        "contract.engine",
+                        "EngineRegistry count does not match listed engines",
+                        source,
+                    )
+                )
+
+            for engine in listed_engines:
+                results.extend(
+                    self._validate_engine_contract_target(
+                        engine,
+                        engine.engine_id,
+                        capability_registry=capability_registry,
+                    )
+                )
+
+            return results
+
+        return [
+            self._invalid_result(
+                "contract.engine",
+                "ENGINE_CONTRACT requires an Engine or EngineRegistry target",
+                source,
+            )
+        ]
+
     def _resolve_schema_id(
         self,
         instance: object,
@@ -1346,6 +1559,27 @@ class Validator:
         if isinstance(target, Service | ServiceRegistry):
             return "SERVICE_CONTRACT"
 
+        if self._is_engine_target(target):
+            return "ENGINE_CONTRACT"
+
+        if (
+            isinstance(target, BaseRegistry)
+            and all(
+                callable(getattr(target, method_name, None))
+                for method_name in (
+                    "register_engine",
+                    "unregister_engine",
+                    "lookup_engine",
+                    "list_engines",
+                    "update_engine",
+                    "start_engine",
+                    "stop_engine",
+                    "restart_engine",
+                )
+            )
+        ):
+            return "ENGINE_CONTRACT"
+
         if isinstance(target, BaseRegistry):
             return "REGISTER_CONTRACT"
 
@@ -1384,9 +1618,22 @@ class Validator:
 
         return published
 
+    @staticmethod
+    def _is_engine_target(target: object) -> bool:
+        """
+        Determine whether a target exposes the published engine boundary.
+        """
+        return (
+            isinstance(target, PlatformObject)
+            and target.namespace == "AXI-ENG"
+            and target.object_type == "Engine"
+            and hasattr(target, "engine_id")
+            and hasattr(type(target), "lifecycle_state")
+        )
+
     def _load_published_contracts(self) -> dict[str, Path]:
         """
-        Load approved published contracts used by M12.
+        Load approved published contracts used by the current runtime.
         """
         published: dict[str, Path] = {}
 

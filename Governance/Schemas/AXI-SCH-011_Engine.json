@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "AXI-SCH-011",
+  "title": "AXI Engine",
+  "description": "Engine definition for governed runtime engines in the AXI Platform.",
+  "type": "object",
+  "required": [
+    "engine_id",
+    "name",
+    "version",
+    "description",
+    "owner",
+    "capabilities",
+    "dependencies",
+    "lifecycle_state",
+    "status",
+    "metadata"
+  ],
+  "properties": {
+    "engine_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^CAP-[0-9]{3}$"
+      },
+      "uniqueItems": true
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^OBJ-[0-9]{6}$"
+      },
+      "uniqueItems": true
+    },
+    "lifecycle_state": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Draft",
+        "Proposed",
+        "Approved",
+        "Frozen",
+        "Deprecated",
+        "Superseded",
+        "Archived"
+      ]
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

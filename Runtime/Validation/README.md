@@ -6,7 +6,8 @@ This package implements the governed M12 runtime validation framework.
 Published scope
 ---------------
 
-- Validates `PlatformObject` instances and service objects
+- Validates `PlatformObject` instances, service objects, and engine
+  objects
 - Validates metadata
 - Validates published schemas listed in `SCHEMA_REGISTRY`
 - Validates published contracts used by the current runtime
@@ -18,8 +19,10 @@ Current authoritative validation inputs
 
 - `AXI-SCH-007`
 - `AXI-SCH-008`
+- `AXI-SCH-011`
 - `REGISTER_CONTRACT`
 - `SERVICE_CONTRACT`
+- `ENGINE_CONTRACT`
 
 Public APIs
 -----------
@@ -43,4 +46,5 @@ Out of scope
 
 - unpublished schemas
 - unpublished contracts
-- M13 and later runtime milestones
+- pipeline runtime and future scheduling behavior beyond published
+  validation inputs
