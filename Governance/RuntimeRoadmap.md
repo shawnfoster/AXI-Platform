@@ -27,8 +27,9 @@ required upstream module is only a placeholder.
 - Event bus is implemented and tested.
 - Dependency resolver is implemented and tested.
 - Validation framework is implemented and tested.
-- Plugin loader through pipeline runtime are defined in governance but
-  not implemented in the runtime package.
+- Plugin loader is implemented and tested.
+- Application registry through pipeline runtime are defined in
+  governance but not implemented in the runtime package.
 
 ---
 
@@ -63,8 +64,8 @@ upstream dependency in the matrix is implemented and validated.
 | 3 | M10 Event Bus | Complete | M9 complete | Runtime module, tests, and validation pass |
 | 4 | M11 Dependency Resolver | Complete | M9 and M10 complete | Runtime module, tests, and validation pass |
 | 5 | M12 Validation Framework | Complete | M9, M10, and M11 complete | Runtime module, tests, and validation pass |
-| 6 | M13 Plugin Loader | Ready | M9 through M12 complete | Runtime module, tests, and validation pass |
-| 7 | M14 Application Registry | Blocked | M9 through M13 complete | Runtime module, tests, and validation pass |
+| 6 | M13 Plugin Loader | Complete | M9 through M12 complete | Runtime module, tests, and validation pass |
+| 7 | M14 Application Registry | Ready | M9 through M13 complete | Runtime module, tests, and validation pass |
 | 8 | M15 Engine Registry | Blocked | M9 through M14 complete | Runtime module, tests, and validation pass |
 | 9 | M16 Pipeline Runtime | Blocked | M9 through M15 complete | Runtime module, tests, and validation pass |
 
