@@ -31,30 +31,32 @@ The repository is the authoritative source of truth.
 
 Current Repository State
 
-- Runtime is implemented through `M12 Validation Framework`.
+- Runtime is implemented through `M13 Plugin Loader`.
 - Implemented runtime foundation components:
   `PlatformObject`, Registry Foundation, `M8 Capability Registry`,
   `M9 Service Registry`, `M10 Event Bus`,
-  `M11 Dependency Resolver`, and `M12 Validation Framework`.
+  `M11 Dependency Resolver`, `M12 Validation Framework`, and
+  `M13 Plugin Loader`.
 - Current runtime architecture:
   `PlatformObject` -> Registry Foundation -> `CapabilityRegistry` ->
-  `ServiceRegistry`; `EventBus`, `DependencyResolver`, and
-  `Validation Framework` integrate with those foundations without
-  replacing them.
+  `ServiceRegistry`; `EventBus`, `DependencyResolver`,
+  `Validation Framework`, and `Plugin Loader` integrate with those
+  foundations without replacing them.
 - Governance status:
   `ADR-0006`, `ADR-0007`, and `ADR-0008` are accepted,
   `REGISTER_CONTRACT`, `SERVICE_CONTRACT`, `PLUGIN_CONTRACT`, and
   `SCHEMA_REGISTRY` are published, `AXI-SCH-009 Plugin Manifest` is
-  published, `M12 Validation Framework` is implemented and validated,
-  `M13 Plugin Loader` implementation has not begun, and `M14` through
-  `M16` remain blocked by published prerequisites.
+  published, `M13 Plugin Loader` is implemented and validated,
+  `M14 Application Registry` is ready, and `M15` through `M16` remain
+  blocked by published prerequisites.
 - Runtime freeze status:
   `Runtime-v1.1` remains the accepted freeze tag for the runtime
   foundation baseline before `M12`.
 - Next governed milestone:
-  `Governance/WorkQueue/M13-Plugin-Loader.md`.
-- `M13 Plugin Loader` implementation has not begun.
-- A fresh M13 readiness assessment is required before implementation.
+  `Governance/WorkQueue/M14-Application-Registry.md`.
+- Runtime milestone progression:
+  `M9` through `M13` are complete, `M14` is ready, and `M15` through
+  `M16` remain blocked by published prerequisites.
 
 ---
 
