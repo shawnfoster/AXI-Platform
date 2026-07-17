@@ -26,6 +26,7 @@ Published schema files with approved content:
 | `AXI-SCH-009` | Plugin Manifest | `Governance/Schemas/AXI-SCH-009_Plugin_Manifest.json` | Published |
 | `AXI-SCH-010` | Application | `Governance/Schemas/AXI-SCH-010_Application.json` | Published |
 | `AXI-SCH-011` | Engine | `Governance/Schemas/AXI-SCH-011_Engine.json` | Published |
+| `AXI-SCH-012` | Pipeline | `Governance/Schemas/AXI-SCH-012_Pipeline.json` | Published |
 
 ---
 

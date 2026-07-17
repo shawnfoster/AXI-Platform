@@ -48,6 +48,9 @@ CONTRACT_PATHS = {
     "ENGINE_CONTRACT": GOVERNANCE_ROOT
     / "Contracts"
     / "ENGINE_CONTRACT.md",
+    "PIPELINE_CONTRACT": GOVERNANCE_ROOT
+    / "Contracts"
+    / "PIPELINE_CONTRACT.md",
 }
 
 
@@ -364,6 +367,12 @@ class Validator:
                 RULE_TARGET_CONTRACT,
                 self._rule_contract_engine,
                 order=40,
+            ),
+            ValidationRule(
+                "contract.pipeline",
+                RULE_TARGET_CONTRACT,
+                self._rule_contract_pipeline,
+                order=50,
             ),
             ValidationRule(
                 "dependencies.target",
@@ -829,6 +838,29 @@ class Validator:
                 if isinstance(capability_registry, CapabilityRegistry)
                 else None
             ),
+        )
+
+    def _rule_contract_pipeline(
+        self,
+        payload: dict[str, object],
+        validator: Validator,
+    ) -> list[ValidationResult]:
+        """
+        Validate PIPELINE_CONTRACT.
+        """
+        target = payload["target"]
+        source = str(payload["source"])
+        contract_name = self._resolve_contract_name(
+            target,
+            payload["contract_name"],
+        )
+
+        if contract_name != "PIPELINE_CONTRACT":
+            return []
+
+        return self._validate_pipeline_contract_target(
+            target,
+            source,
         )
 
     def _rule_dependencies_target(
@@ -1506,6 +1538,132 @@ class Validator:
             )
         ]
 
+    def _validate_pipeline_contract_target(
+        self,
+        target: object,
+        source: str,
+    ) -> list[ValidationResult]:
+        """
+        Validate published pipeline contract behavior.
+        """
+        required_methods = (
+            "register_stage",
+            "unregister_stage",
+            "execute",
+            "execute_stage",
+            "validate_pipeline",
+            "list_stages",
+            "pause",
+            "resume",
+            "stop",
+        )
+        missing_methods = [
+            method_name
+            for method_name in required_methods
+            if not callable(getattr(target, method_name, None))
+        ]
+
+        if missing_methods:
+            return [
+                self._invalid_result(
+                    "contract.pipeline",
+                    (
+                        "Pipeline target is missing required methods: "
+                        + ", ".join(sorted(missing_methods))
+                    ),
+                    source,
+                )
+            ]
+
+        runtime_state = getattr(target, "runtime_state", None)
+        allowed_states = {
+            "Initialized",
+            "Validating",
+            "Ready",
+            "Running",
+            "Paused",
+            "Completed",
+            "Failed",
+            "Cancelled",
+        }
+
+        if runtime_state not in allowed_states:
+            return [
+                self._invalid_result(
+                    "contract.pipeline",
+                    "Pipeline runtime_state is not a published state",
+                    source,
+                )
+            ]
+
+        listed_stages = target.list_stages()
+
+        if not isinstance(listed_stages, list):
+            return [
+                self._invalid_result(
+                    "contract.pipeline",
+                    "list_stages() must return a list",
+                    source,
+                )
+            ]
+
+        stage_ids: list[str] = []
+        stage_keys: list[tuple[int, str]] = []
+
+        for stage in listed_stages:
+            stage_id = getattr(stage, "stage_id", None)
+            execution_order = getattr(stage, "execution_order", None)
+
+            if not isinstance(stage_id, str) or not stage_id:
+                return [
+                    self._invalid_result(
+                        "contract.pipeline",
+                        "Pipeline stage_id is required",
+                        source,
+                    )
+                ]
+
+            if not isinstance(execution_order, int) or isinstance(
+                execution_order,
+                bool,
+            ):
+                return [
+                    self._invalid_result(
+                        "contract.pipeline",
+                        "Pipeline execution_order must be an integer",
+                        source,
+                    )
+                ]
+
+            stage_ids.append(stage_id)
+            stage_keys.append((execution_order, stage_id))
+
+        if len(stage_ids) != len(set(stage_ids)):
+            return [
+                self._invalid_result(
+                    "contract.pipeline",
+                    "Pipeline stage identifiers are not unique",
+                    source,
+                )
+            ]
+
+        if stage_keys != sorted(stage_keys):
+            return [
+                self._invalid_result(
+                    "contract.pipeline",
+                    "Pipeline stages are not ordered deterministically",
+                    source,
+                )
+            ]
+
+        return [
+            self._valid_result(
+                "contract.pipeline",
+                "PIPELINE_CONTRACT validation passed",
+                source,
+            )
+        ]
+
     def _resolve_schema_id(
         self,
         instance: object,
@@ -1579,6 +1737,22 @@ class Validator:
             )
         ):
             return "ENGINE_CONTRACT"
+
+        if all(
+            callable(getattr(target, method_name, None))
+            for method_name in (
+                "register_stage",
+                "unregister_stage",
+                "execute",
+                "execute_stage",
+                "validate_pipeline",
+                "list_stages",
+                "pause",
+                "resume",
+                "stop",
+            )
+        ):
+            return "PIPELINE_CONTRACT"
 
         if isinstance(target, BaseRegistry):
             return "REGISTER_CONTRACT"
@@ -1783,6 +1957,12 @@ class Validator:
                     datetime.fromisoformat(instance)
                 except ValueError:
                     errors.append(f"{path} must be a valid date-time")
+
+            return errors
+
+        if schema_type == "integer":
+            if not isinstance(instance, int) or isinstance(instance, bool):
+                return [f"{path} must be an integer"]
 
             return errors
 
