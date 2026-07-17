@@ -1,6 +1,6 @@
 # AXI Schema Registry
 
-**Version:** 1.0.0
+**Version:** 1.1.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
 
@@ -41,6 +41,8 @@ approved schema content:
 - `AXI-SCH-004_Provenance.json`
 - `AXI-SCH-005_Canonical.json`
 - `AXI-SCH-006_Decisions.json`
+- `AXI-SCH-013_CLI_Command.json`
+- `AXI-SCH-014_API_Operation.json`
 
 Placeholder schemas are not authoritative and shall not be treated as
 published validation inputs.

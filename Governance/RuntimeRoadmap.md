@@ -1,6 +1,6 @@
 # AXI Runtime Roadmap
 
-**Version:** 1.0.0
+**Version:** 1.1.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
 **Audit Date:** 2026-07-17
@@ -31,6 +31,28 @@ required upstream module is only a placeholder.
 - Application registry is implemented and tested.
 - `M15 Engine Registry` is implemented and tested.
 - Pipeline runtime is implemented and tested.
+- Runtime Foundation Phase I is complete through `M16`.
+- No runtime implementation is claimed beyond `M16`.
+
+---
+
+# Phase II Planning Basis
+
+The next governed runtime phase is limited to repository evidence that
+is already published:
+
+- `Governance/DependencyMatrix.md` names future runtime CLI and API
+  milestones as the downstream consumers of `M16`.
+- `Governance/ADR/ADR-0011_Pipeline_Runtime_Boundary.md` explicitly
+  excludes CLI and API execution surfaces from the `M16` boundary.
+- `Governance/Schemas/AXI-SCH-007_Platform_Object.json` already
+  publishes `AXI-CLI` / `CLI` and `AXI-API` / `API` object taxonomy.
+- The repository does not contain `Runtime/CLI/` or `Runtime/API/`
+  implementation modules.
+
+GUI is not included in Phase II because the repository contains only
+placeholder GUI governance and no published downstream runtime milestone
+or dependency evidence beyond the shared object taxonomy.
 
 ---
 
@@ -48,11 +70,17 @@ flowchart TD
     M13 --> M14["Application Registry"]
     M14 --> M15["Engine Registry"]
     M15 --> M16["Pipeline Runtime"]
+    M16 --> M17["Runtime CLI"]
+    M16 --> M18["Runtime API"]
 ```
 
 This graph is intentionally conservative. Later milestones may depend on
 multiple earlier milestones, but no milestone may begin before every
 upstream dependency in the matrix is implemented and validated.
+
+`M17` and `M18` are parallel consumers of `M16`. The ordered plan below
+reflects publication order for Phase II planning, not a published
+dependency between the CLI and API milestones.
 
 ---
 
@@ -69,6 +97,8 @@ upstream dependency in the matrix is implemented and validated.
 | 7 | M14 Application Registry | Complete | M9 through M13 complete | Runtime module, tests, and validation pass |
 | 8 | M15 Engine Registry | Complete | M9 through M14 complete and M15 governance published | Runtime module, tests, and validation pass |
 | 9 | M16 Pipeline Runtime | Complete | M9 through M15 complete and M16 governance published | Runtime module, tests, and validation pass |
+| 10 | M17 Runtime CLI | Planned | `M16` complete and `ADR-0012`, `CLI_CONTRACT`, and `AXI-SCH-013` published from placeholders | `Runtime/CLI/` exists, validation passes, and runtime plus CLI tests pass |
+| 11 | M18 Runtime API | Planned | `M16` complete and `ADR-0013`, `API_CONTRACT`, and `AXI-SCH-014` published from placeholders | `Runtime/API/` exists, validation passes, and runtime plus API tests pass |
 
 ---
 
@@ -83,6 +113,8 @@ upstream dependency in the matrix is implemented and validated.
 4. If numbering drift or missing prerequisite governance is discovered,
    stop implementation and update governance before resuming runtime
    development.
+5. Placeholder ADR, contract, and schema files are planning artifacts
+   only and do not make a milestone implementation-ready by themselves.
 
 ---
 
@@ -95,6 +127,9 @@ Every runtime work item shall declare:
 - which runtime modules must already exist
 - which downstream milestones consume its outputs
 - what repository evidence marks the milestone as ready
+- whether the milestone is an implementation-ready work item or a
+  governance-planned milestone awaiting publication of placeholder
+  artifacts
 
 Use `Governance/DependencyMatrix.md` as the authoritative readiness
 check for the current runtime foundation sequence.
