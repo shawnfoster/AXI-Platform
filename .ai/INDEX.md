@@ -1,6 +1,6 @@
 # AI Index
 
-Version: 1.0.0
+Version: 1.1.0
 
 ## Startup
 
@@ -35,6 +35,9 @@ Version: 1.0.0
 - workflows/hotfix.md
 - workflows/release.md
 - workflows/adr.md
+
+For governed milestone and repository-advancement work, the standard
+Codex governor is `workflows/milestone.md`.
 
 ## Prompts
 

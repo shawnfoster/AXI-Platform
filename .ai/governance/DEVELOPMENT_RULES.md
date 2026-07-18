@@ -1,6 +1,6 @@
 # AI-006 — Development Rules
 
-**Version:** 1.0.0  
+**Version:** 1.1.0
 **Status:** Approved
 
 ---
@@ -30,6 +30,7 @@ Read, understand, and follow:
 3. Architecture Context
 4. Commands
 5. Work Queue
+6. Applicable published workflow
 
 before modifying code.
 

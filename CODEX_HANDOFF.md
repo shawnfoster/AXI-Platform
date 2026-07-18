@@ -18,6 +18,8 @@ Read:
 
 1. AGENTS.md
 2. .ai/START_HERE.md
+3. `.ai/workflows/milestone.md` for governed milestone or
+   repository-advancement work
 
 Complete the startup sequence exactly.
 
@@ -26,6 +28,13 @@ Complete the startup sequence exactly.
 Repository Authority
 
 The repository is the authoritative source of truth.
+
+Standard Codex Governor
+
+For governed milestone and repository-advancement work, the repository-
+controlled Codex governor is:
+
+- `.ai/workflows/milestone.md`
 
 ---
 

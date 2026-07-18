@@ -7,8 +7,9 @@ This directory governs AI-assisted software development.
 1. START_HERE.md
 2. governance/
 3. context/
-4. prompts/
-5. agents/
+4. workflows/
+5. prompts/
+6. agents/
 
 ---
 

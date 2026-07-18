@@ -1,6 +1,6 @@
 # AI-001 — START HERE
 
-Version: 1.1.0
+Version: 1.2.0
 Status: Approved
 Authority: AXI Platform Governance
 
@@ -87,6 +87,19 @@ Governance/WorkQueue/M8-Capability-Registry.md
 Complete only that work item.
 
 Do not begin another task automatically.
+
+---
+
+## Phase 6 — Workflow Selection
+
+Read the published workflow that matches the assigned task.
+
+For governed milestone or repository-advancement work, read:
+
+- `.ai/workflows/milestone.md`
+
+If a published workflow is empty or placeholder-only, treat it as not
+yet published and continue using the approved governance that exists.
 
 ---
 
