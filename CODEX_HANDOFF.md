@@ -8,7 +8,7 @@ AXI-Platform-v2.1
 
 Mission
 
-Implement approved Work Queue items while preserving AXI governance.
+Implement governed objectives while preserving AXI governance.
 
 ---
 
@@ -18,7 +18,8 @@ Read:
 
 1. AGENTS.md
 2. .ai/START_HERE.md
-3. `.ai/workflows/milestone.md` for governed milestone or
+3. `.ai/ARCHITECTURE.md` when the objective modifies `.ai/`
+4. `.ai/workflows/milestone.md` for governed milestone or
    repository-advancement work
 
 Complete the startup sequence exactly.
@@ -28,6 +29,14 @@ Complete the startup sequence exactly.
 Repository Authority
 
 The repository is the authoritative source of truth.
+
+AI Governance Baseline
+
+The AI governance subsystem is frozen at baseline `v1.0`.
+
+Primary maintenance reference:
+
+- `.ai/ARCHITECTURE.md`
 
 Standard Codex Governor
 
@@ -92,7 +101,7 @@ Current Repository State
 
 Implementation Rules
 
-- One work item only.
+- One governed objective only.
 - Preserve architecture.
 - Preserve schemas.
 - Preserve contracts.

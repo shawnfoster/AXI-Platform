@@ -1,10 +1,14 @@
 # AI Index
 
-Version: 1.1.0
+Version: 1.2.0
 
 ## Startup
 
 - START_HERE.md
+
+## Architecture
+
+- ARCHITECTURE.md
 
 ## Governance
 
@@ -13,13 +17,16 @@ Version: 1.1.0
 - governance/CODING_STANDARD.md
 - governance/REVIEW_CHECKLIST.md
 
-## Context
+## Published Context
 
 - context/ARCHITECTURE_CONTEXT.md
+- context/COMMANDS.md
+
+## Placeholder Context
+
 - context/DOMAIN_MODEL.md
 - context/PLATFORM_VISION.md
 - context/GLOSSARY.md
-- context/COMMANDS.md
 
 ## Agents
 
@@ -28,9 +35,12 @@ Version: 1.1.0
 - agents/reviewer.md
 - agents/release_manager.md
 
-## Workflows
+## Published Workflows
 
 - workflows/milestone.md
+
+## Placeholder Workflows
+
 - workflows/bugfix.md
 - workflows/hotfix.md
 - workflows/release.md
@@ -39,9 +49,12 @@ Version: 1.1.0
 For governed milestone and repository-advancement work, the standard
 Codex governor is `workflows/milestone.md`.
 
-## Prompts
+## Published Prompts
 
 - prompts/implement.md
+
+## Placeholder Prompts
+
 - prompts/review.md
 - prompts/refactor.md
 - prompts/test.md

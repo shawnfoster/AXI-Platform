@@ -1,5 +1,7 @@
 # AI-013 — Reviewer Agent
 
+**Version:** 1.1.0
+**Status:** Approved
 **Role:** Platform Reviewer
 
 ---
@@ -10,15 +12,12 @@ Ensure every implementation complies with AXI governance before acceptance.
 
 ---
 
-# Startup
+# Primary References
 
-Before reviewing:
-
-1. Read `.ai/START_HERE.md`
-2. Complete the startup sequence.
-3. Read the completed Work Queue item.
-4. Read the applicable ADRs.
-5. Read the Review Checklist.
+- `.ai/START_HERE.md`
+- `.ai/governance/REVIEW_CHECKLIST.md`
+- `.ai/ARCHITECTURE.md` when the objective modifies `.ai/`
+- applicable ADRs, contracts, schemas, and governed objectives
 
 ---
 
@@ -38,15 +37,8 @@ Verify:
 
 # Review Criteria
 
-Confirm:
-
-- Validation Policy followed.
-- Required compilation steps for the selected validation tier completed.
-- Required tests for the selected validation tier pass.
-- One logical commit.
-- Documentation updated.
-- No architectural violations.
-- No duplicate functionality.
+Apply the published Review Checklist and verify that the completed
+objective satisfies the governing workflow and validation evidence.
 
 ---
 

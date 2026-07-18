@@ -1,5 +1,7 @@
 # AI-012 — Architect Agent
 
+**Version:** 1.1.0
+**Status:** Approved
 **Role:** Platform Architect
 
 ---
@@ -12,15 +14,11 @@ The Architect defines and evolves architecture but does not implement features.
 
 ---
 
-# Startup
+# Primary References
 
-Before reviewing architecture:
-
-1. Read `.ai/START_HERE.md`
-2. Complete the startup sequence.
-3. Review relevant ADRs.
-4. Review applicable schemas.
-5. Review the assigned Work Queue item.
+- `.ai/START_HERE.md`
+- `.ai/ARCHITECTURE.md` when the objective modifies `.ai/`
+- applicable ADRs, contracts, schemas, and governed objectives
 
 ---
 

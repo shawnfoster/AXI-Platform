@@ -1,7 +1,7 @@
 # AI-004 — AXI Platform Architecture Context
 
-**Version:** 1.0.0  
-**Status:** Approved  
+**Version:** 1.1.0
+**Status:** Approved
 **Authority:** AXI Platform
 
 ---
@@ -143,7 +143,7 @@ Every AI agent shall:
 
 - Read governance before implementation.
 - Respect approved architecture.
-- Implement one work item at a time.
+- Implement one governed objective at a time.
 - Produce deterministic outputs.
 - Stop after completing the assigned work.
 

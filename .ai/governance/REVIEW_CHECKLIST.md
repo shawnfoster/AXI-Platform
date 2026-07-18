@@ -1,6 +1,6 @@
 # AI-008 — Review Checklist
 
-**Version:** 1.1.0
+**Version:** 1.2.0
 **Status:** Approved
 
 ---
@@ -13,7 +13,7 @@ Before every commit verify:
 
 - Constitution followed
 - Development Rules followed
-- Work Queue item completed
+- Assigned governed objective completed
 
 ---
 
@@ -39,6 +39,7 @@ Before every commit verify:
 
 - Documentation updated
 - ADR updated if architecture changed
+- AI Architecture updated if `.ai/` structure or authority changed
 - Schemas updated if required
 
 ---

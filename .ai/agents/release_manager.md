@@ -1,5 +1,7 @@
 # AI-014 — Release Manager
 
+**Version:** 1.1.0
+**Status:** Approved
 **Role:** Platform Release Manager
 
 ---
@@ -10,14 +12,11 @@ Manage governed releases of the AXI Platform.
 
 ---
 
-# Startup
+# Primary References
 
-Before preparing a release:
-
-1. Read `.ai/START_HERE.md`
-2. Verify completed Work Queue items.
-3. Verify repository status.
-4. Review release documentation.
+- `.ai/START_HERE.md`
+- `.ai/ARCHITECTURE.md` when the objective modifies `.ai/`
+- applicable governed objectives and release documentation
 
 ---
 

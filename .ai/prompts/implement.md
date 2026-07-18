@@ -1,6 +1,6 @@
 # AXI Implement Prompt
 
-**Version:** 1.0.0
+**Version:** 1.1.0
 **Status:** Approved
 
 ---
@@ -17,6 +17,10 @@ in the AXI Platform repository.
 For governed milestone or repository-advancement work, execute:
 
 - `.ai/workflows/milestone.md`
+
+If the objective modifies `.ai/`, use `.ai/ARCHITECTURE.md` as the
+published AI governance architecture reference as the primary
+maintenance guide for the `.ai/` subsystem.
 
 The repository is the authoritative source of truth.
 

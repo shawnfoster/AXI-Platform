@@ -1,6 +1,6 @@
 # AI-009 — Work Item Template
 
-**Version:** 1.0.0
+**Version:** 1.1.0
 **Status:** Approved
 
 ---
@@ -17,6 +17,8 @@ Priority:
 
 Owner:
 
+Objective Type:
+
 ---
 
 # Objective
@@ -32,6 +34,8 @@ Relevant ADRs:
 Relevant Schemas:
 
 Relevant Contracts:
+
+Applicable Workflow:
 
 ---
 
@@ -53,9 +57,9 @@ List measurable implementation requirements.
 
 # Validation
 
-Compile:
+Validation Tier:
 
-Tests:
+Commands Or Checks:
 
 Documentation:
 

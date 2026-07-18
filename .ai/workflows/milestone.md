@@ -1,6 +1,6 @@
 # AI-010 — Governed Milestone Workflow
 
-**Version:** 1.1.0
+**Version:** 1.4.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
 
@@ -12,9 +12,8 @@ Define the standard Codex governor workflow for governed milestone and
 repository-advancement work inside the AXI Platform repository.
 
 This workflow captures the governance-first implementation methodology
-established by the repository through the current published milestone
-sequence while preserving the repository, not the prompt, as the sole
-authority.
+established by the repository while preserving the repository, not the
+prompt, as the sole authority.
 
 ---
 
@@ -23,8 +22,10 @@ authority.
 Use this workflow when the assigned task requires one or more of the
 following:
 
-- implementing an approved work queue milestone
-- auditing repository readiness before milestone work
+- implementing an approved platform milestone
+- auditing repository readiness before governed implementation
+- executing a repository-advancement objective that is governed by
+  published repository evidence
 - publishing missing milestone-specific governance
 - updating repository status after governed implementation
 
@@ -62,9 +63,10 @@ Derive the current repository state from published repository evidence,
 including:
 
 - `README.md`
-- `CODEX_HANDOFF.md`
+- repository status and handoff documents
 - the applicable roadmap or dependency audit for the task domain
-- the assigned work queue item
+- the assigned governed objective and any published work queue item that
+  authorizes it
 - published ADRs, contracts, and schemas
 
 If those sources differ, update your understanding from the repository
@@ -76,9 +78,8 @@ before continuing.
 
 ## Phase 0 — Mandatory Startup
 
-Execute repository startup exactly as documented in:
-
-- `.ai/START_HERE.md`
+Execute the published repository startup sequence exactly as
+documented.
 
 Read every mandatory governance document referenced by startup.
 
@@ -91,13 +92,14 @@ Do not begin implementation until startup completes.
 
 ## Phase 1 — Repository Audit
 
-Audit the repository evidence relevant to the assigned milestone.
+Audit the repository evidence relevant to the assigned governed
+objective.
 
 Review at minimum:
 
 - `README.md`
-- `CODEX_HANDOFF.md`
-- the assigned work queue item
+- repository status and handoff documents
+- the assigned governed objective
 - the applicable roadmap and dependency matrix if published
 - applicable `Governance/ADR/`
 - applicable `Governance/Contracts/`
@@ -122,11 +124,12 @@ Do not assume work exists beyond published repository evidence.
 ## Phase 2 — Readiness Decision
 
 Implementation is authorized only when all required repository evidence
-for the assigned milestone is published and complete.
+for the assigned governed objective is published and complete.
 
 At minimum verify:
 
-- a published work queue item exists
+- a published work queue item exists when the objective is a platform
+  milestone
 - required ADRs are approved
 - required contracts are published
 - required schemas are published
@@ -151,7 +154,7 @@ missing repository evidence cannot be derived safely.
 
 ## Phase 3 — Implementation
 
-Implement only the assigned milestone.
+Implement only the assigned governed objective.
 
 Reuse published architecture and existing runtime abstractions.
 
@@ -176,11 +179,11 @@ published in:
 - `.ai/governance/DEVELOPMENT_RULES.md`
 
 Run every validation step required by that tier plus any stricter
-validation required by the assigned milestone or other published
+validation required by the assigned objective or other published
 repository governance.
 
-Use `.ai/context/COMMANDS.md` for canonical validation commands when
-published.
+Use the published AI command context for canonical validation commands
+when available.
 
 Repair failures before continuing.
 
@@ -210,6 +213,8 @@ Verify:
 Only after successful validation:
 
 - update repository status documents affected by the milestone
+- update AI governance maintenance documents when the objective changes
+  the `.ai/` subsystem
 - update roadmap or dependency documentation when repository state has
   changed
 - update handoff or README material when public repository state has

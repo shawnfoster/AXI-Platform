@@ -1,6 +1,6 @@
 # AI-006 — Development Rules
 
-**Version:** 1.2.0
+**Version:** 1.3.0
 **Status:** Approved
 
 ---
@@ -13,9 +13,16 @@ They supplement the Constitution by defining implementation behavior.
 
 ---
 
-# Rule 1 — One Work Item
+# Rule 1 — One Governed Objective
 
-Implement exactly one approved Work Queue item per development cycle.
+Implement exactly one governed objective per development cycle.
+
+For platform work, the governed objective is normally an approved Work
+Queue item.
+
+For `.ai/` maintenance, the governed objective may be one explicitly
+assigned AI governance maintenance objective when no dedicated AI work
+queue exists.
 
 Do not begin additional work automatically.
 
@@ -29,8 +36,9 @@ Read, understand, and follow:
 2. Constitution
 3. Architecture Context
 4. Commands
-5. Work Queue
+5. Assigned governed objective
 6. Applicable published workflow
+7. `.ai/ARCHITECTURE.md` when the objective modifies `.ai/`
 
 before modifying code.
 
@@ -141,7 +149,7 @@ Create or update an ADR before making architectural changes.
 
 # Rule 8 — Stop Condition
 
-When the assigned Work Queue item is complete:
+When the assigned governed objective is complete:
 
 - commit,
 - tag if appropriate,

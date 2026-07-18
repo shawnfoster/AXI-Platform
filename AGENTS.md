@@ -102,7 +102,7 @@ Architectural changes require an ADR.
 
 # Implementation Rules
 
-Implement only the assigned work item.
+Implement only the assigned governed objective.
 
 Do not perform unrelated cleanup.
 
@@ -130,13 +130,13 @@ Produce:
 - one logical commit
 - clear commit message
 
-Do not create multiple commits for one work item.
+Do not create multiple commits for one governed objective.
 
 ---
 
 # Completion
 
-When the assigned work item is complete:
+When the assigned governed objective is complete:
 
 - summarize completed work
 - summarize validation

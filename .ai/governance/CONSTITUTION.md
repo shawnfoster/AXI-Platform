@@ -1,6 +1,6 @@
 # AI-003 — AI Governance Constitution
 
-**Version:** 1.1.0
+**Version:** 1.2.0
 **Status:** Approved  
 **Authority:** AXI Platform Governance
 
@@ -49,10 +49,10 @@ Architectural changes require:
 
 Every significant implementation shall be traceable to:
 
-- A Work Queue item
-- One or more ADRs
-- Applicable standards
-- Applicable schemas
+- A governed objective
+- One or more ADRs when applicable
+- Applicable standards when published
+- Applicable schemas when applicable
 
 ---
 

@@ -1,6 +1,6 @@
 # AI-001 — START HERE
 
-Version: 1.3.0
+Version: 1.4.0
 Status: Approved
 Authority: AXI Platform Governance
 
@@ -76,21 +76,36 @@ Only block implementation if the active work item explicitly depends on unpublis
 
 ---
 
-## Phase 5 — Active Work Queue
+## Phase 5 — Assigned Objective
 
-Read only the assigned work item.
+Read only the assigned governed objective.
 
-Example:
+For platform implementation work, this is typically a published
+repository work item such as:
 
 Governance/WorkQueue/M8-Capability-Registry.md
 
-Complete only that work item.
+For `.ai/` maintenance work, this is the explicitly assigned AI
+governance maintenance objective.
+
+Complete only that objective.
 
 Do not begin another task automatically.
 
 ---
 
-## Phase 6 — Workflow Selection
+## Phase 6 — AI Governance Maintenance
+
+If the assigned objective modifies `.ai/`, read:
+
+- `.ai/ARCHITECTURE.md`
+
+This document is the primary maintenance reference for the AI
+governance subsystem.
+
+---
+
+## Phase 7 — Workflow Selection
 
 Read the published workflow that matches the assigned task.
 
@@ -147,7 +162,7 @@ Required verification includes:
 
 # Completion
 
-When the assigned work item is complete:
+When the assigned governed objective is complete:
 
 1. Run the validation required by the Validation Policy in
    `.ai/governance/DEVELOPMENT_RULES.md` and any stricter published
