@@ -1,17 +1,17 @@
 # AXI Runtime Dependency Matrix
 
-**Version:** 1.3.0
+**Version:** 1.5.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
-**Audit Date:** 2026-07-17
+**Audit Date:** 2026-07-18
 
 ---
 
 # Purpose
 
 This document audits the AXI runtime work queue against the repository
-state present on 2026-07-17 and records the governed Phase II runtime
-state after implementation of `M17`.
+state present on 2026-07-18 and records the governed Phase II runtime
+state after implementation of `M18`.
 
 The audit distinguishes between:
 
@@ -63,8 +63,8 @@ active work queue:
 9. `M16 Pipeline Runtime` is now implemented with published pipeline
    governance, runtime code, documentation, and tests, completing the
    current runtime foundation sequence through `M16`.
-10. `Runtime/API/` does not exist in the current repository, so no
-    post-`M17` API access surface is implemented.
+10. `Runtime/API/` now exists with runtime code, documentation, runtime
+    tests, and integration tests.
 11. `AXI-SCH-007 Platform Object` publishes `AXI-CLI` / `CLI` and
     `AXI-API` / `API` object taxonomy, while `ADR-0011` explicitly
     defers CLI and API execution surfaces beyond `M16`.
@@ -73,9 +73,13 @@ active work queue:
     satisfying the M17 governance entry gate.
 13. `Runtime/CLI/` is now implemented with runtime code, documentation,
     runtime tests, and integration tests, completing `M17`.
-14. `ADR-0013`, `API_CONTRACT`, and `AXI-SCH-014` remain placeholders,
-    so `M18` remains planning-only.
-15. GUI governance remains placeholder-only, so no GUI milestone is
+14. `ADR-0013 Runtime API Surface Boundary`, `API_CONTRACT`, and
+    `AXI-SCH-014 API Operation` are now published, satisfying the M18
+    governance entry gate.
+15. `M18 Runtime API` is now implemented with published API
+    governance, runtime code, documentation, runtime tests, and
+    integration tests, completing `M18`.
+16. GUI governance remains placeholder-only, so no GUI milestone is
     published in this audit.
 
 ---
@@ -113,7 +117,7 @@ active work queue:
 | M15 | `Governance/WorkQueue/M15-Engine-Registry.md` | Engine registry | Registry Foundation, Capability Registry, Service Registry, Event Bus, Dependency Resolver, Validation Framework, Plugin Loader, Application Registry, Platform Object Model | `Runtime/EngineRegistry/` | `Governance/ADR/ADR-0010_Engine_Registry_Boundary.md`, `Governance/Contracts/ENGINE_CONTRACT.md`, and `Governance/Schemas/AXI-SCH-011_Engine.json` are published; `Runtime/EngineRegistry/` now contains `__init__.py`, `engine.py`, `lifecycle.py`, `registry.py`, `README.md`, and `Tests/Runtime/test_engine_registry.py` | M16 | Implemented |
 | M16 | `Governance/WorkQueue/M16-Pipeline-Runtime.md` | Pipeline runtime | Registry Foundation, Capability Registry, Service Registry, Event Bus, Dependency Resolver, Validation Framework, Plugin Loader, Application Registry, Engine Registry, Platform Object Model | `Runtime/Pipeline/` | `Governance/ADR/ADR-0011_Pipeline_Runtime_Boundary.md`, `Governance/Contracts/PIPELINE_CONTRACT.md`, and `Governance/Schemas/AXI-SCH-012_Pipeline.json` are published; `Runtime/Pipeline/` now contains `__init__.py`, `pipeline.py`, `runtime.py`, `stage.py`, `execution.py`, `README.md`, and `Tests/Runtime/test_pipeline_runtime.py` | Future runtime CLI and API milestones | Implemented |
 | M17 | `Governance/WorkQueue/M17-Runtime-CLI.md` | Runtime CLI surface | `M16 Pipeline Runtime`, `ADR-0011`, `AXI-SCH-007 Platform Object` | `Runtime/CLI/` | `AXI-SCH-007` publishes `AXI-CLI` / `CLI`; `M9 Service Registry` identifies the CLI as a runtime service consumer; `M16` names future runtime CLI milestones as downstream consumers; `ADR-0012`, `CLI_CONTRACT`, and `AXI-SCH-013` are published; `Runtime/CLI/` now contains `__init__.py`, `command.py`, `result.py`, `cli.py`, `__main__.py`, `README.md`; `Tests/Runtime/test_runtime_cli.py` and `Tests/Integration/test_runtime_cli_integration.py` exist | No later governed consumer published | Implemented |
-| M18 | `Governance/WorkQueue/M18-Runtime-API.md` | Runtime API surface | `M16 Pipeline Runtime`, `ADR-0011`, `AXI-SCH-007 Platform Object` | `Runtime/API/` | `AXI-SCH-007` publishes `AXI-API` / `API`; `M9 Service Registry` identifies APIs as runtime service consumers; `M16` names future runtime API milestones as downstream consumers; `Runtime/API/` does not yet exist; `ADR-0013`, `API_CONTRACT`, and `AXI-SCH-014` are published only as placeholders | No later governed consumer published | Planned |
+| M18 | `Governance/WorkQueue/M18-Runtime-API.md` | Runtime API surface | `M16 Pipeline Runtime`, `ADR-0011`, `AXI-SCH-007 Platform Object` | `Runtime/API/` | `AXI-SCH-007` publishes `AXI-API` / `API`; `M9 Service Registry` identifies APIs as runtime service consumers; `M16` names future runtime API milestones as downstream consumers; `ADR-0013`, `API_CONTRACT`, and `AXI-SCH-014` are now published; `Runtime/API/` now contains `__init__.py`, `api.py`, `operation.py`, `result.py`, `README.md`; `Tests/Runtime/test_runtime_api.py` and `Tests/Integration/test_runtime_api_integration.py` exist | No later governed consumer published | Implemented |
 
 ---
 
@@ -134,12 +138,13 @@ active work queue:
    change explicitly resolves numbering drift.
 6. Publish Phase II only where direct downstream runtime evidence exists
    in the repository; this audit supports CLI and API, but not GUI.
-7. Treat placeholder ADR, contract, and schema artifacts for `M18` as
-   planning evidence only. They do not authorize runtime implementation
-   until approved content replaces them.
+7. Treat `M18` as implemented only while `ADR-0013`, `API_CONTRACT`,
+   and `AXI-SCH-014` remain published alongside the `Runtime/API/`
+   implementation, documentation, and tests, and the upstream runtime
+   foundations through `M16` remain validated.
 8. Treat `M17` as implemented only while `ADR-0012`,
    `CLI_CONTRACT`, and `AXI-SCH-013` remain published alongside the
    `Runtime/CLI/` implementation, documentation, and tests, and the
    upstream runtime foundations through `M16` remain validated.
-9. Do not claim runtime implementation beyond `M17` while `Runtime/API/`
-   remains absent from the repository.
+9. Do not claim runtime implementation beyond `M18` without new
+   published work queue and milestone-specific governance.

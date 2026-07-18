@@ -16,10 +16,6 @@ The Runtime API shall expose governed programmatic access to the
 published runtime foundation completed through `M16 Pipeline Runtime`
 without replacing any existing runtime boundary.
 
-This milestone publishes planning only. Implementation may not begin
-until the API-specific ADR, contract, and schema placeholders are
-replaced with approved governance content.
-
 ---
 
 # Background
@@ -82,9 +78,14 @@ The Runtime API shall:
 - preserve published runtime ordering, validation, and lifecycle rules
 - return deterministic machine-readable results and errors
 
-This work item does not publish transport protocols, route shapes,
-request formats, response formats, or authentication behavior. Those
-boundaries remain reserved for milestone-specific governance.
+The exact operation vocabulary and operation payload boundary are
+published in:
+
+- `Governance/Contracts/API_CONTRACT.md`
+- `Governance/Schemas/AXI-SCH-014_API_Operation.json`
+
+This work item does not publish network transport, route shapes,
+authentication behavior, or authorization behavior.
 
 ---
 

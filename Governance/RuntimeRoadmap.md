@@ -1,9 +1,9 @@
 # AXI Runtime Roadmap
 
-**Version:** 1.3.0
+**Version:** 1.5.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
-**Audit Date:** 2026-07-17
+**Audit Date:** 2026-07-18
 
 ---
 
@@ -32,8 +32,9 @@ required upstream module is only a placeholder.
 - `M15 Engine Registry` is implemented and tested.
 - Pipeline runtime is implemented and tested.
 - Runtime CLI is implemented and tested.
-- Runtime Foundation is complete through `M17`.
-- No runtime implementation is claimed beyond `M17`.
+- Runtime API is implemented and tested.
+- Runtime Foundation is complete through `M18`.
+- No runtime implementation is claimed beyond `M18`.
 
 ---
 
@@ -49,8 +50,8 @@ already published:
 - `Governance/Schemas/AXI-SCH-007_Platform_Object.json` already
   publishes `AXI-CLI` / `CLI` and `AXI-API` / `API` object taxonomy.
 - `Runtime/CLI/` is now implemented.
-- The repository does not contain `Runtime/API/` implementation
-  modules.
+- `ADR-0013`, `API_CONTRACT`, and `AXI-SCH-014` are now published.
+- `Runtime/API/` is now implemented.
 
 GUI is not included in Phase II because the repository contains only
 placeholder GUI governance and no published downstream runtime milestone
@@ -100,7 +101,7 @@ dependency between the CLI and API milestones.
 | 8 | M15 Engine Registry | Complete | M9 through M14 complete and M15 governance published | Runtime module, tests, and validation pass |
 | 9 | M16 Pipeline Runtime | Complete | M9 through M15 complete and M16 governance published | Runtime module, tests, and validation pass |
 | 10 | M17 Runtime CLI | Complete | `M16` complete and `ADR-0012`, `CLI_CONTRACT`, and `AXI-SCH-013` published | `Runtime/CLI/` exists, validation passes, and runtime plus CLI tests pass |
-| 11 | M18 Runtime API | Planned | `M16` complete and `ADR-0013`, `API_CONTRACT`, and `AXI-SCH-014` published from placeholders | `Runtime/API/` exists, validation passes, and runtime plus API tests pass |
+| 11 | M18 Runtime API | Complete | `M16` complete and `ADR-0013`, `API_CONTRACT`, and `AXI-SCH-014` published | `Runtime/API/` exists, validation passes, and runtime plus API tests pass |
 
 ---
 

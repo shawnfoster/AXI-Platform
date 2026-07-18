@@ -1,1 +1,70 @@
-
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "AXI-SCH-014",
+  "title": "AXI API Operation",
+  "description": "Operation payload for the governed AXI Runtime API.",
+  "type": "object",
+  "required": [
+    "operation"
+  ],
+  "properties": {
+    "operation": {
+      "type": "string",
+      "enum": [
+        "inspect",
+        "validate",
+        "execute",
+        "execute-stage",
+        "pause",
+        "resume",
+        "stop"
+      ]
+    },
+    "target": {
+      "type": "string",
+      "enum": [
+        "plugins",
+        "applications",
+        "engines",
+        "stages",
+        "runtime"
+      ]
+    },
+    "stage_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "runtime_context": {
+      "type": "object",
+      "properties": {
+        "plugins": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "applications": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "engines": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "pipeline": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

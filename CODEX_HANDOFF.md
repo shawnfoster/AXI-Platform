@@ -31,14 +31,14 @@ The repository is the authoritative source of truth.
 
 Current Repository State
 
-- Runtime is implemented through `M17 Runtime CLI`.
+- Runtime is implemented through `M18 Runtime API`.
 - Implemented runtime foundation components:
   `PlatformObject`, Registry Foundation, `M8 Capability Registry`,
   `M9 Service Registry`, `M10 Event Bus`,
   `M11 Dependency Resolver`, `M12 Validation Framework`, and
   `M13 Plugin Loader`, `M14 Application Registry`, and
-  `M15 Engine Registry`, `M16 Pipeline Runtime`, and
-  `M17 Runtime CLI`.
+  `M15 Engine Registry`, `M16 Pipeline Runtime`,
+  `M17 Runtime CLI`, and `M18 Runtime API`.
 - Current runtime architecture:
   `PlatformObject` -> Registry Foundation -> `CapabilityRegistry` ->
   `ServiceRegistry`; `EventBus`, `DependencyResolver`,
@@ -46,7 +46,9 @@ Current Repository State
   `Application Registry`, `Engine Registry`, and `Pipeline Runtime`
   integrate with those foundations without replacing them, and
   `Runtime CLI` exposes a local in-process command surface over those
-  published runtime boundaries.
+  published runtime boundaries while `Runtime API` exposes a local
+  in-process programmatic surface over the same governed runtime
+  capabilities.
 - Governance status:
   `ADR-0006`, `ADR-0007`, `ADR-0008`, `ADR-0009`, and `ADR-0010` are
   accepted, `ADR-0011` is accepted, `REGISTER_CONTRACT`,
@@ -55,20 +57,22 @@ Current Repository State
   published, `AXI-SCH-009 Plugin Manifest`, `AXI-SCH-010 Application`,
   `AXI-SCH-011 Engine`, `AXI-SCH-012 Pipeline`, and
   `AXI-SCH-013 CLI Command` are published, `ADR-0012` is accepted,
-  `CLI_CONTRACT` is published,
+  `CLI_CONTRACT` is published, `ADR-0013` is accepted,
+  `API_CONTRACT` is published, and `AXI-SCH-014 API Operation` is
+  published,
   `M13 Plugin Loader`, `M14 Application Registry`,
   `M15 Engine Registry`, and `M16 Pipeline Runtime` are implemented and
-  validated, and `M17 Runtime CLI` is now implemented and validated.
+  validated, `M17 Runtime CLI` is implemented and validated, and
+  `M18 Runtime API` is implemented and validated.
 - Runtime freeze status:
   `Runtime-v1.2` is the accepted freeze tag through `M13`; current
   repository state extends beyond that freeze with `M14`, `M15`,
-  `M16`, and `M17` implemented.
+  `M16`, `M17`, and `M18` implemented.
 - Next governed phase:
-  `Governance/WorkQueue/M18-Runtime-API.md` remains published as the
-  next planning-only milestone and still requires milestone-specific
-  governance publication before implementation.
+  No later runtime work item is published after
+  `Governance/WorkQueue/M18-Runtime-API.md`.
 - Runtime milestone progression:
-  `M9` through `M17` are complete; `M18` is planned.
+  `M9` through `M18` are complete.
 
 ---
 
@@ -100,9 +104,6 @@ Governance Backlog
 - Placeholder `ADR-0003_Decision_Service.md`
 - Placeholder `ADR-0004_Reconstruction_Freeze.md`
 - Placeholder `ADR-0005_Platform_Refactor.md`
-- Placeholder `ADR-0013_Runtime_API_Surface_Boundary.md`
-- Placeholder `Governance/Contracts/API_CONTRACT.md`
-- Placeholder `AXI-SCH-014_API_Operation.json`
 
 ---
 
