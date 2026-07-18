@@ -40,8 +40,9 @@ Verify:
 
 Confirm:
 
-- Runtime compiles.
-- Tests pass.
+- Validation Policy followed.
+- Required compilation steps for the selected validation tier completed.
+- Required tests for the selected validation tier pass.
 - One logical commit.
 - Documentation updated.
 - No architectural violations.

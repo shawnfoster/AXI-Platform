@@ -116,8 +116,8 @@ Do not introduce speculative improvements.
 
 Before completion:
 
-- compile successfully
-- run required tests
+- follow the Validation Policy published in
+  `.ai/governance/DEVELOPMENT_RULES.md`
 - validate behavior
 - preserve determinism where practical
 

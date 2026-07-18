@@ -1,6 +1,6 @@
 # AI-008 — Review Checklist
 
-**Version:** 1.0.0
+**Version:** 1.1.0
 **Status:** Approved
 
 ---
@@ -26,16 +26,12 @@ Before every commit verify:
 
 ---
 
-## Runtime
+## Validation
 
-- Runtime compiles
-
----
-
-## Testing
-
-- Relevant tests pass
-- No failing tests introduced
+- Validation Policy followed
+- Required compilation steps for the selected validation tier completed
+- Required tests for the selected validation tier pass
+- No failing required validation introduced
 
 ---
 

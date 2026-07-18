@@ -36,6 +36,11 @@ controlled Codex governor is:
 
 - `.ai/workflows/milestone.md`
 
+Validation for that workflow is selected from the tiered Validation
+Policy published in:
+
+- `.ai/governance/DEVELOPMENT_RULES.md`
+
 ---
 
 Current Repository State
@@ -92,7 +97,8 @@ Implementation Rules
 - Preserve schemas.
 - Preserve contracts.
 - Preserve provenance.
-- Run validation.
+- Follow the Validation Policy in
+  `.ai/governance/DEVELOPMENT_RULES.md`.
 - Produce one logical commit.
 - Stop after completion.
 
@@ -121,6 +127,6 @@ Success
 A successful implementation leaves:
 
 - Clean repository
-- Passing tests
+- Required validation completed
 - Updated documentation
 - One logical commit

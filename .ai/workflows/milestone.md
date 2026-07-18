@@ -1,6 +1,6 @@
 # AI-010 — Governed Milestone Workflow
 
-**Version:** 1.0.0
+**Version:** 1.1.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
 
@@ -170,20 +170,21 @@ Every implementation change must trace directly to repository evidence.
 
 ## Phase 4 — Validation
 
-Run the validation required by repository governance and the assigned
-milestone.
+Select the applicable validation tier from the Validation Policy
+published in:
 
-At minimum, when applicable:
+- `.ai/governance/DEVELOPMENT_RULES.md`
 
-- compile affected modules
-- run milestone-specific tests
-- run runtime tests
-- run integration tests
-- run the full repository test suite
+Run every validation step required by that tier plus any stricter
+validation required by the assigned milestone or other published
+repository governance.
+
+Use `.ai/context/COMMANDS.md` for canonical validation commands when
+published.
 
 Repair failures before continuing.
 
-Do not update repository status while validation is failing.
+Do not update repository status while required validation is failing.
 
 ---
 

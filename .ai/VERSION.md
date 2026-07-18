@@ -1,6 +1,6 @@
 # AI Governance Version
 
-Version: 1.1.0
+Version: 1.2.0
 
 Status: Active
 
@@ -23,3 +23,8 @@ Open Publication Slots:
 - AI-011 and above
 
 This document tracks the evolution of the AXI AI Governance Layer.
+
+Recent Updates:
+- Tiered Validation Policy published in `AI-006 DEVELOPMENT_RULES`
+- Startup and milestone workflow updated to reference the Validation
+  Policy

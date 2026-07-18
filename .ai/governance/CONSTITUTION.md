@@ -1,6 +1,6 @@
 # AI-003 — AI Governance Constitution
 
-**Version:** 1.0.0  
+**Version:** 1.1.0
 **Status:** Approved  
 **Authority:** AXI Platform Governance
 
@@ -70,8 +70,9 @@ Every implementation must be reproducible.
 
 Required verification includes:
 
-- Successful compilation
-- Passing automated tests
+- Validation proportional to repository impact
+- Successful compilation where applicable
+- Passing automated tests where applicable
 - Deterministic behavior where practical
 
 ---

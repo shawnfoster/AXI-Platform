@@ -1,6 +1,6 @@
 # AI-006 — Development Rules
 
-**Version:** 1.1.0
+**Version:** 1.2.0
 **Status:** Approved
 
 ---
@@ -54,14 +54,70 @@ Avoid mixing refactoring, new features, and governance updates.
 
 ---
 
-# Rule 5 — Testing
+# Rule 5 — Validation Policy
 
 Before completing work:
 
-- compile affected modules,
-- run applicable tests,
+- select validation proportional to repository impact,
+- run the highest applicable validation tier,
+- run any stricter task-specific or milestone-specific validation
+  required by published repository governance,
 - resolve failures,
 - leave the repository clean.
+
+Validation tiers:
+
+## Tier 1 — Documentation-Only Changes
+
+Use for changes limited to documentation, comments, prompts, or other
+non-executable repository text.
+
+Required validation:
+
+- `git diff --check`
+- markdown validation, if available
+- link or reference validation, if available
+
+## Tier 2 — Governance And AI Workflow Changes
+
+Use for changes to AI governance, startup instructions, workflows,
+handoff instructions, prompts, or related repository-control documents.
+
+Required validation:
+
+- all Tier 1 validation
+- startup consistency review
+- AI workflow consistency review
+
+## Tier 3 — Runtime Implementation Changes
+
+Use for governed runtime implementation work that does not alter the
+broader runtime framework boundary.
+
+Required validation:
+
+- compile affected runtime modules
+- milestone-specific tests
+- runtime tests
+
+## Tier 4 — Architectural Or Runtime Framework Changes
+
+Use for architecture-affecting runtime changes and other changes to the
+runtime framework boundary.
+
+Required validation:
+
+- all Tier 3 validation
+- integration tests
+- full repository test suite
+
+Validation selection rules:
+
+- if a change spans multiple tiers, run the highest applicable tier
+- if published governance requires more than the selected tier, run the
+  stricter validation
+- if an optional validation tool is unavailable, record that condition
+  and run the remaining required validation
 
 ---
 

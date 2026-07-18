@@ -1,6 +1,6 @@
 # AI-005 — Canonical Commands
 
-**Version:** 1.0.0  
+**Version:** 1.1.0
 **Status:** Approved
 
 ---
@@ -32,6 +32,39 @@ List tags:
 
 ```bash
 git tag
+```
+
+---
+
+# Validation Policy Reference
+
+Select the applicable validation tier from:
+
+`.ai/governance/DEVELOPMENT_RULES.md`
+
+Then execute the commands required by that tier plus any stricter
+task-specific governance.
+
+---
+
+# Documentation Validation
+
+Check patch formatting:
+
+```bash
+git diff --check
+```
+
+Validate Markdown when a tool is available:
+
+```bash
+command -v markdownlint >/dev/null && markdownlint <files>
+```
+
+Validate links or references when a tool is available:
+
+```bash
+command -v markdown-link-check >/dev/null && markdown-link-check <files>
 ```
 
 ---
@@ -104,12 +137,9 @@ git tag <tag>
 
 # Required Validation
 
-Every implementation must complete:
-
-- Successful compilation
-- Successful tests
-- Clean git status
-- Documentation updates
+Every change must complete the validation required by the selected
+validation tier in `DEVELOPMENT_RULES.md` plus any stricter published
+task-specific governance.
 
 ---
 
@@ -117,9 +147,9 @@ Every implementation must complete:
 
 Before stopping:
 
-- Runtime compiles
-- Tests pass
-- Work Queue updated
+- Required validation tier completed
+- Applicable compile and test commands pass
+- Work Queue updated when required
 - Documentation updated
 - One logical commit
 - Repository clean

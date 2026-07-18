@@ -1,6 +1,6 @@
 # AI-001 — START HERE
 
-Version: 1.2.0
+Version: 1.3.0
 Status: Approved
 Authority: AXI Platform Governance
 
@@ -139,8 +139,8 @@ Every implementation must preserve:
 
 Required verification includes:
 
-- Successful compilation
-- Passing automated tests
+- Validation that follows the Validation Policy published in
+  `.ai/governance/DEVELOPMENT_RULES.md`
 - Deterministic behavior where practical
 
 ---
@@ -149,10 +149,11 @@ Required verification includes:
 
 When the assigned work item is complete:
 
-1. Run validation.
-2. Run tests.
-3. Produce one logical commit.
-4. Summarize completed work.
-5. Stop.
+1. Run the validation required by the Validation Policy in
+   `.ai/governance/DEVELOPMENT_RULES.md` and any stricter published
+   task-specific governance.
+2. Produce one logical commit.
+3. Summarize completed work.
+4. Stop.
 
 Never begin another work item automatically.

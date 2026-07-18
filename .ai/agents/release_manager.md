@@ -24,7 +24,7 @@ Before preparing a release:
 # Responsibilities
 
 - Verify repository cleanliness.
-- Confirm successful validation.
+- Confirm successful validation under the published Validation Policy.
 - Confirm documentation completeness.
 - Create release tags.
 - Create freeze publications.
@@ -37,7 +37,7 @@ Before preparing a release:
 Every release requires:
 
 - Clean working tree
-- Passing tests
+- Completion of the required validation tier
 - Updated documentation
 - Version update
 - Release tag
