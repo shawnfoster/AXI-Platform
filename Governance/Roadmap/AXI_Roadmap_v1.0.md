@@ -1,6 +1,6 @@
 # AXI Decision Intelligence Roadmap
 
-**Version:** 1.11.0
+**Version:** 1.12.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
 **Audit Date:** 2026-07-19
@@ -72,6 +72,12 @@ dependencies through `M18`.
   protected-knowledge baseline for canonical `Knowledge` objects within
   `M22` without changing the active milestone or authorizing runtime
   or cybersecurity implementation.
+- `ADR-0024`, `M24`, `PUB-019`, and `DGM-010` now publish the
+  Architecture Core as the post-`M23` constitutional foundation for
+  shared primitives, state surfaces, operations, transformations,
+  identity, lineage, authority, evidence, and relationship rules
+  without changing `M22` as the repository's active milestone or
+  authorizing runtime, schema, or implementation work.
 - No decision-domain runtime implementation is claimed by this roadmap.
 
 ---
@@ -88,9 +94,10 @@ dependencies through `M18`.
 | 6 | Presentation Architecture, Design System, and Visualization Governance | Complete | Phase 5 complete plus approved `M21` work item | Dashboard, widget, design-system, artifact-specification, and visualization governance are published with canonical registers and diagrams |
 | 7 | Core Organizational Digital Twin and Knowledge Object Schemas | In Progress | Phase 6 complete plus published `M22` work item and approved `ADR-0019` | Published schemas and registers exist for core organization, person, role, knowledge, expertise, policy, timeline, resource, and dependency domains |
 | 8 | Knowledge Expansion and Repository Operationalization Governance | Planned | Phase 7 complete plus published `M23` work item and approved `ADR-0020` | Published governance exists for external knowledge expansion, operational workspace boundaries, Operational Pack derivation, and canonical diagram coverage without authorizing runtime |
-| 9 | Engine-Specific Governance by Layer | Planned | Phase 8 complete | Engine-specific ADRs, contracts, and work items are published only for implementation-ready engine domains |
-| 10 | Decision Runtime and Application Planning | Planned | Phase 9 complete | Published work items define how decision-domain runtimes or applications reuse the existing AXI runtime foundation |
-| 11 | Decision-Domain Runtime Implementation | Blocked pending governance | Phase 10 complete | Repository evidence demonstrates implemented decision-domain runtime or application milestones |
+| 9 | Architecture Core Constitutional Foundation | Planned | Phase 8 complete plus published `M24` work item and approved `ADR-0024` | Published constitutional governance exists for the shared primitive set, Architecture Core layers, invariants, state surfaces, operation vocabulary, transformation vocabulary, identity rules, lineage rules, authority rules, and relationship rules without authorizing runtime or schema implementation |
+| 10 | Engine-Specific Governance by Layer | Planned | Phase 9 complete | Engine-specific ADRs, contracts, and work items are published only for implementation-ready engine domains |
+| 11 | Decision Runtime and Application Planning | Planned | Phase 10 complete | Published work items define how decision-domain runtimes or applications reuse the existing AXI runtime foundation |
+| 12 | Decision-Domain Runtime Implementation | Blocked pending governance | Phase 11 complete | Repository evidence demonstrates implemented decision-domain runtime or application milestones |
 
 ---
 
@@ -125,7 +132,8 @@ flowchart TD
     C --> D
     E --> D
     D --> K["Knowledge Expansion / Repository Operationalization Governance"]
-    K --> G["Engine-Specific Governance by Layer"]
+    K --> AC["Architecture Core Constitutional Foundation"]
+    AC --> G["Engine-Specific Governance by Layer"]
     G --> P["Decision Runtime and Application Planning"]
     P --> I["Decision-Domain Runtime Implementation"]
 ```
@@ -156,6 +164,9 @@ flowchart TD
     `CTG-001` is satisfied by repository evidence.
 12. Do not treat conversational completion claims as sufficient
     authority for a constitutional phase transition.
+13. Do not publish later cross-domain governance that violates the
+    `M24` Architecture Core constitutional foundation once it is
+    published.
 
 ---
 
@@ -169,10 +180,14 @@ The next repository-advancement priorities after this roadmap are:
 2. Execute `M23` to keep external knowledge expansion, Pack
    derivation, and operational workspace governance ahead of future
    runtime or connector planning.
-3. Publish engine-specific ADRs for the first implementation-ready
-   engine domains only after the upstream knowledge and governance
-   phases remain consistent.
-4. Publish work items for decision-domain runtime reuse only after the
+3. Use `M24` as the constitutional foundation for future
+   cross-domain governance so later milestones reuse the shared
+   primitive, state, operation, lineage, and authority model rather
+   than inventing new architectural abstractions.
+4. Publish engine-specific ADRs for the first implementation-ready
+   engine domains only after the upstream knowledge and Architecture
+   Core phases remain consistent.
+5. Publish work items for decision-domain runtime reuse only after the
    upstream governance exists.
 
 ---
@@ -188,16 +203,20 @@ The next repository-advancement priorities after this roadmap are:
 - `Governance/ADR/ADR-0021_Constitutional_Transition_Gate_Governance.md`
 - `Governance/ADR/ADR-0022_Prompt_Operations_Manual_Governance.md`
 - `Governance/ADR/ADR-0023_Information_Governance_and_Knowledge_Protection_Governance.md`
+- `Governance/ADR/ADR-0024_Architecture_Core_Constitutional_Foundation.md`
 - `Governance/WorkQueue/M23-Knowledge-Expansion-and-Repository-Operationalization-Planning.md`
+- `Governance/WorkQueue/M24-Architecture-Core.md`
 - `Governance/Publications/AXI_Organization_Intelligence_Architecture.md`
 - `Governance/Publications/AXI_Organization_Register.md`
 - `Governance/Publications/AXI_Knowledge_Register.md`
 - `Governance/Publications/AXI_Information_Governance_and_Knowledge_Protection_Model.md`
+- `Governance/Publications/AXI_Architecture_Core_Operating_System.md`
 - `Governance/Publications/AXI_Organization_Profile_Model.md`
 - `Governance/Publications/PromptOperations/AXI_Prompt_Operations_Manual.md`
 - `Governance/Publications/PromptOperations/AXI_Prompt_Operations_Index.md`
 - `Governance/TransitionGates/CTG-001_M22_Completion_Gate.md`
 - `Governance/Publications/Diagrams/DGM-009_Knowledge_Expansion_and_Operationalization_Topology.md`
+- `Governance/Publications/Diagrams/DGM-010_Architecture_Core_Constitutional_Topology.md`
 - `Governance/Publications/Diagrams/DGM-008_Organization_Intelligence_ODT_Foundation_Map.md`
 - `Governance/RuntimeRoadmap.md`
 - `Governance/DependencyMatrix.md`

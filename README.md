@@ -15,8 +15,8 @@ Current platform status:
   command execution surface.
 - `M18 Runtime API` is implemented, validated, and extends the current
   governed runtime through the local programmatic execution surface.
-- Decision Intelligence architecture is published through
-  `ADR-0014` through `ADR-0023`,
+- Decision Intelligence architecture and the Architecture Core are
+  published through `ADR-0014` through `ADR-0024`,
   `AXI-SCH-006`, `AXI-SCH-015` through `AXI-SCH-031`,
   `DECISION_REGISTER`, `CAPABILITY_REGISTER`, and
   `AXI_Roadmap_v1.0`.
@@ -33,6 +33,9 @@ Current platform status:
 - The next planned governance-only milestone is
   `Governance/WorkQueue/M23-Knowledge-Expansion-and-Repository-Operationalization-Planning.md`,
   governed by `ADR-0020`.
+- The next planned post-`M23` constitutional milestone is
+  `Governance/WorkQueue/M24-Architecture-Core.md`,
+  governed by `ADR-0024`.
 - `ADR-0021` and
   `Governance/TransitionGates/CTG-001_M22_Completion_Gate.md`
   now publish Constitutional Transition Gate governance, and
@@ -62,6 +65,12 @@ Current platform status:
   Knowledge Expansion and Repository Operationalization governance
   baseline without authorizing runtime, connectors, indexing, or
   persistence changes.
+- `ADR-0024`, `M24`, `PUB-019`, and `DGM-010` now publish the
+  Architecture Core as the constitutional foundation for shared
+  primitives, state surfaces, operations, transformations, identity,
+  lineage, authority, evidence, and relationship rules across governed
+  AXI families without changing `M22` as the active milestone or
+  authorizing runtime, schema, or implementation work.
 - No decision-domain runtime implementation is claimed by the
   repository.
 - No runtime implementation is claimed beyond `M18`.

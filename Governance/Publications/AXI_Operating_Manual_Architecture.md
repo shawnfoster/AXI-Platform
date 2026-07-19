@@ -2,7 +2,7 @@
 
 **Publication ID:** `PUB-002`
 **Publication Type:** `Operating Manual`
-**Version:** `1.0.0`
+**Version:** `1.1.0`
 **Status:** `Approved`
 **Lifecycle State:** `Active`
 **Owner:** `AXI Platform Governance`
@@ -52,7 +52,7 @@ The Operating Manual shall not:
 
 | Volume | Title | Purpose | Governing Publications | Relationship to the Platform |
 | --- | --- | --- | --- | --- |
-| I | Foundations | Publish the constitutional basis, platform mission, glossary, architectural principles, and repository authority model. | Constitution, `ADR-0014`, `ADR-0017` | Anchors every operational interpretation to the approved platform baseline. |
+| I | Foundations | Publish the constitutional basis, platform mission, glossary, architectural principles, and repository authority model. | Constitution, `PUB-019`, `ADR-0014`, `ADR-0017` | Anchors every operational interpretation to the approved platform baseline. |
 | II | Platform Operations | Explain operation of the implemented runtime foundation through `M18`, repository controls, release discipline, and operator responsibilities. | `Governance/RuntimeRoadmap.md`, `Governance/DependencyMatrix.md`, runtime ADRs, `ADR-0017` | Describes how the current runtime substrate is operated without claiming later runtime implementation. |
 | III | Decision Intelligence | Explain the canonical decision lifecycle, decision object model, capabilities, engine layering, and human approval boundary. | `ADR-0014`, `DECISION_REGISTER`, `CAPABILITY_REGISTER` | Connects platform operations to AXI's decision-centric mission. |
 | IV | Knowledge Management | Explain AXI Methodology, External Knowledge, Organizational Knowledge, Learned Knowledge, Governed Expertise, and evidence handling. | `ADR-0014`, `ADR-0015`, `ADR-0017` | Preserves strict knowledge separation and provenance. |
@@ -165,6 +165,7 @@ The Operating Manual shall not:
 # Related
 
 - `Governance/ADR/ADR-0017_Publication_and_Documentation_Governance.md`
+- `Governance/Publications/AXI_Architecture_Core_Operating_System.md`
 - `Governance/Publications/PUBLICATION_REGISTER.md`
 - `Governance/Publications/DIAGRAM_REGISTER.md`
 - `Governance/Publications/Diagrams/DGM-005_Operating_Manual_Volume_Map.md`

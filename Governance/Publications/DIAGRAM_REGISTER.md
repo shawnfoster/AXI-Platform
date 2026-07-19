@@ -2,7 +2,7 @@
 
 **Publication ID:** `PUB-004`
 **Publication Type:** `Register`
-**Version:** `1.5.0`
+**Version:** `1.6.0`
 **Status:** `Approved`
 **Lifecycle State:** `Active`
 **Owner:** `AXI Platform Governance`
@@ -35,6 +35,7 @@ publication relationships required to keep those diagrams authoritative.
 | `DGM-007` | Presentation Services Topology | `ADR-0018` | Presentation Architecture, Dashboard Architecture, Design System Architecture, Visualization Standards, Dependency Graphs | `Governance/Publications/Diagrams/DGM-007_Presentation_Services_Topology.md` | `ADR-0014`, `ADR-0017`, `ADR-0018` | `AXI-SCH-007`, `AXI-SCH-022`, `AXI-SCH-023`, `AXI-SCH-024`, `AXI-SCH-025`, `AXI-SCH-026`, `AXI-SCH-027`, `AXI-SCH-028` |
 | `DGM-008` | Organization Intelligence ODT Foundation Map | `PUB-011` | Organizational Digital Twin, Knowledge Architecture, Object Relationships, Dependency Graphs | `Governance/Publications/Diagrams/DGM-008_Organization_Intelligence_ODT_Foundation_Map.md` | `ADR-0014`, `ADR-0017`, `ADR-0018`, `ADR-0019` | `AXI-SCH-006`, `AXI-SCH-007`, `AXI-SCH-023`, `AXI-SCH-029`, `AXI-SCH-030` |
 | `DGM-009` | Knowledge Expansion And Operationalization Topology | `ADR-0020` | Knowledge Architecture, Workflow Diagrams, Dependency Graphs, Object Relationships | `Governance/Publications/Diagrams/DGM-009_Knowledge_Expansion_and_Operationalization_Topology.md` | `ADR-0014`, `ADR-0015`, `ADR-0017`, `ADR-0018`, `ADR-0019`, `ADR-0020` | `AXI-SCH-006`, `AXI-SCH-007`, `AXI-SCH-015`, `AXI-SCH-018`, `AXI-SCH-019`, `AXI-SCH-020`, `AXI-SCH-021`, `AXI-SCH-023`, `AXI-SCH-029`, `AXI-SCH-030` |
+| `DGM-010` | Architecture Core Constitutional Topology | `PUB-019` | Platform Architecture, Object Relationships, Workflow Diagrams, Dependency Graphs | `Governance/Publications/Diagrams/DGM-010_Architecture_Core_Constitutional_Topology.md` | `ADR-0014`, `ADR-0015`, `ADR-0017`, `ADR-0018`, `ADR-0019`, `ADR-0020`, `ADR-0021`, `ADR-0022`, `ADR-0023`, `ADR-0024` | `AXI-SCH-006`, `AXI-SCH-007`, `AXI-SCH-015`, `AXI-SCH-018`, `AXI-SCH-022`, `AXI-SCH-023`, `AXI-SCH-029`, `AXI-SCH-030`, `AXI-SCH-031` |
 
 ---
 
@@ -51,6 +52,7 @@ publication relationships required to keep those diagrams authoritative.
 | Presentation Services Governance | `DGM-007` | Published |
 | Organization Intelligence Architecture | `DGM-008` | Published |
 | Knowledge Expansion And Repository Operationalization Governance | `DGM-009` | Published |
+| Architecture Core Constitutional Foundation | `DGM-010` | Published |
 
 A new major published architectural domain shall not be considered
 diagram-complete until this register records at least one approved
@@ -76,6 +78,8 @@ canonical diagram for that domain.
 - `Governance/ADR/ADR-0018_Presentation_Services_Governance.md`
 - `Governance/ADR/ADR-0021_Constitutional_Transition_Gate_Governance.md`
 - `Governance/ADR/ADR-0022_Prompt_Operations_Manual_Governance.md`
+- `Governance/ADR/ADR-0024_Architecture_Core_Constitutional_Foundation.md`
 - `Governance/Publications/PUBLICATION_REGISTER.md`
 - `Governance/Publications/AXI_Organization_Intelligence_Architecture.md`
+- `Governance/Publications/AXI_Architecture_Core_Operating_System.md`
 - `Governance/Standards/DOCUMENTATION_VISUALIZATION_STANDARD.md`

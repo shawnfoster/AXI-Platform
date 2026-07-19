@@ -2,7 +2,7 @@
 
 **Publication ID:** `PUB-016`
 **Publication Type:** `Prompt Operations Manual`
-**Version:** `1.0.0`
+**Version:** `1.1.0`
 **Status:** `Approved`
 **Lifecycle State:** `Active`
 **Owner:** `AXI Platform Governance`
@@ -112,7 +112,7 @@ If the route is composite, the governing artifacts shall be explicit.
   shall not receive governed route identifiers until approved content
   exists.
 - Milestone-route coverage exists only for published work items:
-  `M8` through `M18`, `M21`, `M22`, and `M23`.
+  `M8` through `M18`, `M21`, `M22`, `M23`, and `M24`.
 - No governed milestone prompt route currently exists for `M1` through
   `M7`, `M19`, or `M20`; those gaps remain explicit rather than
   inferred.

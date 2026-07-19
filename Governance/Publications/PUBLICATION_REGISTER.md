@@ -2,7 +2,7 @@
 
 **Publication ID:** `PUB-001`
 **Publication Type:** `Register`
-**Version:** `1.7.0`
+**Version:** `1.8.0`
 **Status:** `Approved`
 **Lifecycle State:** `Active`
 **Owner:** `AXI Platform Governance`
@@ -59,6 +59,7 @@ publications.
 | `PUB-016` | AXI Prompt Operations Manual | Prompt Operations Manual | `Governance/Publications/PromptOperations/AXI_Prompt_Operations_Manual.md` | `ADR-0017`, `ADR-0021`, `ADR-0022` | `AXI-SCH-022` | `CAP-018` | Semiannual and change-triggered |
 | `PUB-017` | AXI Prompt Operations Index | Register | `Governance/Publications/PromptOperations/AXI_Prompt_Operations_Index.md` | `ADR-0017`, `ADR-0022` | `AXI-SCH-022` | `CAP-018` | Annual and change-triggered |
 | `PUB-018` | AXI Information Governance And Knowledge Protection Model | Reference | `Governance/Publications/AXI_Information_Governance_and_Knowledge_Protection_Model.md` | `ADR-0015`, `ADR-0016`, `ADR-0018`, `ADR-0019`, `ADR-0023` | `AXI-SCH-015`, `AXI-SCH-020`, `AXI-SCH-030`, `AXI-SCH-031` | `CAP-002`, `CAP-004`, `CAP-011`, `CAP-023` | Semiannual and change-triggered |
+| `PUB-019` | AXI Architecture Core Operating System | Operating System | `Governance/Publications/AXI_Architecture_Core_Operating_System.md` | `ADR-0014`, `ADR-0015`, `ADR-0017`, `ADR-0018`, `ADR-0019`, `ADR-0020`, `ADR-0021`, `ADR-0022`, `ADR-0023`, `ADR-0024` | `AXI-SCH-006`, `AXI-SCH-007`, `AXI-SCH-015`, `AXI-SCH-018`, `AXI-SCH-022`, `AXI-SCH-023`, `AXI-SCH-029`, `AXI-SCH-030`, `AXI-SCH-031` | `CAP-002`, `CAP-003`, `CAP-010`, `CAP-011`, `CAP-018`, `CAP-023` | Annual and change-triggered |
 
 ---
 
@@ -116,8 +117,10 @@ shall be measured rather than assumed.
 - `Governance/ADR/ADR-0021_Constitutional_Transition_Gate_Governance.md`
 - `Governance/ADR/ADR-0022_Prompt_Operations_Manual_Governance.md`
 - `Governance/ADR/ADR-0023_Information_Governance_and_Knowledge_Protection_Governance.md`
+- `Governance/ADR/ADR-0024_Architecture_Core_Constitutional_Foundation.md`
 - `Governance/Publications/DIAGRAM_REGISTER.md`
 - `Governance/Publications/AXI_Operating_Manual_Architecture.md`
+- `Governance/Publications/AXI_Architecture_Core_Operating_System.md`
 - `Governance/Publications/PromptOperations/AXI_Prompt_Operations_Manual.md`
 - `Governance/Publications/PromptOperations/AXI_Prompt_Operations_Index.md`
 - `Governance/Publications/AXI_Field_Manual_Architecture.md`

@@ -18,17 +18,19 @@ Conversation history is not authoritative.
 - Current Active Milestone: `M22`
 - Current Repository Version: `AXI-Platform-v2.1`
 - Current Constitutional Baseline:
-  `ADR-0006` through `ADR-0023`, `AXI-SCH-006` through `AXI-SCH-031`,
-  `PUB-001` through `PUB-018`, and `DGM-001` through `DGM-009`
+  `ADR-0006` through `ADR-0024`, `AXI-SCH-006` through `AXI-SCH-031`,
+  `PUB-001` through `PUB-019`, and `DGM-001` through `DGM-010`
 - Current Active CTG: `CTG-001`
 - Current Runtime Boundary: `M18 Runtime API`
 - Current Repository State:
   `M22` governance is in progress, protected-knowledge governance is
   now published for canonical `Knowledge` objects, `M23` is planned,
-  and no runtime implementation is authorized beyond `M18`
+  `M24` Architecture Core is now published as the next constitutional
+  foundation after `M23`, and no runtime implementation is authorized
+  beyond `M18`
 - Current Branch: `main`
-- Last Approved ADR: `ADR-0023`
-- Last Approved Publication: `PUB-018`
+- Last Approved ADR: `ADR-0024`
+- Last Approved Publication: `PUB-019`
 - Last Completed Work Item: `M21`
 - Last Commit:
   verify live repository state during startup with
@@ -105,6 +107,9 @@ Publication Families
 - Applied Practice
 - Visual Governance
 
+The Constitutional Core now includes the first Architecture Core
+Operating System publication.
+
 Schemas
 
 - Decision and platform schemas are published.
@@ -172,7 +177,7 @@ Milestone prompt organization:
 
 - Prompt routes use milestone identifiers such as `POM-M22-001`.
 - Current repository evidence publishes milestone coverage for `M8`
-  through `M18`, `M21`, `M22`, and `M23`.
+  through `M18`, `M21`, `M22`, `M23`, and `M24`.
 - No governed milestone prompt routes currently exist for `M1` through
   `M7`, `M19`, or `M20`.
 
@@ -198,7 +203,7 @@ Medium
 
 - Historical milestone numbering drift remains documented rather than
   normalized; current governance starts from the published `M8`
-  through `M18`, then `M21` through `M23`.
+  through `M18`, then `M21` through `M24`.
 
 Low
 
@@ -223,11 +228,14 @@ Current opportunities:
 - Finish the remaining `M22` `ODT` schema and register set.
 - Use the new Prompt Operations baseline to keep future reviews and
   milestone work repository-driven.
+- Use `M24` to keep future cross-domain governance aligned to one
+  constitutional foundation.
 
 Outstanding governance work:
 
 - Remaining `M22` object families
-- Eventual `M23` planning execution after `M22`
+- Eventual `M23` planning execution after `M22`, with `M24` preserved
+  as the downstream constitutional foundation
 - Future transition-gate expansion only when repository evidence
   requires it
 
@@ -239,6 +247,8 @@ Outstanding governance work:
   constitutional artifacts.
 - Keep `CTG-001` closed until repository evidence satisfies every gate
   criterion.
+- Use `M24` as the constitutional foundation for future cross-domain
+  governance instead of introducing new architectural abstractions.
 - Use governed POM identifiers rather than conversational prompt recall
   for future startup, review, and milestone routing.
 - Do not authorize runtime or operational implementation beyond the

@@ -2,7 +2,7 @@
 
 **Publication ID:** `PUB-017`
 **Publication Type:** `Register`
-**Version:** `1.0.0`
+**Version:** `1.1.0`
 **Status:** `Approved`
 **Lifecycle State:** `Active`
 **Owner:** `AXI Platform Governance`
@@ -58,6 +58,7 @@ has not published.
 | `M21` | `POM-M21-001` | Dashboard Design System And Visualization Services Route | `Governance/WorkQueue/M21-Dashboard-Design-System-Visualization-Services.md` | Historical Complete | Historical reference only unless explicitly reassigned. |
 | `M22` | `POM-M22-001` | Core Organizational Digital Twin And Knowledge Object Schemas Route | `Governance/WorkQueue/M22-Core-Organizational-Digital-Twin-and-Knowledge-Object-Schemas.md` | Published Active | Governance-only continuation; no runtime implementation is authorized. |
 | `M23` | `POM-M23-001` | Knowledge Expansion And Repository Operationalization Planning Route | `Governance/WorkQueue/M23-Knowledge-Expansion-and-Repository-Operationalization-Planning.md` | Published Planned | Planning-only route; it does not supersede active `M22` authority. |
+| `M24` | `POM-M24-001` | Architecture Core Constitutional Foundation Route | `Governance/WorkQueue/M24-Architecture-Core.md` | Published Planned | Governance-only publication route; it does not supersede active `M22` authority or planned `M23` sequencing. |
 
 ---
 
