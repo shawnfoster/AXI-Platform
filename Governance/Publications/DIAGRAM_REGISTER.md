@@ -2,7 +2,7 @@
 
 **Publication ID:** `PUB-004`
 **Publication Type:** `Register`
-**Version:** `1.2.0`
+**Version:** `1.3.0`
 **Status:** `Approved`
 **Lifecycle State:** `Active`
 **Owner:** `AXI Platform Governance`
@@ -33,6 +33,7 @@ publication relationships required to keep those diagrams authoritative.
 | `DGM-005` | Operating Manual Volume Map | `PUB-002` | Workflow Diagrams, Dependency Graphs | `Governance/Publications/Diagrams/DGM-005_Operating_Manual_Volume_Map.md` | `ADR-0017` | `AXI-SCH-022`, `AXI-SCH-023` |
 | `DGM-006` | Field Manual Integration Map | `PUB-003` | Workflow Diagrams, Object Relationships | `Governance/Publications/Diagrams/DGM-006_Field_Manual_Integration_Map.md` | `ADR-0014`, `ADR-0016`, `ADR-0017` | `AXI-SCH-006`, `AXI-SCH-021`, `AXI-SCH-022`, `AXI-SCH-023` |
 | `DGM-007` | Presentation Services Topology | `ADR-0018` | Presentation Architecture, Dashboard Architecture, Design System Architecture, Visualization Standards, Dependency Graphs | `Governance/Publications/Diagrams/DGM-007_Presentation_Services_Topology.md` | `ADR-0014`, `ADR-0017`, `ADR-0018` | `AXI-SCH-007`, `AXI-SCH-022`, `AXI-SCH-023`, `AXI-SCH-024`, `AXI-SCH-025`, `AXI-SCH-026`, `AXI-SCH-027`, `AXI-SCH-028` |
+| `DGM-008` | Organization Intelligence ODT Foundation Map | `PUB-011` | Organizational Digital Twin, Knowledge Architecture, Object Relationships, Dependency Graphs | `Governance/Publications/Diagrams/DGM-008_Organization_Intelligence_ODT_Foundation_Map.md` | `ADR-0014`, `ADR-0017`, `ADR-0018`, `ADR-0019` | `AXI-SCH-006`, `AXI-SCH-007`, `AXI-SCH-023`, `AXI-SCH-029`, `AXI-SCH-030` |
 
 ---
 
@@ -47,14 +48,11 @@ publication relationships required to keep those diagrams authoritative.
 | Operating Manual Architecture | `DGM-005` | Published |
 | Field Manual Architecture | `DGM-006` | Published |
 | Presentation Services Governance | `DGM-007` | Published |
-| Organization Intelligence Architecture | Not yet published | Pending |
+| Organization Intelligence Architecture | `DGM-008` | Published |
 
 A new major published architectural domain shall not be considered
 diagram-complete until this register records at least one approved
 canonical diagram for that domain.
-
-`Pending` means a major domain publication exists, but its first
-canonical diagram has not yet been approved and registered.
 
 ---
 

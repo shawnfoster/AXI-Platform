@@ -2,13 +2,14 @@
 
 **Publication ID:** `PUB-011`
 **Publication Type:** `Reference`
-**Version:** `1.0.0`
+**Version:** `1.1.0`
 **Status:** `Approved`
 **Lifecycle State:** `Active`
 **Owner:** `AXI Platform Governance`
 **Review Cycle:** `Semiannual and change-triggered`
 **Approval Authority:** `AXI Platform Governance`
 **Audit Date:** `2026-07-19`
+**Related Diagram:** `DGM-008`
 
 ---
 
@@ -209,25 +210,25 @@ It is not responsible for:
 
 # M22 Phase Boundary
 
-This publication completes only the architecture-definition portion of
-the current `M22` governance cycle.
+This publication, even with its canonical diagram, does not satisfy
+the `M22` exit gate by itself.
 
-It does not satisfy the `M22` exit gate by itself.
-
-`M22` remains incomplete until the repository publishes the authorized
-core Organization Intelligence and `ODT` schemas and registers.
+`M22` remains incomplete until the repository publishes the remaining
+authorized core Organization Intelligence and `ODT` schemas and
+registers.
 
 ---
 
 # Diagram Boundary
 
-This publication establishes domain meaning but does not claim visual
-completeness for Organization Intelligence.
+`DGM-008` now provides the first canonical diagram for this
+architecture publication and restores diagram completeness for the
+Organization Intelligence architecture domain.
 
-A future canonical diagram shall be published and recorded in
-`DIAGRAM_REGISTER` before AXI treats this domain as diagram-complete.
+That diagram does not complete the broader `M22` schema-and-register
+baseline by itself.
 
-When published, that diagram shall comply with:
+Future diagram revisions shall comply with:
 
 - `ADR-0017`
 - `ADR-0019`
@@ -252,4 +253,5 @@ When published, that diagram shall comply with:
 - `Governance/Publications/DIAGRAM_REGISTER.md`
 - `Governance/Publications/AXI_Operating_Manual_Architecture.md`
 - `Governance/Publications/AXI_Artifact_Specification_Baseline.md`
+- `Governance/Publications/Diagrams/DGM-008_Organization_Intelligence_ODT_Foundation_Map.md`
 - `Governance/Roadmap/AXI_Roadmap_v1.0.md`

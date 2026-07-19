@@ -102,8 +102,11 @@ Current Repository State
   published through `PUB-007` through `PUB-010` and `DGM-007`,
   `ADR-0019` is accepted, `M22` is approved as the governance-only
   milestone for Organization Intelligence and the core `ODT` schema
-  baseline, and `PUB-011` now publishes the Organization Intelligence
-  architecture baseline.
+  baseline, `PUB-011` now publishes the Organization Intelligence
+  architecture baseline, `AXI-SCH-029` and `AXI-SCH-030` are
+  published, `PUB-012` and `PUB-013` are published, and `DGM-008`
+  now publishes the first canonical Organization Intelligence / `ODT`
+  foundation diagram.
 - Decision Intelligence architecture status:
   the Decision is now the primary governed object, the canonical
   decision lifecycle is published, the Organizational Digital Twin is a
@@ -114,19 +117,22 @@ Current Repository State
   governance are published, dashboards, widgets, design-system assets,
   artifact specifications, and visualizations are now governed as
   first-class presentation services, Organization Intelligence
-  architecture is now published through `PUB-011`, its canonical
-  diagram is still pending, and no decision-domain runtime
-  implementation is yet claimed.
+  architecture is now published through `PUB-011`, Organization and
+  Knowledge governance artifacts are now published through
+  `AXI-SCH-029`, `AXI-SCH-030`, `PUB-012`, and `PUB-013`, governed
+  canonical diagrams now exist for every current major architectural
+  domain, and no decision-domain runtime implementation is yet
+  claimed.
 - Runtime freeze status:
   `Runtime-v1.2` is the accepted freeze tag through `M13`; current
   repository state extends beyond that freeze with `M14`, `M15`,
   `M16`, `M17`, and `M18` implemented.
 - Next governed phase:
-  `M22` remains the active governance-only milestone. `PUB-011` now
-  publishes its Organization Intelligence architecture phase, while
-  the core Organizational Digital Twin schemas, registers, and
-  canonical diagram evidence remain pending. No runtime implementation
-  is yet authorized beyond `M18`.
+  `M22` remains the active governance-only milestone. Its
+  architecture plus first Organization and Knowledge schema, register,
+  and diagram outputs are now published, while the remaining core
+  Organizational Digital Twin schemas and registers remain pending.
+  No runtime implementation is yet authorized beyond `M18`.
 - Runtime milestone progression:
   `M9` through `M18` are complete.
 

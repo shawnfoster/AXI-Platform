@@ -1,6 +1,6 @@
 # AXI Decision Intelligence Roadmap
 
-**Version:** 1.5.0
+**Version:** 1.6.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
 **Audit Date:** 2026-07-19
@@ -48,9 +48,11 @@ dependencies through `M18`.
   schema-and-register milestone without authorizing runtime
   implementation.
 - `PUB-011` now publishes the constitutional Organization
-  Intelligence architecture baseline ahead of the core `ODT`
-  schema-and-register set, but the domain remains diagram-pending and
-  does not yet claim schema completion.
+  Intelligence architecture baseline, and `AXI-SCH-029`,
+  `AXI-SCH-030`, `PUB-012`, `PUB-013`, and `DGM-008` now publish the
+  first constitutional Organization and Knowledge artifact set within
+  `M22`, but the phase remains in progress until the remaining core
+  `ODT` object-family schemas and registers are published.
 - No decision-domain runtime implementation is claimed by this roadmap.
 
 ---
@@ -65,7 +67,7 @@ dependencies through `M18`.
 | 4 | Operating Context, Regulatory Knowledge, and Readiness Governance | Complete | Phase 2 complete | Operating context, regulatory knowledge, and readiness governance are published and connected to the decision model |
 | 5 | Publication and Documentation Governance | Complete | Phases 3 and 4 complete | Publication hierarchy, manual architecture, diagram governance, and documentation quality standards are published |
 | 6 | Presentation Architecture, Design System, and Visualization Governance | Complete | Phase 5 complete plus approved `M21` work item | Dashboard, widget, design-system, artifact-specification, and visualization governance are published with canonical registers and diagrams |
-| 7 | Core Organizational Digital Twin and Knowledge Object Schemas | Ready | Phase 6 complete plus published `M22` work item and approved `ADR-0019` | Published schemas and registers exist for core organization, person, role, knowledge, expertise, policy, timeline, resource, and dependency domains |
+| 7 | Core Organizational Digital Twin and Knowledge Object Schemas | In Progress | Phase 6 complete plus published `M22` work item and approved `ADR-0019` | Published schemas and registers exist for core organization, person, role, knowledge, expertise, policy, timeline, resource, and dependency domains |
 | 8 | Engine-Specific Governance by Layer | Planned | Phase 7 complete | Engine-specific ADRs, contracts, and work items are published only for implementation-ready engine domains |
 | 9 | Decision Runtime and Application Planning | Planned | Phase 8 complete | Published work items define how decision-domain runtimes or applications reuse the existing AXI runtime foundation |
 | 10 | Decision-Domain Runtime Implementation | Blocked pending governance | Phase 9 complete | Repository evidence demonstrates implemented decision-domain runtime or application milestones |
@@ -124,10 +126,9 @@ flowchart TD
 
 The next repository-advancement priorities after this roadmap are:
 
-1. Execute `M22` by publishing organization-intelligence and core
-   Organizational Digital Twin schemas and registers for organization,
-   person, role, knowledge, expertise, policy, timeline, resource, and
-   dependency domains.
+1. Complete `M22` by publishing the remaining core Organizational
+   Digital Twin schemas and registers for person, role, expertise,
+   policy, timeline, resource, and dependency domains.
 2. Publish engine-specific ADRs for the first implementation-ready
    engine domains.
 3. Publish work items for decision-domain runtime reuse only after the
@@ -143,6 +144,9 @@ The next repository-advancement priorities after this roadmap are:
 - `Governance/ADR/ADR-0018_Presentation_Services_Governance.md`
 - `Governance/ADR/ADR-0019_Organization_Intelligence_and_Core_ODT_Schema_Governance.md`
 - `Governance/Publications/AXI_Organization_Intelligence_Architecture.md`
+- `Governance/Publications/AXI_Organization_Register.md`
+- `Governance/Publications/AXI_Knowledge_Register.md`
+- `Governance/Publications/Diagrams/DGM-008_Organization_Intelligence_ODT_Foundation_Map.md`
 - `Governance/RuntimeRoadmap.md`
 - `Governance/DependencyMatrix.md`
 - `Governance/Capabilities/CAPABILITY_REGISTER.md`

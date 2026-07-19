@@ -1,6 +1,6 @@
 # AXI Schema Registry
 
-**Version:** 1.7.0
+**Version:** 1.8.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
 
@@ -44,6 +44,8 @@ Published schema files with approved content:
 | `AXI-SCH-026` | Design System Asset | `Governance/Schemas/AXI-SCH-026_Design_System_Asset.json` | Published |
 | `AXI-SCH-027` | Artifact Specification | `Governance/Schemas/AXI-SCH-027_Artifact_Specification.json` | Published |
 | `AXI-SCH-028` | Visualization | `Governance/Schemas/AXI-SCH-028_Visualization.json` | Published |
+| `AXI-SCH-029` | Organization | `Governance/Schemas/AXI-SCH-029_Organization.json` | Published |
+| `AXI-SCH-030` | Knowledge | `Governance/Schemas/AXI-SCH-030_Knowledge.json` | Published |
 
 ---
 
@@ -84,3 +86,11 @@ visualizations.
 
 Publication of those schemas does not, by itself, authorize runtime
 implementation or claim runtime validation support for those domains.
+
+`AXI-SCH-029` and `AXI-SCH-030` publish governance structures for
+Organization and Knowledge objects within the Organization Intelligence
+domain.
+
+Publication of those schemas does not, by itself, authorize runtime
+implementation or claim runtime validation support for the core `ODT`
+domain.

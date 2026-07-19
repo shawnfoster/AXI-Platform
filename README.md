@@ -18,7 +18,7 @@ Current platform status:
 - Decision Intelligence architecture is published through
   `ADR-0014`, `ADR-0015`, `ADR-0016`, `ADR-0017`, `ADR-0018`,
   `ADR-0019`,
-  `AXI-SCH-006`, `AXI-SCH-015` through `AXI-SCH-028`,
+  `AXI-SCH-006`, `AXI-SCH-015` through `AXI-SCH-030`,
   `DECISION_REGISTER`, `CAPABILITY_REGISTER`, and
   `AXI_Roadmap_v1.0`.
 - Publication and documentation governance is published through
@@ -33,8 +33,11 @@ Current platform status:
   governed by `ADR-0019`.
 - `Governance/Publications/AXI_Organization_Intelligence_Architecture.md`
   (`PUB-011`) now publishes the Organization Intelligence architecture
-  baseline; core `ODT` schemas, registers, and the domain's canonical
-  diagram remain pending within `M22`.
+  baseline.
+- `AXI-SCH-029`, `AXI-SCH-030`, `PUB-012`, `PUB-013`, and `DGM-008`
+  now publish the first constitutional Organization and Knowledge
+  artifacts within `M22`; the remaining core `ODT` schemas and
+  registers are still pending.
 - No decision-domain runtime implementation is claimed by the
   repository.
 - No runtime implementation is claimed beyond `M18`.
