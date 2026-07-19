@@ -1,6 +1,6 @@
 # AXI Decision Intelligence Roadmap
 
-**Version:** 1.8.0
+**Version:** 1.9.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
 **Audit Date:** 2026-07-19
@@ -59,6 +59,10 @@ dependencies through `M18`.
   Knowledge Expansion and Repository Operationalization governance
   baseline without changing `M22` as the repository's current active
   milestone.
+- `ADR-0021`, `PUB-015`, and the updated publication-governance
+  baseline now publish Constitutional Transition Gates as first-class
+  governance artifacts, and `CTG-001` remains closed while `M22`
+  remains in progress.
 - No decision-domain runtime implementation is claimed by this roadmap.
 
 ---
@@ -78,6 +82,18 @@ dependencies through `M18`.
 | 9 | Engine-Specific Governance by Layer | Planned | Phase 8 complete | Engine-specific ADRs, contracts, and work items are published only for implementation-ready engine domains |
 | 10 | Decision Runtime and Application Planning | Planned | Phase 9 complete | Published work items define how decision-domain runtimes or applications reuse the existing AXI runtime foundation |
 | 11 | Decision-Domain Runtime Implementation | Blocked pending governance | Phase 10 complete | Repository evidence demonstrates implemented decision-domain runtime or application milestones |
+
+---
+
+# Constitutional Transition Gate Overlay
+
+- `CTG-001` governs readiness to transition from `M22` into Post-M22
+  Executive Transition Validation.
+- `CTG-001` evaluates repository evidence rather than conversation
+  assertions.
+- While `M22` remains `In Progress`, `CTG-001` remains closed.
+- Satisfaction of `CTG-001` authorizes validation only; it does not
+  authorize runtime implementation or bypass later roadmap governance.
 
 ---
 
@@ -127,6 +143,10 @@ flowchart TD
    become systems of record for business data.
 10. Organization-specific customization shall be preserved through
     governed overlays rather than dashboard-definition forks.
+11. Do not begin Post-M22 Executive Transition Validation unless
+    `CTG-001` is satisfied by repository evidence.
+12. Do not treat conversational completion claims as sufficient
+    authority for a constitutional phase transition.
 
 ---
 
@@ -156,11 +176,13 @@ The next repository-advancement priorities after this roadmap are:
 - `Governance/ADR/ADR-0018_Presentation_Services_Governance.md`
 - `Governance/ADR/ADR-0019_Organization_Intelligence_and_Core_ODT_Schema_Governance.md`
 - `Governance/ADR/ADR-0020_Knowledge_Expansion_and_Repository_Operationalization_Governance.md`
+- `Governance/ADR/ADR-0021_Constitutional_Transition_Gate_Governance.md`
 - `Governance/WorkQueue/M23-Knowledge-Expansion-and-Repository-Operationalization-Planning.md`
 - `Governance/Publications/AXI_Organization_Intelligence_Architecture.md`
 - `Governance/Publications/AXI_Organization_Register.md`
 - `Governance/Publications/AXI_Knowledge_Register.md`
 - `Governance/Publications/AXI_Organization_Profile_Model.md`
+- `Governance/TransitionGates/CTG-001_M22_Completion_Gate.md`
 - `Governance/Publications/Diagrams/DGM-009_Knowledge_Expansion_and_Operationalization_Topology.md`
 - `Governance/Publications/Diagrams/DGM-008_Organization_Intelligence_ODT_Foundation_Map.md`
 - `Governance/RuntimeRoadmap.md`

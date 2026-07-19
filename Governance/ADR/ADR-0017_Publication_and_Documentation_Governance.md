@@ -16,6 +16,7 @@ This ADR publishes the governing architecture for:
 
 - publication philosophy and hierarchy
 - publication relationships and cross-reference rules
+- constitutional transition-gate governance as a publication family
 - publication lifecycle and versioning
 - review requirements and approval authorities
 - operating and field manual architecture baselines
@@ -78,7 +79,7 @@ AXI shall use the following canonical publication hierarchy:
 
 - `Constitutional Core`: Constitution and Operating System
 - `Architecture and Governance Core`: ADR, Standard, Policy, Schema,
-  Register
+  Register, Artifact Specification, Transition Gate
 - `Operational Guidance`: Operating Manual, Procedure (SOP), Workflow,
   Checklist, Guide, Reference
 - `Applied Practice`: Field Manual, Playbook, Tutorial, Training Module
@@ -98,8 +99,13 @@ The canonical publication relationship model is:
 - Constitutional publications define the non-bypassable principles and
   operating system of AXI.
 - ADRs define architectural decisions and control boundaries.
-- Standards, policies, schemas, and registers operationalize those
-  decisions in reusable governed forms.
+- Standards, policies, schemas, registers, and artifact
+  specifications operationalize those decisions in reusable governed
+  forms.
+- Transition Gates determine whether a constitutional phase change is
+  authorized by current repository evidence; they shall not invent
+  completion, infer acceptance from conversation context, or override
+  the upstream governance they evaluate.
 - The Operating Manual consolidates how the platform operates while
   remaining subordinate to constitutional and architectural governance.
 - The Field Manual converts governed methodology and expertise into
@@ -168,16 +174,22 @@ phrasing wherever possible.
 
 The default review model is:
 
-- Constitutional, architectural, schema, standard, register, and
-  diagram artifacts: annual review plus change-triggered review
+- Constitutional, architectural, schema, standard, register, artifact
+  specification, transition-gate, and diagram artifacts: annual review
+  plus change-triggered review, with milestone-closeout review when
+  the artifact governs a milestone transition
 - Operating manual, procedure, workflow, checklist, guide, reference,
   field manual, playbook, tutorial, and training artifacts: semiannual
   review plus change-triggered review
 
+Transition-gate evaluation results shall also be reviewed whenever the
+underlying milestone, roadmap, repository-status, or dependency
+evidence changes in a way that could affect gate state.
+
 The default approval model is:
 
-- Constitution, ADR, Standard, Policy, Schema, Register: AXI Platform
-  Governance
+- Constitution, ADR, Standard, Policy, Schema, Register, Artifact
+  Specification, Transition Gate: AXI Platform Governance
 - Operating Manual and Field Manual architecture artifacts: domain
   owner plus AXI Platform Governance
 - Diagram artifacts: the same authority as the source publication, with
@@ -350,6 +362,7 @@ This ADR does not approve:
 - `Governance/ADR/ADR-0014_Decision_Intelligence_Architecture.md`
 - `Governance/ADR/ADR-0015_Repository_Stewardship_Governance.md`
 - `Governance/ADR/ADR-0016_Decision_Support_Context_Governance.md`
+- `Governance/ADR/ADR-0021_Constitutional_Transition_Gate_Governance.md`
 - `Governance/Schemas/AXI-SCH-022_Publication.json`
 - `Governance/Schemas/AXI-SCH-023_Diagram.json`
 - `Governance/Publications/PUBLICATION_REGISTER.md`

@@ -108,8 +108,11 @@ Current Repository State
   `DGM-008` now publishes the first canonical Organization
   Intelligence / `ODT` foundation diagram, `ADR-0020` is accepted,
   `M23` is approved as the next planned governance-only milestone for
-  Knowledge Expansion and Repository Operationalization, and `DGM-009`
-  now publishes the canonical diagram for that planned domain.
+  Knowledge Expansion and Repository Operationalization, `DGM-009`
+  now publishes the canonical diagram for that planned domain,
+  `ADR-0021` is accepted, Constitutional Transition Gates are now a
+  first-class governance artifact family, and `CTG-001` is published
+  in the closed state because `M22` remains incomplete.
 - Decision Intelligence architecture status:
   the Decision is now the primary governed object, the canonical
   decision lifecycle is published, the Organizational Digital Twin is a
@@ -128,7 +131,9 @@ Current Repository State
   for every current major architectural domain, Knowledge Expansion
   and Repository Operationalization governance is now published as the
   next planned domain through `ADR-0020` and `DGM-009`, and no
-  decision-domain runtime implementation is yet claimed.
+  decision-domain runtime implementation is yet claimed, while
+  Constitutional Transition Gate governance now preserves repository-
+  evidence control over Post-M22 phase changes.
 - Runtime freeze status:
   `Runtime-v1.2` is the accepted freeze tag through `M13`; current
   repository state extends beyond that freeze with `M14`, `M15`,
@@ -140,8 +145,9 @@ Current Repository State
   remaining core Organizational Digital Twin schemas and registers
   remain pending. `M23` is now published as the next planned
   governance-only milestone for Knowledge Expansion and Repository
-  Operationalization. No runtime implementation is yet authorized
-  beyond `M18`.
+  Operationalization. `CTG-001` remains closed, so Post-M22 Executive
+  Transition Validation is not yet eligible. No runtime implementation
+  is yet authorized beyond `M18`.
 - Runtime milestone progression:
   `M9` through `M18` are complete.
 

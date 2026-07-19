@@ -2,7 +2,7 @@
 
 **Publication ID:** `PUB-001`
 **Publication Type:** `Register`
-**Version:** `1.4.0`
+**Version:** `1.5.0`
 **Status:** `Approved`
 **Lifecycle State:** `Active`
 **Owner:** `AXI Platform Governance`
@@ -19,7 +19,7 @@ Publish the canonical publication architecture baseline for AXI.
 This register records the approved publication hierarchy, identifies the
 published documentation artifacts that implement that hierarchy, and
 preserves their governing relationships, including governed Artifact
-Specifications.
+Specifications and Constitutional Transition Gates.
 
 ---
 
@@ -28,7 +28,7 @@ Specifications.
 | Publication Family | Publication Types | Role |
 | --- | --- | --- |
 | Constitutional Core | Constitution, Operating System | Defines the non-bypassable principles and platform operating model. |
-| Architecture and Governance Core | ADR, Standard, Policy, Schema, Register, Artifact Specification | Defines architecture, normalization rules, governing controls, canonical sets, and rendering requirements for governed artifact families. |
+| Architecture and Governance Core | ADR, Standard, Policy, Schema, Register, Artifact Specification, Transition Gate | Defines architecture, normalization rules, governing controls, canonical sets, rendering requirements for governed artifact families, and repository-evidence transition authorization. |
 | Operational Guidance | Operating Manual, Procedure (SOP), Workflow, Checklist, Guide, Reference | Explains how AXI operates without overriding constitutional or architectural authority. |
 | Applied Practice | Field Manual, Playbook, Tutorial, Training Module | Converts governed methodology and expertise into practical operating patterns. |
 | Visual Governance | Architecture Diagram, Flow Diagram, Decision Tree | Visualizes approved knowledge and remains synchronized with source publications. |
@@ -53,6 +53,7 @@ Specifications.
 | `PUB-012` | AXI Organization Register | Register | `Governance/Publications/AXI_Organization_Register.md` | `ADR-0014`, `ADR-0015`, `ADR-0017`, `ADR-0019` | `AXI-SCH-015`, `AXI-SCH-029` | `CAP-003`, `CAP-010`, `CAP-018` | Semiannual and change-triggered |
 | `PUB-013` | AXI Knowledge Register | Register | `Governance/Publications/AXI_Knowledge_Register.md` | `ADR-0014`, `ADR-0015`, `ADR-0016`, `ADR-0017`, `ADR-0019` | `AXI-SCH-015`, `AXI-SCH-030` | `CAP-002`, `CAP-010`, `CAP-018` | Semiannual and change-triggered |
 | `PUB-014` | AXI Organization Profile Model | Reference | `Governance/Publications/AXI_Organization_Profile_Model.md` | `ADR-0014`, `ADR-0015`, `ADR-0016`, `ADR-0017`, `ADR-0019` | `AXI-SCH-015`, `AXI-SCH-019`, `AXI-SCH-020`, `AXI-SCH-021`, `AXI-SCH-029` | `CAP-002`, `CAP-003`, `CAP-010`, `CAP-018` | Semiannual and change-triggered |
+| `PUB-015` | AXI Constitutional Transition Gate — M22 Completion Gate | Transition Gate | `Governance/TransitionGates/CTG-001_M22_Completion_Gate.md` | `ADR-0017`, `ADR-0021` | `AXI-SCH-022` | `CAP-012`, `CAP-018` | Annual, change-triggered, and milestone-closeout |
 
 ---
 
@@ -88,6 +89,9 @@ shall be measured rather than assumed.
 - Artifact Specifications define canonical rendering constraints for
   governed artifact families and remain subordinate to their governing
   ADRs, schemas, and design-system architecture.
+- Transition Gates evaluate whether repository evidence authorizes a
+  major constitutional phase change and remain subordinate to the
+  governance artifacts they evaluate.
 - Diagrams shall be treated as governed publications with their own
   identifiers, version history, review history, and source publication
   references.
@@ -111,5 +115,6 @@ shall be measured rather than assumed.
 - `Governance/Publications/AXI_Organization_Register.md`
 - `Governance/Publications/AXI_Knowledge_Register.md`
 - `Governance/Publications/AXI_Organization_Profile_Model.md`
+- `Governance/TransitionGates/CTG-001_M22_Completion_Gate.md`
 - `Governance/Standards/DOCUMENTATION_VISUALIZATION_STANDARD.md`
 - `Governance/Standards/DOCUMENTATION_QUALITY_STANDARD.md`

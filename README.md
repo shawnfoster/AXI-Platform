@@ -34,6 +34,11 @@ Current platform status:
 - The next planned governance-only milestone is
   `Governance/WorkQueue/M23-Knowledge-Expansion-and-Repository-Operationalization-Planning.md`,
   governed by `ADR-0020`.
+- `ADR-0021` and
+  `Governance/TransitionGates/CTG-001_M22_Completion_Gate.md`
+  now publish Constitutional Transition Gate governance, and
+  `CTG-001` remains closed until repository evidence shows `M22`
+  complete.
 - `Governance/Publications/AXI_Organization_Intelligence_Architecture.md`
   (`PUB-011`) now publishes the Organization Intelligence architecture
   baseline.
