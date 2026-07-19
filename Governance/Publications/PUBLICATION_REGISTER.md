@@ -2,7 +2,7 @@
 
 **Publication ID:** `PUB-001`
 **Publication Type:** `Register`
-**Version:** `1.1.0`
+**Version:** `1.2.0`
 **Status:** `Approved`
 **Lifecycle State:** `Active`
 **Owner:** `AXI Platform Governance`
@@ -49,6 +49,7 @@ Specifications.
 | `PUB-008` | AXI Widget Register | Register | `Governance/Publications/AXI_Widget_Register.md` | `ADR-0018` | `AXI-SCH-025`, `AXI-SCH-028` | `CAP-019`, `CAP-021` | Semiannual and change-triggered |
 | `PUB-009` | AXI Design System Architecture And Template Taxonomy | Reference | `Governance/Publications/AXI_Design_System_Architecture.md` | `ADR-0017`, `ADR-0018` | `AXI-SCH-026`, `AXI-SCH-027` | `CAP-020`, `CAP-022` | Semiannual and change-triggered |
 | `PUB-010` | AXI Artifact Specification Baseline | Artifact Specification | `Governance/Publications/AXI_Artifact_Specification_Baseline.md` | `ADR-0017`, `ADR-0018` | `AXI-SCH-022`, `AXI-SCH-027` | `CAP-020`, `CAP-022` | Annual and change-triggered |
+| `PUB-011` | AXI Organization Intelligence Architecture | Reference | `Governance/Publications/AXI_Organization_Intelligence_Architecture.md` | `ADR-0014`, `ADR-0015`, `ADR-0016`, `ADR-0017`, `ADR-0019` | `AXI-SCH-006`, `AXI-SCH-007`, `AXI-SCH-019` through `AXI-SCH-023` | `CAP-002`, `CAP-003`, `CAP-010`, `CAP-018` | Semiannual and change-triggered |
 
 ---
 
@@ -103,5 +104,6 @@ shall be measured rather than assumed.
 - `Governance/Publications/AXI_Widget_Register.md`
 - `Governance/Publications/AXI_Design_System_Architecture.md`
 - `Governance/Publications/AXI_Artifact_Specification_Baseline.md`
+- `Governance/Publications/AXI_Organization_Intelligence_Architecture.md`
 - `Governance/Standards/DOCUMENTATION_VISUALIZATION_STANDARD.md`
 - `Governance/Standards/DOCUMENTATION_QUALITY_STANDARD.md`

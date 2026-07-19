@@ -1,6 +1,6 @@
 # AXI Decision Intelligence Roadmap
 
-**Version:** 1.4.0
+**Version:** 1.5.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
 **Audit Date:** 2026-07-19
@@ -47,6 +47,10 @@ dependencies through `M18`.
   to begin the next Organization Intelligence and core `ODT`
   schema-and-register milestone without authorizing runtime
   implementation.
+- `PUB-011` now publishes the constitutional Organization
+  Intelligence architecture baseline ahead of the core `ODT`
+  schema-and-register set, but the domain remains diagram-pending and
+  does not yet claim schema completion.
 - No decision-domain runtime implementation is claimed by this roadmap.
 
 ---
@@ -138,6 +142,7 @@ The next repository-advancement priorities after this roadmap are:
 - `Governance/ADR/ADR-0016_Decision_Support_Context_Governance.md`
 - `Governance/ADR/ADR-0018_Presentation_Services_Governance.md`
 - `Governance/ADR/ADR-0019_Organization_Intelligence_and_Core_ODT_Schema_Governance.md`
+- `Governance/Publications/AXI_Organization_Intelligence_Architecture.md`
 - `Governance/RuntimeRoadmap.md`
 - `Governance/DependencyMatrix.md`
 - `Governance/Capabilities/CAPABILITY_REGISTER.md`

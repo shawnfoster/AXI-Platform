@@ -28,9 +28,13 @@ Current platform status:
 - Presentation-services governance is published through
   `Governance/WorkQueue/M21-Dashboard-Design-System-Visualization-Services.md`,
   `ADR-0018`, `PUB-007` through `PUB-010`, and `DGM-007`.
-- The next repository-ready governance milestone is
+- The active governance-only repository milestone is
   `Governance/WorkQueue/M22-Core-Organizational-Digital-Twin-and-Knowledge-Object-Schemas.md`,
   governed by `ADR-0019`.
+- `Governance/Publications/AXI_Organization_Intelligence_Architecture.md`
+  (`PUB-011`) now publishes the Organization Intelligence architecture
+  baseline; core `ODT` schemas, registers, and the domain's canonical
+  diagram remain pending within `M22`.
 - No decision-domain runtime implementation is claimed by the
   repository.
 - No runtime implementation is claimed beyond `M18`.

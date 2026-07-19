@@ -2,7 +2,7 @@
 
 **Publication ID:** `PUB-004`
 **Publication Type:** `Register`
-**Version:** `1.1.0`
+**Version:** `1.2.0`
 **Status:** `Approved`
 **Lifecycle State:** `Active`
 **Owner:** `AXI Platform Governance`
@@ -47,10 +47,14 @@ publication relationships required to keep those diagrams authoritative.
 | Operating Manual Architecture | `DGM-005` | Published |
 | Field Manual Architecture | `DGM-006` | Published |
 | Presentation Services Governance | `DGM-007` | Published |
+| Organization Intelligence Architecture | Not yet published | Pending |
 
 A new major published architectural domain shall not be considered
 diagram-complete until this register records at least one approved
 canonical diagram for that domain.
+
+`Pending` means a major domain publication exists, but its first
+canonical diagram has not yet been approved and registered.
 
 ---
 
@@ -71,4 +75,5 @@ canonical diagram for that domain.
 - `Governance/ADR/ADR-0017_Publication_and_Documentation_Governance.md`
 - `Governance/ADR/ADR-0018_Presentation_Services_Governance.md`
 - `Governance/Publications/PUBLICATION_REGISTER.md`
+- `Governance/Publications/AXI_Organization_Intelligence_Architecture.md`
 - `Governance/Standards/DOCUMENTATION_VISUALIZATION_STANDARD.md`
