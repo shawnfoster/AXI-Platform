@@ -1,6 +1,6 @@
 # AXI Decision Intelligence Roadmap
 
-**Version:** 1.9.0
+**Version:** 1.10.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
 **Audit Date:** 2026-07-19
@@ -63,6 +63,10 @@ dependencies through `M18`.
   baseline now publish Constitutional Transition Gates as first-class
   governance artifacts, and `CTG-001` remains closed while `M22`
   remains in progress.
+- `ADR-0022`, `PUB-016`, and `PUB-017` now publish the Prompt
+  Operations and executive handoff governance baseline for future AI
+  sessions without changing `M22` as the repository's active milestone
+  or authorizing runtime beyond `M18`.
 - No decision-domain runtime implementation is claimed by this roadmap.
 
 ---
@@ -177,11 +181,14 @@ The next repository-advancement priorities after this roadmap are:
 - `Governance/ADR/ADR-0019_Organization_Intelligence_and_Core_ODT_Schema_Governance.md`
 - `Governance/ADR/ADR-0020_Knowledge_Expansion_and_Repository_Operationalization_Governance.md`
 - `Governance/ADR/ADR-0021_Constitutional_Transition_Gate_Governance.md`
+- `Governance/ADR/ADR-0022_Prompt_Operations_Manual_Governance.md`
 - `Governance/WorkQueue/M23-Knowledge-Expansion-and-Repository-Operationalization-Planning.md`
 - `Governance/Publications/AXI_Organization_Intelligence_Architecture.md`
 - `Governance/Publications/AXI_Organization_Register.md`
 - `Governance/Publications/AXI_Knowledge_Register.md`
 - `Governance/Publications/AXI_Organization_Profile_Model.md`
+- `Governance/Publications/PromptOperations/AXI_Prompt_Operations_Manual.md`
+- `Governance/Publications/PromptOperations/AXI_Prompt_Operations_Index.md`
 - `Governance/TransitionGates/CTG-001_M22_Completion_Gate.md`
 - `Governance/Publications/Diagrams/DGM-009_Knowledge_Expansion_and_Operationalization_Topology.md`
 - `Governance/Publications/Diagrams/DGM-008_Organization_Intelligence_ODT_Foundation_Map.md`
@@ -189,3 +196,4 @@ The next repository-advancement priorities after this roadmap are:
 - `Governance/DependencyMatrix.md`
 - `Governance/Capabilities/CAPABILITY_REGISTER.md`
 - `Governance/Decisions/DECISION_REGISTER.md`
+- `CODEX_HANDOFF.md`

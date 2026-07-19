@@ -1,7 +1,7 @@
 # DGM-004 — Publication Governance Topology
 
 **Diagram ID:** `DGM-004`
-**Version:** `1.1.0`
+**Version:** `1.2.0`
 **Status:** `Approved`
 **Lifecycle State:** `Active`
 **Owner:** `AXI Platform Governance`
@@ -10,7 +10,7 @@
 **Source Publication:** `ADR-0017`
 **Notation:** `Mermaid`
 **Categories:** `Platform Architecture`, `Object Relationships`, `Dependency Graphs`
-**Related ADRs:** `ADR-0017`, `ADR-0018`
+**Related ADRs:** `ADR-0017`, `ADR-0018`, `ADR-0021`, `ADR-0022`
 **Related Schemas:** `AXI-SCH-022`, `AXI-SCH-023`, `AXI-SCH-027`
 **Related Capabilities:** `CAP-018`, `CAP-022`
 
@@ -19,7 +19,8 @@
 # Purpose
 
 Provide the canonical visual baseline for AXI's publication hierarchy
-and the governed relationship between textual publications and diagrams.
+and the governed relationship between publication families, transition
+controls, prompt operations, and diagrams.
 
 ---
 
@@ -29,19 +30,25 @@ and the governed relationship between textual publications and diagrams.
 flowchart TD
     CC["Constitutional Core"] --> AG["Architecture and Governance Core"]
     AG --> OG["Operational Guidance"]
-    OG --> AP["Applied Practice"]
+    OG --> PO["Prompt Operations"]
+    PO --> AP["Applied Practice"]
 
     CC --> VG["Visual Governance"]
     AG --> VG
     OG --> VG
+    PO --> VG
     AP --> VG
 
-    AG --> OM["Operating Manual"]
-    AG --> FM["Field Manual"]
-    AG --> STD["Standards Schemas Registers"]
+    AG --> STD["ADRs Standards Schemas Registers"]
+    AG --> TG["Transition Gates"]
     AG --> AS["Artifact Specifications"]
 
-    OM --> REF["Operational References and Workflows"]
+    OG --> OM["Operating Manual"]
+    OG --> REF["Operational References and Workflows"]
+    PO --> POM["Prompt Operations Manual"]
+    POM --> PRI["Prompt Route Index"]
+    TG --> POM
+    AP --> FM["Field Manual"]
     FM --> PB["Playbooks Tutorials Training"]
     AS --> RAF["Rendered Artifact Families"]
 
@@ -65,6 +72,7 @@ flowchart TD
 | --- | --- | --- | --- |
 | `1.0.0` | `2026-07-19` | Initial governed publication. | AXI Platform Governance |
 | `1.1.0` | `2026-07-19` | Added Artifact Specifications to the governed publication topology. | AXI Platform Governance |
+| `1.2.0` | `2026-07-19` | Added Transition Gates and Prompt Operations to the governed publication topology. | AXI Platform Governance |
 
 ---
 
@@ -74,3 +82,4 @@ flowchart TD
 | --- | --- | --- | --- |
 | `2026-07-19` | AXI Platform Governance | Approved | Published as the canonical diagram for publication and documentation governance. |
 | `2026-07-19` | AXI Platform Governance | Approved | Reviewed and updated to reflect the governed Artifact Specification publication type. |
+| `2026-07-19` | AXI Platform Governance | Approved | Reviewed and updated to reflect Constitutional Transition Gates and Prompt Operations governance. |

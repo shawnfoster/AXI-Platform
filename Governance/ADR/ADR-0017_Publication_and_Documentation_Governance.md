@@ -17,6 +17,7 @@ This ADR publishes the governing architecture for:
 - publication philosophy and hierarchy
 - publication relationships and cross-reference rules
 - constitutional transition-gate governance as a publication family
+- prompt-operations manual governance as a publication family
 - publication lifecycle and versioning
 - review requirements and approval authorities
 - operating and field manual architecture baselines
@@ -82,6 +83,7 @@ AXI shall use the following canonical publication hierarchy:
   Register, Artifact Specification, Transition Gate
 - `Operational Guidance`: Operating Manual, Procedure (SOP), Workflow,
   Checklist, Guide, Reference
+- `Prompt Operations`: Prompt Operations Manual
 - `Applied Practice`: Field Manual, Playbook, Tutorial, Training Module
 - `Visual Governance`: Architecture Diagram, Flow Diagram, Decision
   Tree
@@ -108,6 +110,11 @@ The canonical publication relationship model is:
   the upstream governance they evaluate.
 - The Operating Manual consolidates how the platform operates while
   remaining subordinate to constitutional and architectural governance.
+- The Prompt Operations Manual consolidates governed prompt categories,
+  route identifiers, and prompt-index references for AI-agent
+  execution while remaining subordinate to repository authority,
+  constitutional governance, published AI governance, work items,
+  workflows, and transition gates.
 - The Field Manual converts governed methodology and expertise into
   use-case playbooks while remaining subordinate to constitutional,
   architectural, and operating-manual governance.
@@ -178,9 +185,9 @@ The default review model is:
   specification, transition-gate, and diagram artifacts: annual review
   plus change-triggered review, with milestone-closeout review when
   the artifact governs a milestone transition
-- Operating manual, procedure, workflow, checklist, guide, reference,
-  field manual, playbook, tutorial, and training artifacts: semiannual
-  review plus change-triggered review
+- Operating manual, prompt-operations manual, procedure, workflow,
+  checklist, guide, reference, field manual, playbook, tutorial, and
+  training artifacts: semiannual review plus change-triggered review
 
 Transition-gate evaluation results shall also be reviewed whenever the
 underlying milestone, roadmap, repository-status, or dependency
@@ -190,8 +197,8 @@ The default approval model is:
 
 - Constitution, ADR, Standard, Policy, Schema, Register, Artifact
   Specification, Transition Gate: AXI Platform Governance
-- Operating Manual and Field Manual architecture artifacts: domain
-  owner plus AXI Platform Governance
+- Operating Manual, Prompt Operations Manual, and Field Manual
+  architecture artifacts: domain owner plus AXI Platform Governance
 - Diagram artifacts: the same authority as the source publication, with
   AXI Platform Governance required whenever the diagram affects
   architectural meaning
@@ -227,7 +234,30 @@ This ADR approves the architecture and table of contents only.
 
 It does not approve full operational prose for those volumes.
 
-### 9. Field Manual Baseline
+### 9. Prompt Operations Manual Baseline
+
+AXI shall maintain a governed Prompt Operations publication family.
+
+The Prompt Operations Manual is the canonical prompt-routing and
+prompt-library interpretation layer for future AXI AI-agent sessions.
+
+It shall publish the approved baseline for:
+
+- prompt categories and identifier rules
+- route-index references
+- authoritative routing to published startup, workflows, work items,
+  status surfaces, and transition gates
+- explicit distinction between published prompt routes and placeholder
+  prompt surfaces
+
+The Prompt Operations Manual may organize routes by startup,
+architecture, governance, milestone, operational-validation, executive,
+and emergency categories.
+
+It shall not supersede repository authority or widen the authorization
+boundaries of the artifacts it references.
+
+### 10. Field Manual Baseline
 
 AXI shall maintain a governed Field Manual publication family.
 
@@ -251,7 +281,7 @@ initial domains:
 - Partnership Assessment
 - Vendor Evaluation
 
-### 10. Diagram Governance
+### 11. Diagram Governance
 
 Architectural diagrams are governed artifacts, not merely
 illustrations.
@@ -282,7 +312,7 @@ Every major published architectural domain shall have at least one
 canonical approved diagram before AXI treats that domain as visually
 complete.
 
-### 11. Documentation Quality
+### 12. Documentation Quality
 
 Documentation quality shall be measured explicitly.
 
@@ -303,7 +333,7 @@ These metrics may feed repository health dimensions published by
 `ADR-0015`, but documentation quality remains an explicit governed
 surface rather than an implicit side effect.
 
-### 12. Future Integration Boundary
+### 13. Future Integration Boundary
 
 The publication architecture shall support future:
 
@@ -321,7 +351,7 @@ It publishes the metadata and traceability architecture required so
 that future integration does not require redesign of the documentation
 subsystem.
 
-### 13. Constitutional Validation Extension
+### 14. Constitutional Validation Extension
 
 Future publications that guide decisions or operationalize decision
 methodology shall preserve explicit support for:
@@ -363,11 +393,14 @@ This ADR does not approve:
 - `Governance/ADR/ADR-0015_Repository_Stewardship_Governance.md`
 - `Governance/ADR/ADR-0016_Decision_Support_Context_Governance.md`
 - `Governance/ADR/ADR-0021_Constitutional_Transition_Gate_Governance.md`
+- `Governance/ADR/ADR-0022_Prompt_Operations_Manual_Governance.md`
 - `Governance/Schemas/AXI-SCH-022_Publication.json`
 - `Governance/Schemas/AXI-SCH-023_Diagram.json`
 - `Governance/Publications/PUBLICATION_REGISTER.md`
 - `Governance/Publications/DIAGRAM_REGISTER.md`
 - `Governance/Publications/AXI_Operating_Manual_Architecture.md`
+- `Governance/Publications/PromptOperations/AXI_Prompt_Operations_Manual.md`
+- `Governance/Publications/PromptOperations/AXI_Prompt_Operations_Index.md`
 - `Governance/Publications/AXI_Field_Manual_Architecture.md`
 - `Governance/Standards/DOCUMENTATION_VISUALIZATION_STANDARD.md`
 - `Governance/Standards/DOCUMENTATION_QUALITY_STANDARD.md`

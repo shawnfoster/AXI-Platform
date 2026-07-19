@@ -2,7 +2,7 @@
 
 **Publication ID:** `PUB-001`
 **Publication Type:** `Register`
-**Version:** `1.5.0`
+**Version:** `1.6.0`
 **Status:** `Approved`
 **Lifecycle State:** `Active`
 **Owner:** `AXI Platform Governance`
@@ -19,7 +19,8 @@ Publish the canonical publication architecture baseline for AXI.
 This register records the approved publication hierarchy, identifies the
 published documentation artifacts that implement that hierarchy, and
 preserves their governing relationships, including governed Artifact
-Specifications and Constitutional Transition Gates.
+Specifications, Constitutional Transition Gates, and Prompt Operations
+publications.
 
 ---
 
@@ -30,6 +31,7 @@ Specifications and Constitutional Transition Gates.
 | Constitutional Core | Constitution, Operating System | Defines the non-bypassable principles and platform operating model. |
 | Architecture and Governance Core | ADR, Standard, Policy, Schema, Register, Artifact Specification, Transition Gate | Defines architecture, normalization rules, governing controls, canonical sets, rendering requirements for governed artifact families, and repository-evidence transition authorization. |
 | Operational Guidance | Operating Manual, Procedure (SOP), Workflow, Checklist, Guide, Reference | Explains how AXI operates without overriding constitutional or architectural authority. |
+| Prompt Operations | Prompt Operations Manual | Governs AI prompt-routing categories, route identifiers, and prompt-library references without overriding repository authority. |
 | Applied Practice | Field Manual, Playbook, Tutorial, Training Module | Converts governed methodology and expertise into practical operating patterns. |
 | Visual Governance | Architecture Diagram, Flow Diagram, Decision Tree | Visualizes approved knowledge and remains synchronized with source publications. |
 
@@ -54,6 +56,8 @@ Specifications and Constitutional Transition Gates.
 | `PUB-013` | AXI Knowledge Register | Register | `Governance/Publications/AXI_Knowledge_Register.md` | `ADR-0014`, `ADR-0015`, `ADR-0016`, `ADR-0017`, `ADR-0019` | `AXI-SCH-015`, `AXI-SCH-030` | `CAP-002`, `CAP-010`, `CAP-018` | Semiannual and change-triggered |
 | `PUB-014` | AXI Organization Profile Model | Reference | `Governance/Publications/AXI_Organization_Profile_Model.md` | `ADR-0014`, `ADR-0015`, `ADR-0016`, `ADR-0017`, `ADR-0019` | `AXI-SCH-015`, `AXI-SCH-019`, `AXI-SCH-020`, `AXI-SCH-021`, `AXI-SCH-029` | `CAP-002`, `CAP-003`, `CAP-010`, `CAP-018` | Semiannual and change-triggered |
 | `PUB-015` | AXI Constitutional Transition Gate — M22 Completion Gate | Transition Gate | `Governance/TransitionGates/CTG-001_M22_Completion_Gate.md` | `ADR-0017`, `ADR-0021` | `AXI-SCH-022` | `CAP-012`, `CAP-018` | Annual, change-triggered, and milestone-closeout |
+| `PUB-016` | AXI Prompt Operations Manual | Prompt Operations Manual | `Governance/Publications/PromptOperations/AXI_Prompt_Operations_Manual.md` | `ADR-0017`, `ADR-0021`, `ADR-0022` | `AXI-SCH-022` | `CAP-018` | Semiannual and change-triggered |
+| `PUB-017` | AXI Prompt Operations Index | Register | `Governance/Publications/PromptOperations/AXI_Prompt_Operations_Index.md` | `ADR-0017`, `ADR-0022` | `AXI-SCH-022` | `CAP-018` | Annual and change-triggered |
 
 ---
 
@@ -92,6 +96,10 @@ shall be measured rather than assumed.
 - Transition Gates evaluate whether repository evidence authorizes a
   major constitutional phase change and remain subordinate to the
   governance artifacts they evaluate.
+- Prompt Operations publications define governed prompt categories,
+  route identifiers, and route-state visibility for future AI-agent
+  sessions while remaining subordinate to repository authority,
+  published AI governance, work items, and transition gates.
 - Diagrams shall be treated as governed publications with their own
   identifiers, version history, review history, and source publication
   references.
@@ -104,8 +112,12 @@ shall be measured rather than assumed.
 
 - `Governance/ADR/ADR-0017_Publication_and_Documentation_Governance.md`
 - `Governance/ADR/ADR-0018_Presentation_Services_Governance.md`
+- `Governance/ADR/ADR-0021_Constitutional_Transition_Gate_Governance.md`
+- `Governance/ADR/ADR-0022_Prompt_Operations_Manual_Governance.md`
 - `Governance/Publications/DIAGRAM_REGISTER.md`
 - `Governance/Publications/AXI_Operating_Manual_Architecture.md`
+- `Governance/Publications/PromptOperations/AXI_Prompt_Operations_Manual.md`
+- `Governance/Publications/PromptOperations/AXI_Prompt_Operations_Index.md`
 - `Governance/Publications/AXI_Field_Manual_Architecture.md`
 - `Governance/Publications/AXI_Dashboard_Register.md`
 - `Governance/Publications/AXI_Widget_Register.md`

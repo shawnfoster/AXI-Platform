@@ -1,6 +1,6 @@
 # AXI Schema Registry
 
-**Version:** 1.10.0
+**Version:** 1.11.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
 
@@ -80,9 +80,11 @@ artifacts.
 repository stewardship, decision-support context, publications, and
 diagrams.
 
-`AXI-SCH-022` now includes `Transition Gate` as a governed publication
-type so constitutional phase-change controls remain first-class
-repository artifacts rather than narrative-only directives.
+`AXI-SCH-022` now includes `Transition Gate` and
+`Prompt Operations Manual` as governed publication types so
+constitutional phase-change controls and prompt-routing governance
+remain first-class repository artifacts rather than narrative-only
+directives.
 
 `AXI-SCH-024` through `AXI-SCH-028` publish governance structures for
 dashboards, widgets, design-system assets, artifact specifications, and

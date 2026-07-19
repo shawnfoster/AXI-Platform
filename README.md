@@ -39,6 +39,11 @@ Current platform status:
   now publish Constitutional Transition Gate governance, and
   `CTG-001` remains closed until repository evidence shows `M22`
   complete.
+- `ADR-0022`, `PUB-016`, `PUB-017`, and `CODEX_HANDOFF.md`
+  now publish the governed Prompt Operations and executive handoff
+  baseline for startup, architecture, governance, milestone,
+  operational-validation, executive, and emergency routes without
+  changing the active milestone or authorizing runtime beyond `M18`.
 - `Governance/Publications/AXI_Organization_Intelligence_Architecture.md`
   (`PUB-011`) now publishes the Organization Intelligence architecture
   baseline.
