@@ -3,10 +3,10 @@
 **Gate ID:** `CTG-001`
 **Publication ID:** `PUB-015`
 **Publication Type:** `Transition Gate`
-**Version:** `1.0.0`
+**Version:** `1.1.0`
 **Status:** `Approved`
 **Lifecycle State:** `Active`
-**Gate State:** `Closed`
+**Gate State:** `Satisfied`
 **Owner:** `AXI Platform Governance`
 **Review Cycle:** `Annual, change-triggered, and milestone-closeout`
 **Approval Authority:** `AXI Platform Governance`
@@ -156,38 +156,33 @@ The current repository evaluation on `2026-07-19` is:
 
 | Criterion | Result | Repository Evidence |
 | --- | --- | --- |
-| `M22` acceptance | Fail | `M22` acceptance is not yet satisfied because the remaining authorized core `ODT` schemas and registers are still pending in the published roadmap and status surfaces. |
-| Work queue completion state | Fail | `Governance/WorkQueue/M22-Core-Organizational-Digital-Twin-and-Knowledge-Object-Schemas.md` remains an approved active work item rather than a completed milestone artifact. |
-| `README.md` | Fail | `README.md` states that `M22` remains the active governance-only repository milestone. |
-| Roadmap | Fail | `Governance/Roadmap/AXI_Roadmap_v1.0.md` marks phase 7 as `In Progress`. |
-| `CODEX_HANDOFF.md` | Fail | `CODEX_HANDOFF.md` states that `M22` remains the active governance-only milestone and that remaining core `ODT` schemas and registers are still pending. |
-| Dependency evidence | Not Applicable | No published `M22` completion claim currently changes dependency sequencing beyond the existing roadmap and milestone evidence. |
-| Required publications | Fail | The repository has published the first Organization and Knowledge artifacts, but the full set of `M22`-authorized core object-family schemas and registers does not yet exist. |
+| `M22` acceptance | Pass | `AXI-SCH-029` through `AXI-SCH-038`, `PUB-012`, `PUB-013`, `PUB-020`, and the updated `DGM-008` now satisfy the published `M22` acceptance criteria. |
+| Work queue completion state | Pass | `Governance/WorkQueue/M22-Core-Organizational-Digital-Twin-and-Knowledge-Object-Schemas.md` now records `Milestone State: Complete` and includes a governed completion record. |
+| `README.md` | Pass | `README.md` now records `M22` as the most recently completed governance-only milestone and preserves `M23` as planned only. |
+| Roadmap | Pass | `Governance/Roadmap/AXI_Roadmap_v1.0.md` now marks phase 7 as `Complete` and preserves the planned state of later milestones. |
+| `CODEX_HANDOFF.md` | Pass | `CODEX_HANDOFF.md` now records `M22` as complete, `CTG-001` as satisfied, and later milestones as not automatically authorized. |
+| Dependency evidence | Pass | `Governance/DependencyMatrix.md` now records that `M22` is complete as governance-only evidence without changing the runtime boundary beyond `M18`. |
+| Required publications | Pass | The repository now publishes the full `M22` core object-family schema and register set, including the new supporting-object register. |
 | ADR consistency | Pass | No repository inconsistency is currently observed between `ADR-0019`, `ADR-0020`, and the published milestone/status surfaces. |
-| Repository validation | Pass | Current repository evidence remains internally consistent enough to keep the gate evaluation authoritative, but not sufficient to open the gate. |
+| Repository validation | Pass | Current repository evidence is internally consistent and supports milestone closeout without authorizing runtime expansion. |
 
 ---
 
 # Deficiencies
 
-The gate remains closed because repository evidence still shows:
-
-- `M22` is in progress rather than complete
-- required `M22` core `ODT` schema-and-register outputs remain pending
-- repository status artifacts have not been updated to a completed
-  `M22` state
+No current deficiencies are recorded.
 
 ---
 
 # Determination
 
-`CTG-001` is not satisfied as of `2026-07-19`.
+`CTG-001` is satisfied as of `2026-07-19`.
 
-The Post-M22 Executive Transition Directive is therefore not yet
-eligible for execution.
+The Post-M22 Executive Transition Directive is therefore eligible for
+execution when explicitly assigned.
 
 `M23` remains published only as the next planned governance-only
-milestone and does not supersede the closed state of this gate.
+milestone and is not authorized by this gate.
 
 ---
 
@@ -210,7 +205,7 @@ Even when satisfied, this gate does not authorize:
 
 # Executive Transition Mission
 
-Following future satisfaction of `CTG-001`, AXI shall validate itself
+Following satisfaction of `CTG-001`, AXI shall validate itself
 by governing its own knowledge ecosystem as the first operational
 subject of AXI.
 

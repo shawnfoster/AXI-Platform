@@ -2,7 +2,7 @@
 
 **Publication ID:** `PUB-011`
 **Publication Type:** `Reference`
-**Version:** `1.1.0`
+**Version:** `1.2.0`
 **Status:** `Approved`
 **Lifecycle State:** `Active`
 **Owner:** `AXI Platform Governance`
@@ -21,8 +21,7 @@ as a governed AXI domain.
 This publication explains why Organization Intelligence exists and how
 it relates to the already approved decision, knowledge, evidence,
 publication, presentation, and future Organizational Digital Twin
-architecture before core schemas, registers, runtime objects, or
-services are implemented.
+architecture before runtime objects or services are implemented.
 
 ---
 
@@ -52,6 +51,9 @@ The repository already publishes the following relevant evidence:
 - `M22` authorizes governance-only advancement of the core
   Organization Intelligence and `ODT` domain without authorizing
   runtime implementation.
+- `AXI-SCH-029` through `AXI-SCH-038`, `PUB-012`, `PUB-013`,
+  `PUB-020`, and the updated `DGM-008` now publish the first complete
+  core `ODT` schema-and-register baseline for the domain.
 - `PUB-002` already identifies Organization Intelligence as the sixth
   canonical volume of the AXI Operating Manual.
 
@@ -210,23 +212,21 @@ It is not responsible for:
 
 # M22 Phase Boundary
 
-This publication, even with its canonical diagram, does not satisfy
-the `M22` exit gate by itself.
+This publication now participates in a completed `M22` baseline.
 
-`M22` remains incomplete until the repository publishes the remaining
-authorized core Organization Intelligence and `ODT` schemas and
-registers.
+The `M22` exit gate is satisfied only because this publication, the
+Organization Register, the Knowledge Register, the supporting-object
+register, the published `ODT` schemas, and synchronized repository
+status surfaces now exist together.
 
 ---
 
 # Diagram Boundary
 
-`DGM-008` now provides the first canonical diagram for this
-architecture publication and restores diagram completeness for the
-Organization Intelligence architecture domain.
-
-That diagram does not complete the broader `M22` schema-and-register
-baseline by itself.
+`DGM-008` now provides canonical diagram coverage for the completed
+`M22` schema-and-register baseline and keeps the Organization
+Intelligence architecture domain visually synchronized with the
+published object-family set.
 
 Future diagram revisions shall comply with:
 
@@ -253,5 +253,6 @@ Future diagram revisions shall comply with:
 - `Governance/Publications/DIAGRAM_REGISTER.md`
 - `Governance/Publications/AXI_Operating_Manual_Architecture.md`
 - `Governance/Publications/AXI_Artifact_Specification_Baseline.md`
+- `Governance/Publications/AXI_Organizational_Digital_Twin_Supporting_Object_Register.md`
 - `Governance/Publications/Diagrams/DGM-008_Organization_Intelligence_ODT_Foundation_Map.md`
 - `Governance/Roadmap/AXI_Roadmap_v1.0.md`

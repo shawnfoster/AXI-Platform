@@ -1,6 +1,6 @@
 # AXI Schema Registry
 
-**Version:** 1.12.0
+**Version:** 1.13.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
 
@@ -47,6 +47,13 @@ Published schema files with approved content:
 | `AXI-SCH-029` | Organization | `Governance/Schemas/AXI-SCH-029_Organization.json` | Published |
 | `AXI-SCH-030` | Knowledge | `Governance/Schemas/AXI-SCH-030_Knowledge.json` | Published |
 | `AXI-SCH-031` | Information Governance Profile | `Governance/Schemas/AXI-SCH-031_Information_Governance_Profile.json` | Published |
+| `AXI-SCH-032` | Person | `Governance/Schemas/AXI-SCH-032_Person.json` | Published |
+| `AXI-SCH-033` | Role | `Governance/Schemas/AXI-SCH-033_Role.json` | Published |
+| `AXI-SCH-034` | Expertise | `Governance/Schemas/AXI-SCH-034_Expertise.json` | Published |
+| `AXI-SCH-035` | Policy | `Governance/Schemas/AXI-SCH-035_Policy.json` | Published |
+| `AXI-SCH-036` | Timeline | `Governance/Schemas/AXI-SCH-036_Timeline.json` | Published |
+| `AXI-SCH-037` | Resource | `Governance/Schemas/AXI-SCH-037_Resource.json` | Published |
+| `AXI-SCH-038` | Dependency | `Governance/Schemas/AXI-SCH-038_Dependency.json` | Published |
 
 ---
 
@@ -94,18 +101,20 @@ visualizations.
 Publication of those schemas does not, by itself, authorize runtime
 implementation or claim runtime validation support for those domains.
 
-`AXI-SCH-029` and `AXI-SCH-030` publish governance structures for
-Organization and Knowledge objects within the Organization Intelligence
-domain.
+`AXI-SCH-029` through `AXI-SCH-038` publish the first complete
+Organization Intelligence and core `ODT` schema baseline for
+Organization, Knowledge, Person, Role, Expertise, Policy, Timeline,
+Resource, and Dependency objects.
 
 `AXI-SCH-029` now operationalizes the Organization Profile Model across
 operational identity, organizational context, and governed
 decision-context inputs while preserving the architectural boundaries to
 Operating Context, Regulatory Knowledge, and Readiness.
 
-Publication of those schemas does not, by itself, authorize runtime
-implementation or claim runtime validation support for the core `ODT`
-domain.
+`AXI-SCH-032` through `AXI-SCH-038` now publish the remaining `M22`
+supporting object-family structures required to make the first core
+`ODT` baseline constitutionally complete without authorizing runtime
+implementation.
 
 `AXI-SCH-031` publishes the reusable Information Governance Profile
 required by canonical `Knowledge` objects for stewardship, trust,

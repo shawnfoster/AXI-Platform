@@ -2,7 +2,7 @@
 
 **Publication ID:** `PUB-001`
 **Publication Type:** `Register`
-**Version:** `1.8.0`
+**Version:** `1.9.0`
 **Status:** `Approved`
 **Lifecycle State:** `Active`
 **Owner:** `AXI Platform Governance`
@@ -51,7 +51,7 @@ publications.
 | `PUB-008` | AXI Widget Register | Register | `Governance/Publications/AXI_Widget_Register.md` | `ADR-0018` | `AXI-SCH-025`, `AXI-SCH-028` | `CAP-019`, `CAP-021` | Semiannual and change-triggered |
 | `PUB-009` | AXI Design System Architecture And Template Taxonomy | Reference | `Governance/Publications/AXI_Design_System_Architecture.md` | `ADR-0017`, `ADR-0018` | `AXI-SCH-026`, `AXI-SCH-027` | `CAP-020`, `CAP-022` | Semiannual and change-triggered |
 | `PUB-010` | AXI Artifact Specification Baseline | Artifact Specification | `Governance/Publications/AXI_Artifact_Specification_Baseline.md` | `ADR-0017`, `ADR-0018` | `AXI-SCH-022`, `AXI-SCH-027` | `CAP-020`, `CAP-022` | Annual and change-triggered |
-| `PUB-011` | AXI Organization Intelligence Architecture | Reference | `Governance/Publications/AXI_Organization_Intelligence_Architecture.md` | `ADR-0014`, `ADR-0015`, `ADR-0016`, `ADR-0017`, `ADR-0018`, `ADR-0019` | `AXI-SCH-006`, `AXI-SCH-007`, `AXI-SCH-019` through `AXI-SCH-023`, `AXI-SCH-029`, `AXI-SCH-030` | `CAP-002`, `CAP-003`, `CAP-010`, `CAP-018`, `CAP-019`, `CAP-021` | Semiannual and change-triggered |
+| `PUB-011` | AXI Organization Intelligence Architecture | Reference | `Governance/Publications/AXI_Organization_Intelligence_Architecture.md` | `ADR-0014`, `ADR-0015`, `ADR-0016`, `ADR-0017`, `ADR-0018`, `ADR-0019` | `AXI-SCH-006`, `AXI-SCH-007`, `AXI-SCH-019` through `AXI-SCH-023`, `AXI-SCH-029` through `AXI-SCH-038` | `CAP-002`, `CAP-003`, `CAP-010`, `CAP-018`, `CAP-019`, `CAP-021` | Semiannual and change-triggered |
 | `PUB-012` | AXI Organization Register | Register | `Governance/Publications/AXI_Organization_Register.md` | `ADR-0014`, `ADR-0015`, `ADR-0017`, `ADR-0019` | `AXI-SCH-015`, `AXI-SCH-029` | `CAP-003`, `CAP-010`, `CAP-018` | Semiannual and change-triggered |
 | `PUB-013` | AXI Knowledge Register | Register | `Governance/Publications/AXI_Knowledge_Register.md` | `ADR-0014`, `ADR-0015`, `ADR-0016`, `ADR-0017`, `ADR-0019`, `ADR-0023` | `AXI-SCH-015`, `AXI-SCH-030`, `AXI-SCH-031` | `CAP-002`, `CAP-010`, `CAP-018`, `CAP-023` | Semiannual and change-triggered |
 | `PUB-014` | AXI Organization Profile Model | Reference | `Governance/Publications/AXI_Organization_Profile_Model.md` | `ADR-0014`, `ADR-0015`, `ADR-0016`, `ADR-0017`, `ADR-0019` | `AXI-SCH-015`, `AXI-SCH-019`, `AXI-SCH-020`, `AXI-SCH-021`, `AXI-SCH-029` | `CAP-002`, `CAP-003`, `CAP-010`, `CAP-018` | Semiannual and change-triggered |
@@ -60,6 +60,7 @@ publications.
 | `PUB-017` | AXI Prompt Operations Index | Register | `Governance/Publications/PromptOperations/AXI_Prompt_Operations_Index.md` | `ADR-0017`, `ADR-0022` | `AXI-SCH-022` | `CAP-018` | Annual and change-triggered |
 | `PUB-018` | AXI Information Governance And Knowledge Protection Model | Reference | `Governance/Publications/AXI_Information_Governance_and_Knowledge_Protection_Model.md` | `ADR-0015`, `ADR-0016`, `ADR-0018`, `ADR-0019`, `ADR-0023` | `AXI-SCH-015`, `AXI-SCH-020`, `AXI-SCH-030`, `AXI-SCH-031` | `CAP-002`, `CAP-004`, `CAP-011`, `CAP-023` | Semiannual and change-triggered |
 | `PUB-019` | AXI Architecture Core Operating System | Operating System | `Governance/Publications/AXI_Architecture_Core_Operating_System.md` | `ADR-0014`, `ADR-0015`, `ADR-0017`, `ADR-0018`, `ADR-0019`, `ADR-0020`, `ADR-0021`, `ADR-0022`, `ADR-0023`, `ADR-0024` | `AXI-SCH-006`, `AXI-SCH-007`, `AXI-SCH-015`, `AXI-SCH-018`, `AXI-SCH-022`, `AXI-SCH-023`, `AXI-SCH-029`, `AXI-SCH-030`, `AXI-SCH-031` | `CAP-002`, `CAP-003`, `CAP-010`, `CAP-011`, `CAP-018`, `CAP-023` | Annual and change-triggered |
+| `PUB-020` | AXI Organizational Digital Twin Supporting Object Register | Register | `Governance/Publications/AXI_Organizational_Digital_Twin_Supporting_Object_Register.md` | `ADR-0014`, `ADR-0015`, `ADR-0016`, `ADR-0017`, `ADR-0019` | `AXI-SCH-032` through `AXI-SCH-038` | `CAP-003`, `CAP-010`, `CAP-018` | Semiannual and change-triggered |
 
 ---
 
@@ -133,6 +134,7 @@ shall be measured rather than assumed.
 - `Governance/Publications/AXI_Knowledge_Register.md`
 - `Governance/Publications/AXI_Information_Governance_and_Knowledge_Protection_Model.md`
 - `Governance/Publications/AXI_Organization_Profile_Model.md`
+- `Governance/Publications/AXI_Organizational_Digital_Twin_Supporting_Object_Register.md`
 - `Governance/TransitionGates/CTG-001_M22_Completion_Gate.md`
 - `Governance/Standards/DOCUMENTATION_VISUALIZATION_STANDARD.md`
 - `Governance/Standards/DOCUMENTATION_QUALITY_STANDARD.md`

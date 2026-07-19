@@ -2,7 +2,7 @@
 
 **Publication ID:** `PUB-018`
 **Publication Type:** `Reference`
-**Version:** `1.0.0`
+**Version:** `1.1.0`
 **Status:** `Approved`
 **Lifecycle State:** `Active`
 **Owner:** `AXI Platform Governance`
@@ -156,9 +156,10 @@ boundary first.
 Future governance and implementation planning should proceed in this
 order:
 
-1. Extend the Information Governance profile to later protected object
-   families such as `Expertise`, `Policy`, and future operational
-   asset objects.
+1. Extend the Information Governance profile to the now-published
+   supporting object families such as `Expertise`, `Policy`, and
+   future operational asset objects when later governance requires
+   protected-object treatment.
 2. Publish the narrower standards required to normalize
    classification, handling, retention, licensing, privacy, and audit
    posture across organizations.

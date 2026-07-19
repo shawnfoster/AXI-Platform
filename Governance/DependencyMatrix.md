@@ -1,6 +1,6 @@
 # AXI Runtime Dependency Matrix
 
-**Version:** 1.7.0
+**Version:** 1.8.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
 **Audit Date:** 2026-07-19
@@ -83,7 +83,12 @@ active work queue:
     artifact-specification governance as architecture-only repository
     evidence, but no GUI runtime milestone or implementation is
     published in this audit.
-17. `M24` now publishes the Architecture Core constitutional
+17. `M22` now publishes a complete governance-only core `ODT`
+    schema-and-register baseline through `AXI-SCH-029` through
+    `AXI-SCH-038`, `PUB-012`, `PUB-013`, `PUB-020`, and the updated
+    `DGM-008`, but it does not authorize runtime implementation beyond
+    `M18` or alter runtime dependency ordering.
+18. `M24` now publishes the Architecture Core constitutional
     foundation as architecture-only repository evidence, but it does
     not authorize runtime implementation, schema creation, or any
     runtime dependency change beyond the current `M18` boundary.
@@ -159,3 +164,6 @@ active work queue:
 11. Treat `M24` as architecture-only repository evidence that does not
     authorize runtime implementation beyond `M18` or alter runtime
     readiness ordering by itself.
+12. Treat completed `M22` as governance-only repository evidence that
+    restores constitutional sequencing without changing the runtime
+    boundary beyond `M18`.

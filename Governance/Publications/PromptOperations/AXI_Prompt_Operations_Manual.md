@@ -2,7 +2,7 @@
 
 **Publication ID:** `PUB-016`
 **Publication Type:** `Prompt Operations Manual`
-**Version:** `1.1.0`
+**Version:** `1.2.0`
 **Status:** `Approved`
 **Lifecycle State:** `Active`
 **Owner:** `AXI Platform Governance`
@@ -117,7 +117,8 @@ If the route is composite, the governing artifacts shall be explicit.
   `M7`, `M19`, or `M20`; those gaps remain explicit rather than
   inferred.
 - Operational-validation routes that depend on Post-`M22` transition
-  authority remain gated while `CTG-001` is closed.
+  authority remain gated until their governing Constitutional
+  Transition Gate is satisfied by repository evidence.
 - Executive routes may summarize repository state, but they shall not
   override live repository evidence.
 

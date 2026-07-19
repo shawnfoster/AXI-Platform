@@ -15,23 +15,23 @@ Conversation history is not authoritative.
 
 # Repository Status
 
-- Current Active Milestone: `M22`
+- Current Active Milestone: None (`M22` Complete)
 - Current Repository Version: `AXI-Platform-v2.1`
 - Current Constitutional Baseline:
-  `ADR-0006` through `ADR-0024`, `AXI-SCH-006` through `AXI-SCH-031`,
-  `PUB-001` through `PUB-019`, and `DGM-001` through `DGM-010`
-- Current Active CTG: `CTG-001`
+  `ADR-0006` through `ADR-0024`, `AXI-SCH-006` through `AXI-SCH-038`,
+  `PUB-001` through `PUB-020`, and `DGM-001` through `DGM-010`
+- Current Active CTG: `CTG-001` (`Satisfied`)
 - Current Runtime Boundary: `M18 Runtime API`
 - Current Repository State:
-  `M22` governance is in progress, protected-knowledge governance is
-  now published for canonical `Knowledge` objects, `M23` is planned,
-  `M24` Architecture Core is now published as the next constitutional
-  foundation after `M23`, and no runtime implementation is authorized
-  beyond `M18`
+  `M22` governance is complete, `CTG-001` is satisfied, Post-`M22`
+  Executive Transition Validation is eligible when explicitly assigned,
+  `M23` remains planned, `M24` Architecture Core remains the published
+  downstream constitutional foundation after `M23`, and no runtime
+  implementation is authorized beyond `M18`
 - Current Branch: `main`
 - Last Approved ADR: `ADR-0024`
-- Last Approved Publication: `PUB-019`
-- Last Completed Work Item: `M21`
+- Last Approved Publication: `PUB-020`
+- Last Completed Work Item: `M22`
 - Last Commit:
   verify live repository state during startup with
   `git log -1 --oneline`
@@ -59,9 +59,9 @@ Every Codex session shall:
 
 Primary Objective
 
-- Complete the currently authorized `M22` governance-only milestone
-  without authorizing runtime, APIs, persistence, workflows, or
-  operational implementation.
+- Preserve the completed `M22` baseline and synchronized `CTG-001`
+  satisfaction evidence until a later governed objective is explicitly
+  assigned.
 
 Secondary Objective
 
@@ -72,7 +72,8 @@ Secondary Objective
 Explicitly Unauthorized
 
 - Runtime expansion
-- Unauthorized milestones
+- Automatic `M23` start
+- Automatic Post-`M22` validation start
 - Operational implementation
 - Any work outside repository authority
 
@@ -114,8 +115,9 @@ Schemas
 
 - Decision and platform schemas are published.
 - Repository stewardship, publication, diagram, dashboard, widget,
-  visualization, Organization, Knowledge, and Information Governance
-  Profile schemas are published.
+  visualization, Organization, Knowledge, Information Governance
+  Profile, Person, Role, Expertise, Policy, Timeline, Resource, and
+  Dependency schemas are published.
 - Canonical `Knowledge` objects now inherit governed information
   metadata through `AXI-SCH-031` and the updated `AXI-SCH-030`.
 - Placeholder schema family `AXI-SCH-001` through `AXI-SCH-005`
@@ -131,7 +133,7 @@ Standards
 Transition Gates
 
 - Constitutional Transition Gates are first-class governed artifacts.
-- `CTG-001` is published and closed.
+- `CTG-001` is published and satisfied.
 
 Runtime Boundary
 
@@ -144,15 +146,15 @@ Runtime Boundary
 
 `CTG-001`
 
-- Current State: Closed
+- Current State: Satisfied
 - Activation Criteria:
   all published `M22` acceptance evidence plus synchronized work queue,
   README, roadmap, handoff, publication, ADR, and dependency state
 - Repository Evidence:
   `Governance/TransitionGates/CTG-001_M22_Completion_Gate.md`
 - Authorized Next Step:
-  complete `M22` and reevaluate the gate; do not begin Post-`M22`
-  validation while the gate remains closed
+  Post-`M22` Executive Transition Validation is eligible when
+  explicitly assigned; do not begin `M23` automatically
 
 ---
 
@@ -186,7 +188,8 @@ Operational rule:
 - POM routes govern prompt references and route-state visibility.
 - POM routes do not override repository authority or protected-
   knowledge posture.
-- Closed CTGs keep dependent operational-validation routes closed.
+- Dependent operational-validation routes remain closed until their
+  governing CTGs are satisfied by repository evidence.
 
 ---
 
@@ -219,23 +222,26 @@ Overall repository health is stable at the constitutional layer.
 
 Current risks:
 
-- `M22` remains incomplete, so `CTG-001` cannot open.
 - Placeholder standards continue to leave a known governance gap for
   foundational repository normalization.
+- Later milestone work could drift if future sessions treat satisfied
+  `CTG-001` as implicit authorization for `M23`.
 
 Current opportunities:
 
-- Finish the remaining `M22` `ODT` schema and register set.
-- Use the new Prompt Operations baseline to keep future reviews and
+- Use satisfied `CTG-001` to govern any future Post-`M22` validation
+  assignment.
+- Use the Prompt Operations baseline to keep future reviews and
   milestone work repository-driven.
 - Use `M24` to keep future cross-domain governance aligned to one
-  constitutional foundation.
+  constitutional foundation when later milestones are explicitly
+  assigned.
 
 Outstanding governance work:
 
-- Remaining `M22` object families
-- Eventual `M23` planning execution after `M22`, with `M24` preserved
-  as the downstream constitutional foundation
+- Post-`M22` Executive Transition Validation when explicitly assigned
+- Eventual `M23` planning execution after explicit authorization, with
+  `M24` preserved as the downstream constitutional foundation
 - Future transition-gate expansion only when repository evidence
   requires it
 
@@ -243,10 +249,10 @@ Outstanding governance work:
 
 # Executive Recommendations
 
-- Continue the approved roadmap by completing the remaining `M22`
-  constitutional artifacts.
-- Keep `CTG-001` closed until repository evidence satisfies every gate
-  criterion.
+- Preserve synchronized evidence for completed `M22` and satisfied
+  `CTG-001`.
+- Do not auto-open `M23` or later milestone work without explicit
+  authorization.
 - Use `M24` as the constitutional foundation for future cross-domain
   governance instead of introducing new architectural abstractions.
 - Use governed POM identifiers rather than conversational prompt recall
@@ -266,10 +272,12 @@ The current objective remains complete only when:
 - schema and publication numbering remain valid
 - any CTG-dependent transition is validated through the governing gate
 
-For `M22`, success remains governed by the published work item and
-`CTG-001`.
+For the completed `M22` state, success remains governed by the
+published work item, the synchronized repository status surfaces, and
+the satisfied `CTG-001` artifact.
 
-Completion of this handoff does not satisfy `CTG-001`.
+Completion of this handoff does not authorize `M23` or any later
+milestone automatically.
 
 ---
 
