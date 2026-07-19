@@ -1,0 +1,361 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "AXI-SCH-031",
+  "title": "AXI Information Governance Profile",
+  "description": "Reusable governed information-governance and knowledge-protection profile for AXI Knowledge objects and future protected knowledge domains.",
+  "type": "object",
+  "required": [
+    "stewardship",
+    "trust_profile",
+    "classification",
+    "access_policy",
+    "sharing_policy",
+    "retention_policy",
+    "licensing",
+    "regulatory_constraints",
+    "jurisdictions",
+    "privacy_requirements",
+    "audit_requirements",
+    "inheritance_rule",
+    "implementation_boundary"
+  ],
+  "properties": {
+    "stewardship": {
+      "type": "object",
+      "required": [
+        "primary_steward",
+        "stewardship_scope_summary"
+      ],
+      "properties": {
+        "primary_steward": {
+          "type": "string",
+          "minLength": 1
+        },
+        "stewardship_scope_summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "escalation_authorities": {
+          "$ref": "#/$defs/stringArray"
+        }
+      },
+      "additionalProperties": false
+    },
+    "trust_profile": {
+      "type": "object",
+      "required": [
+        "trust_level",
+        "confidence_level",
+        "trust_basis_summary"
+      ],
+      "properties": {
+        "trust_level": {
+          "type": "string",
+          "enum": [
+            "Trusted",
+            "Conditionally Trusted",
+            "Restricted",
+            "Unverified"
+          ]
+        },
+        "confidence_level": {
+          "type": "string",
+          "enum": [
+            "High",
+            "Moderate",
+            "Low",
+            "Unknown"
+          ]
+        },
+        "trust_basis_summary": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "classification": {
+      "type": "object",
+      "required": [
+        "scheme_name",
+        "level_name",
+        "organization_defined",
+        "handling_summary"
+      ],
+      "properties": {
+        "scheme_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "level_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "organization_defined": {
+          "type": "boolean"
+        },
+        "handling_summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sensitivity_rank": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "required_review_authorities": {
+          "$ref": "#/$defs/stringArray"
+        }
+      },
+      "additionalProperties": false
+    },
+    "access_policy": {
+      "type": "object",
+      "required": [
+        "access_scope_summary",
+        "restriction_bases",
+        "human_review_required"
+      ],
+      "properties": {
+        "access_scope_summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "restriction_bases": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "enum": [
+              "Classification",
+              "Privacy",
+              "Legal",
+              "Contractual",
+              "Policy",
+              "Regulatory",
+              "Executive",
+              "Organization Defined"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "required_approval_authorities": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "human_review_required": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "sharing_policy": {
+      "type": "object",
+      "required": [
+        "sharing_scope_summary",
+        "external_sharing_permitted",
+        "redistribution_permitted",
+        "sharing_constraints"
+      ],
+      "properties": {
+        "sharing_scope_summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "external_sharing_permitted": {
+          "type": "boolean"
+        },
+        "redistribution_permitted": {
+          "type": "boolean"
+        },
+        "sharing_constraints": {
+          "$ref": "#/$defs/stringArray"
+        }
+      },
+      "additionalProperties": false
+    },
+    "retention_policy": {
+      "type": "object",
+      "required": [
+        "retention_basis_summary",
+        "minimum_retention_summary",
+        "disposal_constraints",
+        "legal_hold_supported"
+      ],
+      "properties": {
+        "retention_basis_summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "minimum_retention_summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "disposal_constraints": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "legal_hold_supported": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "licensing": {
+      "type": "object",
+      "required": [
+        "license_summary",
+        "copyright_owner",
+        "attribution_required",
+        "derivative_use_permitted"
+      ],
+      "properties": {
+        "license_summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "copyright_owner": {
+          "type": "string",
+          "minLength": 1
+        },
+        "attribution_required": {
+          "type": "boolean"
+        },
+        "derivative_use_permitted": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "regulatory_constraints": {
+      "type": "object",
+      "required": [
+        "constraint_summary"
+      ],
+      "properties": {
+        "constraint_summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "related_regulatory_knowledge_ids": {
+          "$ref": "#/$defs/objectRefArray"
+        },
+        "related_policy_ids": {
+          "$ref": "#/$defs/objectRefArray"
+        }
+      },
+      "additionalProperties": false
+    },
+    "jurisdictions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "privacy_requirements": {
+      "type": "object",
+      "required": [
+        "contains_personal_data",
+        "privacy_review_required",
+        "privacy_constraint_summary"
+      ],
+      "properties": {
+        "contains_personal_data": {
+          "type": "boolean"
+        },
+        "special_category_data": {
+          "type": "boolean"
+        },
+        "privacy_review_required": {
+          "type": "boolean"
+        },
+        "privacy_constraint_summary": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "audit_requirements": {
+      "type": "object",
+      "required": [
+        "audit_required",
+        "audit_scope_summary",
+        "evidence_retention_required"
+      ],
+      "properties": {
+        "audit_required": {
+          "type": "boolean"
+        },
+        "audit_scope_summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_retention_required": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "inheritance_rule": {
+      "type": "string",
+      "const": "Inherit Strictest Downstream"
+    },
+    "implementation_boundary": {
+      "type": "object",
+      "required": [
+        "authentication_defined",
+        "authorization_defined",
+        "encryption_defined",
+        "cybersecurity_controls_defined",
+        "secrets_management_defined"
+      ],
+      "properties": {
+        "authentication_defined": {
+          "type": "boolean",
+          "const": false
+        },
+        "authorization_defined": {
+          "type": "boolean",
+          "const": false
+        },
+        "encryption_defined": {
+          "type": "boolean",
+          "const": false
+        },
+        "cybersecurity_controls_defined": {
+          "type": "boolean",
+          "const": false
+        },
+        "secrets_management_defined": {
+          "type": "boolean",
+          "const": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "objectRefArray": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^OBJ-[0-9]{6}$"
+      },
+      "uniqueItems": true
+    },
+    "stringArray": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false
+}

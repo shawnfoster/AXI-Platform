@@ -1,6 +1,6 @@
 # AXI Decision Intelligence Roadmap
 
-**Version:** 1.10.0
+**Version:** 1.11.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
 **Audit Date:** 2026-07-19
@@ -67,6 +67,11 @@ dependencies through `M18`.
   Operations and executive handoff governance baseline for future AI
   sessions without changing `M22` as the repository's active milestone
   or authorizing runtime beyond `M18`.
+- `ADR-0023`, `CAP-023`, `AXI-SCH-031`, `PUB-018`, and the updated
+  `AXI-SCH-030` / `PUB-013` now publish the Information Governance and
+  protected-knowledge baseline for canonical `Knowledge` objects within
+  `M22` without changing the active milestone or authorizing runtime
+  or cybersecurity implementation.
 - No decision-domain runtime implementation is claimed by this roadmap.
 
 ---
@@ -182,10 +187,12 @@ The next repository-advancement priorities after this roadmap are:
 - `Governance/ADR/ADR-0020_Knowledge_Expansion_and_Repository_Operationalization_Governance.md`
 - `Governance/ADR/ADR-0021_Constitutional_Transition_Gate_Governance.md`
 - `Governance/ADR/ADR-0022_Prompt_Operations_Manual_Governance.md`
+- `Governance/ADR/ADR-0023_Information_Governance_and_Knowledge_Protection_Governance.md`
 - `Governance/WorkQueue/M23-Knowledge-Expansion-and-Repository-Operationalization-Planning.md`
 - `Governance/Publications/AXI_Organization_Intelligence_Architecture.md`
 - `Governance/Publications/AXI_Organization_Register.md`
 - `Governance/Publications/AXI_Knowledge_Register.md`
+- `Governance/Publications/AXI_Information_Governance_and_Knowledge_Protection_Model.md`
 - `Governance/Publications/AXI_Organization_Profile_Model.md`
 - `Governance/Publications/PromptOperations/AXI_Prompt_Operations_Manual.md`
 - `Governance/Publications/PromptOperations/AXI_Prompt_Operations_Index.md`
@@ -196,4 +203,5 @@ The next repository-advancement priorities after this roadmap are:
 - `Governance/DependencyMatrix.md`
 - `Governance/Capabilities/CAPABILITY_REGISTER.md`
 - `Governance/Decisions/DECISION_REGISTER.md`
+- `Governance/Schemas/AXI-SCH-031_Information_Governance_Profile.json`
 - `CODEX_HANDOFF.md`

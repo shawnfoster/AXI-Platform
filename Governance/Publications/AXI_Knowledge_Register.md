@@ -2,7 +2,7 @@
 
 **Publication ID:** `PUB-013`
 **Publication Type:** `Register`
-**Version:** `1.0.0`
+**Version:** `1.1.0`
 **Status:** `Approved`
 **Lifecycle State:** `Active`
 **Owner:** `AXI Platform Governance`
@@ -21,9 +21,10 @@ objects in AXI.
 No knowledge instances are published in this register yet.
 
 This artifact defines the minimum metadata, provenance, lifecycle,
-authority, dependency, publication, and traceability expectations that
-future governed knowledge objects shall satisfy before they may be
-treated as canonical Organization Intelligence knowledge.
+authority, information-governance, dependency, publication, and
+traceability expectations that future governed knowledge objects shall
+satisfy before they may be treated as canonical Organization
+Intelligence knowledge.
 
 ---
 
@@ -61,6 +62,7 @@ The register therefore requires explicit preservation of:
 - knowledge-domain designation
 - authority metadata
 - provenance metadata
+- information-governance metadata
 - dependency references
 - publication references
 
@@ -73,6 +75,7 @@ The register therefore requires explicit preservation of:
 | Identity | `object_id`, `namespace`, `object_type`, `name`, `knowledge_domain`, version, owner | `ADR-0014`, `ADR-0019`, `AXI-SCH-030` |
 | Authority | approval authority, authority-scope summary, governing ADR references, governing publication references | `ADR-0017`, `ADR-0019`, `AXI-SCH-030` |
 | Provenance | source-artifact references, evidence references, provenance completeness, derived-from knowledge references when applicable | `ADR-0014`, `ADR-0015`, `AXI-SCH-030` |
+| Information Governance | stewardship, trust and confidence posture, classification, access policy, sharing policy, retention policy, licensing, regulatory constraints, jurisdictions, privacy requirements, audit requirements, inheritance rule, implementation boundary | `ADR-0023`, `AXI-SCH-030`, `AXI-SCH-031` |
 | Lifecycle | status, lifecycle state, created and updated timestamps, lifecycle-record linkage when governed transitions occur | `ADR-0015`, `AXI-SCH-015`, `AXI-SCH-030` |
 | Relationships | related organization references and related decision references where knowledge is decision-linked | `ADR-0014`, `ADR-0019`, `AXI-SCH-030` |
 | Traceability | dependency references, publication references, review-case references when applicable | `ADR-0015`, `ADR-0017`, `AXI-SCH-030` |
@@ -85,6 +88,8 @@ The register therefore requires explicit preservation of:
   publication status and lifecycle state.
 - Lifecycle interpretation shall reuse the governed state model from
   `ADR-0015`.
+- Protection posture shall remain first-class governed metadata rather
+  than free-form narrative in `metadata`.
 - Canonical knowledge shall not move across knowledge domains without
   preserving the provenance and justification for that change.
 - A knowledge record may be rendered by publications, dashboards, or
@@ -93,16 +98,32 @@ The register therefore requires explicit preservation of:
 
 ---
 
+# Protection Inheritance Rules
+
+- Canonical `Knowledge` objects shall preserve a governed protection
+  posture that downstream artifacts inherit rather than redefine.
+- If multiple governed knowledge sources contribute to one downstream
+  publication, dashboard, visualization, prompt route, or future
+  rendered artifact, the downstream artifact shall inherit the
+  strictest applicable source posture.
+- Downstream operationalization shall not relax classification, access,
+  sharing, retention, privacy, jurisdiction, or audit posture without
+  later approved governance.
+
+---
+
 # Validation Rules
 
 The register shall reject knowledge records that:
 
-- omit required authority, provenance, lifecycle, dependency, or
-  publication metadata
+- omit required authority, provenance, lifecycle, information-
+  governance, dependency, or publication metadata
 - use a namespace other than `AXI-PLT`
 - use an object type other than `Knowledge`
 - collapse Regulatory Knowledge or Governed Expertise into the
   `Knowledge` object family
+- place protected-knowledge posture only in free-form `metadata`
+  instead of the governed schema fields
 - claim canonical knowledge without source-artifact and evidence
   support
 - reference unresolved ADR, publication, organization, decision,
@@ -117,11 +138,15 @@ The register shall reject knowledge records that:
 - Every governed knowledge record shall preserve evidence and
   provenance sufficient to explain why the knowledge is canonical,
   durable, and governable.
+- Every governed knowledge record shall preserve protection metadata
+  sufficient to explain why the knowledge may be shared, retained,
+  operationalized, or restricted.
 - If knowledge is derived from a decision, lesson, or publication
   update, the related upstream object or artifact shall remain
   traceable.
 - Publication references shall identify where the knowledge is
-  operationalized or rendered for governed reuse.
+  operationalized or rendered for governed reuse without relaxing the
+  governed protection posture.
 
 ---
 
@@ -132,7 +157,10 @@ The register shall reject knowledge records that:
 - `Governance/ADR/ADR-0016_Decision_Support_Context_Governance.md`
 - `Governance/ADR/ADR-0017_Publication_and_Documentation_Governance.md`
 - `Governance/ADR/ADR-0019_Organization_Intelligence_and_Core_ODT_Schema_Governance.md`
+- `Governance/ADR/ADR-0023_Information_Governance_and_Knowledge_Protection_Governance.md`
 - `Governance/Schemas/AXI-SCH-015_Information_Lifecycle_Record.json`
 - `Governance/Schemas/AXI-SCH-030_Knowledge.json`
+- `Governance/Schemas/AXI-SCH-031_Information_Governance_Profile.json`
+- `Governance/Publications/AXI_Information_Governance_and_Knowledge_Protection_Model.md`
 - `Governance/Publications/AXI_Organization_Intelligence_Architecture.md`
 - `Governance/Publications/Diagrams/DGM-008_Organization_Intelligence_ODT_Foundation_Map.md`

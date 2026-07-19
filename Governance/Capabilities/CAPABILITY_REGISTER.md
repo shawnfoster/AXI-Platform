@@ -1,6 +1,6 @@
 # AXI Capability Register
 
-**Version:** 1.2.0
+**Version:** 1.3.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
 **Audit Date:** 2026-07-19
@@ -43,6 +43,7 @@ services, applications, and decision workflows shall trace to.
 | `CAP-020` | Design System And Brand Governance | Repository Stewardship, Recommend, Human Approval, Execute | Govern brand kits, themes, typography, color, iconography, layout grids, accessibility, export styles, and white-label overlays across all rendered AXI artifacts. |
 | `CAP-021` | Visualization And Insight Communication | Observe, Discover, Situational Assessment, Recommend, Measure | Govern approved visualization families, interpretability rules, executive-summary patterns, and governed visualization-to-data-source traceability. |
 | `CAP-022` | Artifact Specification And Export Governance | Repository Stewardship, Human Approval, Execute | Govern canonical rendering requirements, responsive variants, export formats, safe areas, typography scale, icon sizes, and accessibility across dashboards, documents, diagrams, reports, and presentations. |
+| `CAP-023` | Information Governance And Knowledge Protection | Repository Stewardship, Assess Context, Human Approval | Govern protected-knowledge metadata, classification frameworks, access and sharing posture, retention posture, licensing, privacy, jurisdiction, audit requirements, and downstream protection inheritance for canonical `Knowledge` objects without authorizing cybersecurity implementation. |
 
 ---
 
@@ -91,6 +92,9 @@ claim runtime implementation.
 - `Governance/ADR/ADR-0016_Decision_Support_Context_Governance.md`
 - `Governance/ADR/ADR-0017_Publication_and_Documentation_Governance.md`
 - `Governance/ADR/ADR-0018_Presentation_Services_Governance.md`
+- `Governance/ADR/ADR-0023_Information_Governance_and_Knowledge_Protection_Governance.md`
 - `Governance/Decisions/DECISION_REGISTER.md`
 - `Governance/Schemas/AXI-SCH-006_Decisions.json`
 - `Governance/Schemas/AXI-SCH-008_Capability.json`
+- `Governance/Schemas/AXI-SCH-031_Information_Governance_Profile.json`
+- `Governance/Publications/AXI_Information_Governance_and_Knowledge_Protection_Model.md`

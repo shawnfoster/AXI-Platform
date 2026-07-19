@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "AXI-SCH-030",
   "title": "AXI Knowledge",
-  "description": "Governed constitutional representation of durable knowledge within the Organization Intelligence domain of the AXI Platform.",
+  "description": "Governed constitutional representation of durable knowledge and required information-governance metadata within the Organization Intelligence domain of the AXI Platform.",
   "type": "object",
   "required": [
     "object_id",
@@ -16,6 +16,7 @@
     "knowledge_domain",
     "authority",
     "provenance",
+    "information_governance",
     "dependency_refs",
     "publication_refs",
     "created_at",
@@ -138,6 +139,9 @@
         }
       },
       "additionalProperties": false
+    },
+    "information_governance": {
+      "$ref": "AXI-SCH-031_Information_Governance_Profile.json"
     },
     "related_organization_ids": {
       "$ref": "#/$defs/objectRefArray"

@@ -18,16 +18,17 @@ Conversation history is not authoritative.
 - Current Active Milestone: `M22`
 - Current Repository Version: `AXI-Platform-v2.1`
 - Current Constitutional Baseline:
-  `ADR-0006` through `ADR-0022`, `AXI-SCH-006` through `AXI-SCH-030`,
-  `PUB-001` through `PUB-017`, and `DGM-001` through `DGM-009`
+  `ADR-0006` through `ADR-0023`, `AXI-SCH-006` through `AXI-SCH-031`,
+  `PUB-001` through `PUB-018`, and `DGM-001` through `DGM-009`
 - Current Active CTG: `CTG-001`
 - Current Runtime Boundary: `M18 Runtime API`
 - Current Repository State:
-  `M22` governance is in progress, `M23` is planned, and no runtime
-  implementation is authorized beyond `M18`
+  `M22` governance is in progress, protected-knowledge governance is
+  now published for canonical `Knowledge` objects, `M23` is planned,
+  and no runtime implementation is authorized beyond `M18`
 - Current Branch: `main`
-- Last Approved ADR: `ADR-0022`
-- Last Approved Publication: `PUB-017`
+- Last Approved ADR: `ADR-0023`
+- Last Approved Publication: `PUB-018`
 - Last Completed Work Item: `M21`
 - Last Commit:
   verify live repository state during startup with
@@ -108,7 +109,10 @@ Schemas
 
 - Decision and platform schemas are published.
 - Repository stewardship, publication, diagram, dashboard, widget,
-  visualization, Organization, and Knowledge schemas are published.
+  visualization, Organization, Knowledge, and Information Governance
+  Profile schemas are published.
+- Canonical `Knowledge` objects now inherit governed information
+  metadata through `AXI-SCH-031` and the updated `AXI-SCH-030`.
 - Placeholder schema family `AXI-SCH-001` through `AXI-SCH-005`
   remains unpublished and non-authoritative.
 
@@ -175,7 +179,8 @@ Milestone prompt organization:
 Operational rule:
 
 - POM routes govern prompt references and route-state visibility.
-- POM routes do not override repository authority.
+- POM routes do not override repository authority or protected-
+  knowledge posture.
 - Closed CTGs keep dependent operational-validation routes closed.
 
 ---

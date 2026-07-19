@@ -1,6 +1,6 @@
 # AXI Schema Registry
 
-**Version:** 1.11.0
+**Version:** 1.12.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
 
@@ -46,6 +46,7 @@ Published schema files with approved content:
 | `AXI-SCH-028` | Visualization | `Governance/Schemas/AXI-SCH-028_Visualization.json` | Published |
 | `AXI-SCH-029` | Organization | `Governance/Schemas/AXI-SCH-029_Organization.json` | Published |
 | `AXI-SCH-030` | Knowledge | `Governance/Schemas/AXI-SCH-030_Knowledge.json` | Published |
+| `AXI-SCH-031` | Information Governance Profile | `Governance/Schemas/AXI-SCH-031_Information_Governance_Profile.json` | Published |
 
 ---
 
@@ -105,3 +106,13 @@ Operating Context, Regulatory Knowledge, and Readiness.
 Publication of those schemas does not, by itself, authorize runtime
 implementation or claim runtime validation support for the core `ODT`
 domain.
+
+`AXI-SCH-031` publishes the reusable Information Governance Profile
+required by canonical `Knowledge` objects for stewardship, trust,
+confidence, classification, access and sharing posture, retention,
+licensing, privacy, jurisdiction, audit requirements, and explicit
+non-implementation boundaries.
+
+Publication of `AXI-SCH-031` does not publish the historical
+placeholder classification schema family and does not advance `M23`
+classification or external-knowledge operationalization work.

@@ -16,9 +16,8 @@ Current platform status:
 - `M18 Runtime API` is implemented, validated, and extends the current
   governed runtime through the local programmatic execution surface.
 - Decision Intelligence architecture is published through
-  `ADR-0014`, `ADR-0015`, `ADR-0016`, `ADR-0017`, `ADR-0018`,
-  `ADR-0019`,
-  `AXI-SCH-006`, `AXI-SCH-015` through `AXI-SCH-030`,
+  `ADR-0014` through `ADR-0023`,
+  `AXI-SCH-006`, `AXI-SCH-015` through `AXI-SCH-031`,
   `DECISION_REGISTER`, `CAPABILITY_REGISTER`, and
   `AXI_Roadmap_v1.0`.
 - Publication and documentation governance is published through
@@ -44,14 +43,21 @@ Current platform status:
   baseline for startup, architecture, governance, milestone,
   operational-validation, executive, and emergency routes without
   changing the active milestone or authorizing runtime beyond `M18`.
+- `ADR-0023`, `CAP-023`, `AXI-SCH-031`, `PUB-018`, and the updated
+  `AXI-SCH-030` / `PUB-013` now publish governed Information
+  Governance and Knowledge Protection for canonical `Knowledge`
+  objects, including classification, sharing, retention, licensing,
+  privacy, jurisdiction, and audit metadata, without authorizing
+  runtime or cybersecurity implementation.
 - `Governance/Publications/AXI_Organization_Intelligence_Architecture.md`
   (`PUB-011`) now publishes the Organization Intelligence architecture
   baseline.
 - `AXI-SCH-029`, `PUB-012`, and `PUB-014` now publish the
   constitutional Organization Profile and Decision Context foundation,
-  while `AXI-SCH-030`, `PUB-013`, and `DGM-008` continue the first
-  Knowledge and diagram baseline within `M22`; the remaining core
-  `ODT` schemas and registers are still pending.
+  while `AXI-SCH-030`, `PUB-013`, `AXI-SCH-031`, `PUB-018`, and
+  `DGM-008` continue the first Knowledge, Information Governance, and
+  diagram baseline within `M22`; the remaining core `ODT` schemas and
+  registers are still pending.
 - `ADR-0020`, `M23`, and `DGM-009` now publish the next planned
   Knowledge Expansion and Repository Operationalization governance
   baseline without authorizing runtime, connectors, indexing, or
