@@ -1,6 +1,6 @@
 # AXI Decision Intelligence Roadmap
 
-**Version:** 1.6.0
+**Version:** 1.7.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
 **Audit Date:** 2026-07-19
@@ -48,11 +48,13 @@ dependencies through `M18`.
   schema-and-register milestone without authorizing runtime
   implementation.
 - `PUB-011` now publishes the constitutional Organization
-  Intelligence architecture baseline, and `AXI-SCH-029`,
-  `AXI-SCH-030`, `PUB-012`, `PUB-013`, and `DGM-008` now publish the
-  first constitutional Organization and Knowledge artifact set within
-  `M22`, but the phase remains in progress until the remaining core
-  `ODT` object-family schemas and registers are published.
+  Intelligence architecture baseline, `AXI-SCH-029`, `PUB-012`, and
+  `PUB-014` now publish the constitutional Organization Profile and
+  Decision Context foundation, and `AXI-SCH-030`, `PUB-013`, and
+  `DGM-008` continue the first constitutional Knowledge and diagram
+  artifact set within `M22`, but the phase remains in progress until
+  the remaining core `ODT` object-family schemas and registers are
+  published.
 - No decision-domain runtime implementation is claimed by this roadmap.
 
 ---
@@ -146,6 +148,7 @@ The next repository-advancement priorities after this roadmap are:
 - `Governance/Publications/AXI_Organization_Intelligence_Architecture.md`
 - `Governance/Publications/AXI_Organization_Register.md`
 - `Governance/Publications/AXI_Knowledge_Register.md`
+- `Governance/Publications/AXI_Organization_Profile_Model.md`
 - `Governance/Publications/Diagrams/DGM-008_Organization_Intelligence_ODT_Foundation_Map.md`
 - `Governance/RuntimeRoadmap.md`
 - `Governance/DependencyMatrix.md`

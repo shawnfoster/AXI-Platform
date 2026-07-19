@@ -2,7 +2,7 @@
 
 **Publication ID:** `PUB-012`
 **Publication Type:** `Register`
-**Version:** `1.0.0`
+**Version:** `1.1.0`
 **Status:** `Approved`
 **Lifecycle State:** `Active`
 **Owner:** `AXI Platform Governance`
@@ -25,6 +25,10 @@ validation rules, and traceability requirements that future governed
 organization objects shall satisfy before they may be treated as
 canonical Organization Intelligence evidence.
 
+It also operationalizes the constitutional Organization Profile Model
+for operational identity, organizational context, and governed decision
+context inputs.
+
 ---
 
 # Registration Boundary
@@ -33,6 +37,8 @@ The Organization Register governs the constitutional representation of
 an organization as a durable governed system of:
 
 - identity
+- organizational context
+- decision context inputs
 - mission alignment
 - ownership boundary
 - governance
@@ -44,6 +50,8 @@ It does not register:
 - operating context windows
 - readiness assessments
 - regulatory conclusions
+- legal, tax, or accounting advice
+- recommended organizational outcomes
 - dashboards, widgets, or visualizations
 
 Those remain separate governed domains.
@@ -63,6 +71,8 @@ The register therefore requires explicit preservation of:
 - namespace and object-type consistency
 - status and lifecycle-state separation
 - organization identity metadata
+- organizational context metadata
+- decision-context metadata
 - governance metadata
 - ownership metadata
 - relationship references
@@ -74,7 +84,9 @@ The register therefore requires explicit preservation of:
 
 | Metadata Group | Minimum Required Elements | Governing Basis |
 | --- | --- | --- |
-| Identity | `object_id`, `namespace`, `object_type`, `name`, canonical organization name, organization kind, mission alignment, ownership boundary | `ADR-0014`, `ADR-0019`, `AXI-SCH-029` |
+| Identity | `object_id`, `namespace`, `object_type`, `name`, canonical organization name, organization kind, jurisdiction, industry, mission, vision, core values, governance maturity, mission alignment, ownership boundary | `ADR-0014`, `ADR-0019`, `AXI-SCH-029`, `PUB-014` |
+| Organizational Context | size, stage, revenue model, geographic scope, stakeholders, strategic objectives | `ADR-0014`, `ADR-0016`, `ADR-0019`, `AXI-SCH-029`, `PUB-014` |
+| Decision Context | legal entity type, entity status, growth objectives, capital strategy, risk tolerance, regulatory environment, reporting requirements, guidance boundary | `ADR-0014`, `ADR-0016`, `ADR-0019`, `AXI-SCH-029`, `PUB-014` |
 | Governance | owner, approval authority, governing ADR references, governing publication references | `ADR-0017`, `ADR-0019`, `AXI-SCH-029` |
 | Lifecycle | status, lifecycle state, created and updated timestamps, lifecycle-record linkage when governed transitions occur | `ADR-0015`, `AXI-SCH-015`, `AXI-SCH-029` |
 | Ownership | accountable owner, steward role references, parent-organization reference when applicable | `ADR-0014`, `ADR-0019`, `AXI-SCH-029` |
@@ -93,6 +105,9 @@ The register therefore requires explicit preservation of:
   `Deprecated`, `Archive Candidate`, `Archived`, `Historical`, or
   `Eligible for Disposal` shall remain traceable through governed
   lifecycle evidence rather than narrative alone.
+- `WILL DECIDE` is an approved governed value for
+  `decision_context.entity_status` when the organization has not yet
+  committed to a legal-entity outcome.
 - No registered organization object may be removed from canon solely
   because a presentation artifact, report, or runtime view stops using
   it.
@@ -103,12 +118,18 @@ The register therefore requires explicit preservation of:
 
 The register shall reject organization records that:
 
-- omit required identity, governance, ownership, relationship, or
-  traceability metadata
+- omit required identity, organizational-context, decision-context,
+  governance, ownership, relationship, or traceability metadata
 - use a namespace other than `AXI-PLT`
 - use an object type other than `Organization`
 - collapse operating context, regulatory knowledge, readiness, or
   presentation semantics into the organization record
+- encode board calendars, reporting calendars, or other time-bound
+  execution windows as organizational profile fields
+- assert legal, tax, accounting, or compliance conclusions inside the
+  governed decision context
+- assert a recommended entity structure, governance model, or
+  accounting outcome inside the organization record
 - omit evidence references for organizational identity or boundary
   claims
 - reference unresolved ADR, publication, decision, lifecycle, or
@@ -120,7 +141,12 @@ The register shall reject organization records that:
 # Traceability Rules
 
 - Every governed organization record shall preserve evidence-based
-  support for its identity and ownership boundary.
+  support for its identity, organizational context, and ownership
+  boundary.
+- Every governed decision-context assertion shall preserve evidence or
+  approved knowledge support sufficient to explain why the input is
+  canonical, while keeping recommendation logic outside the
+  organization record.
 - If organizational meaning changes because of a decision, outcome,
   lesson, or review, the related decision and lifecycle evidence shall
   remain traceable.
@@ -139,4 +165,5 @@ The register shall reject organization records that:
 - `Governance/Schemas/AXI-SCH-015_Information_Lifecycle_Record.json`
 - `Governance/Schemas/AXI-SCH-029_Organization.json`
 - `Governance/Publications/AXI_Organization_Intelligence_Architecture.md`
+- `Governance/Publications/AXI_Organization_Profile_Model.md`
 - `Governance/Publications/Diagrams/DGM-008_Organization_Intelligence_ODT_Foundation_Map.md`

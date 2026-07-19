@@ -1,6 +1,6 @@
 # AXI Schema Registry
 
-**Version:** 1.8.0
+**Version:** 1.9.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
 
@@ -90,6 +90,11 @@ implementation or claim runtime validation support for those domains.
 `AXI-SCH-029` and `AXI-SCH-030` publish governance structures for
 Organization and Knowledge objects within the Organization Intelligence
 domain.
+
+`AXI-SCH-029` now operationalizes the Organization Profile Model across
+operational identity, organizational context, and governed
+decision-context inputs while preserving the architectural boundaries to
+Operating Context, Regulatory Knowledge, and Readiness.
 
 Publication of those schemas does not, by itself, authorize runtime
 implementation or claim runtime validation support for the core `ODT`

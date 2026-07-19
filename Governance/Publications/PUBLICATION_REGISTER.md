@@ -2,7 +2,7 @@
 
 **Publication ID:** `PUB-001`
 **Publication Type:** `Register`
-**Version:** `1.3.0`
+**Version:** `1.4.0`
 **Status:** `Approved`
 **Lifecycle State:** `Active`
 **Owner:** `AXI Platform Governance`
@@ -52,6 +52,7 @@ Specifications.
 | `PUB-011` | AXI Organization Intelligence Architecture | Reference | `Governance/Publications/AXI_Organization_Intelligence_Architecture.md` | `ADR-0014`, `ADR-0015`, `ADR-0016`, `ADR-0017`, `ADR-0018`, `ADR-0019` | `AXI-SCH-006`, `AXI-SCH-007`, `AXI-SCH-019` through `AXI-SCH-023`, `AXI-SCH-029`, `AXI-SCH-030` | `CAP-002`, `CAP-003`, `CAP-010`, `CAP-018`, `CAP-019`, `CAP-021` | Semiannual and change-triggered |
 | `PUB-012` | AXI Organization Register | Register | `Governance/Publications/AXI_Organization_Register.md` | `ADR-0014`, `ADR-0015`, `ADR-0017`, `ADR-0019` | `AXI-SCH-015`, `AXI-SCH-029` | `CAP-003`, `CAP-010`, `CAP-018` | Semiannual and change-triggered |
 | `PUB-013` | AXI Knowledge Register | Register | `Governance/Publications/AXI_Knowledge_Register.md` | `ADR-0014`, `ADR-0015`, `ADR-0016`, `ADR-0017`, `ADR-0019` | `AXI-SCH-015`, `AXI-SCH-030` | `CAP-002`, `CAP-010`, `CAP-018` | Semiannual and change-triggered |
+| `PUB-014` | AXI Organization Profile Model | Reference | `Governance/Publications/AXI_Organization_Profile_Model.md` | `ADR-0014`, `ADR-0015`, `ADR-0016`, `ADR-0017`, `ADR-0019` | `AXI-SCH-015`, `AXI-SCH-019`, `AXI-SCH-020`, `AXI-SCH-021`, `AXI-SCH-029` | `CAP-002`, `CAP-003`, `CAP-010`, `CAP-018` | Semiannual and change-triggered |
 
 ---
 
@@ -109,5 +110,6 @@ shall be measured rather than assumed.
 - `Governance/Publications/AXI_Organization_Intelligence_Architecture.md`
 - `Governance/Publications/AXI_Organization_Register.md`
 - `Governance/Publications/AXI_Knowledge_Register.md`
+- `Governance/Publications/AXI_Organization_Profile_Model.md`
 - `Governance/Standards/DOCUMENTATION_VISUALIZATION_STANDARD.md`
 - `Governance/Standards/DOCUMENTATION_QUALITY_STANDARD.md`

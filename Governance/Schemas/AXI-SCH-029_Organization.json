@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "AXI-SCH-029",
   "title": "AXI Organization",
-  "description": "Governed constitutional representation of an organization within the Organization Intelligence domain of the AXI Platform.",
+  "description": "Governed constitutional representation of an organization, including operational identity, organizational context, and decision context inputs within the Organization Intelligence domain of the AXI Platform.",
   "type": "object",
   "required": [
     "object_id",
@@ -14,6 +14,8 @@
     "owner",
     "lifecycle_state",
     "identity",
+    "organizational_context",
+    "decision_context",
     "governance",
     "ownership",
     "relationships",
@@ -76,6 +78,12 @@
       "required": [
         "canonical_name",
         "organization_kind",
+        "jurisdiction",
+        "industry",
+        "mission",
+        "vision",
+        "core_values",
+        "governance_maturity",
         "mission_alignment",
         "ownership_boundary"
       ],
@@ -85,6 +93,29 @@
           "minLength": 1
         },
         "organization_kind": {
+          "type": "string",
+          "minLength": 1
+        },
+        "jurisdiction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "industry": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mission": {
+          "type": "string",
+          "minLength": 1
+        },
+        "vision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "core_values": {
+          "$ref": "#/$defs/stringArrayMinOne"
+        },
+        "governance_maturity": {
           "type": "string",
           "minLength": 1
         },
@@ -125,6 +156,113 @@
             "additionalProperties": false
           },
           "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "organizational_context": {
+      "type": "object",
+      "required": [
+        "size",
+        "stage",
+        "revenue_model",
+        "geographic_scope",
+        "stakeholders",
+        "strategic_objectives"
+      ],
+      "properties": {
+        "size": {
+          "type": "string",
+          "minLength": 1
+        },
+        "stage": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revenue_model": {
+          "type": "string",
+          "minLength": 1
+        },
+        "geographic_scope": {
+          "$ref": "#/$defs/stringArrayMinOne"
+        },
+        "stakeholders": {
+          "$ref": "#/$defs/stringArrayMinOne"
+        },
+        "strategic_objectives": {
+          "$ref": "#/$defs/stringArrayMinOne"
+        }
+      },
+      "additionalProperties": false
+    },
+    "decision_context": {
+      "type": "object",
+      "required": [
+        "legal_entity_type",
+        "entity_status",
+        "growth_objectives",
+        "capital_strategy",
+        "risk_tolerance",
+        "regulatory_environment",
+        "reporting_requirements",
+        "guidance_boundary"
+      ],
+      "properties": {
+        "legal_entity_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "entity_status": {
+          "type": "string",
+          "enum": [
+            "Existing",
+            "Planned",
+            "WILL DECIDE"
+          ]
+        },
+        "growth_objectives": {
+          "$ref": "#/$defs/stringArrayMinOne"
+        },
+        "capital_strategy": {
+          "$ref": "#/$defs/stringArrayMinOne"
+        },
+        "risk_tolerance": {
+          "type": "string",
+          "minLength": 1
+        },
+        "regulatory_environment": {
+          "$ref": "#/$defs/stringArrayMinOne"
+        },
+        "reporting_requirements": {
+          "$ref": "#/$defs/stringArrayMinOne"
+        },
+        "guidance_boundary": {
+          "type": "object",
+          "required": [
+            "recommended_outcome_asserted",
+            "legal_advice_asserted",
+            "tax_advice_asserted",
+            "accounting_advice_asserted"
+          ],
+          "properties": {
+            "recommended_outcome_asserted": {
+              "type": "boolean",
+              "const": false
+            },
+            "legal_advice_asserted": {
+              "type": "boolean",
+              "const": false
+            },
+            "tax_advice_asserted": {
+              "type": "boolean",
+              "const": false
+            },
+            "accounting_advice_asserted": {
+              "type": "boolean",
+              "const": false
+            }
+          },
+          "additionalProperties": false
         }
       },
       "additionalProperties": false
@@ -256,6 +394,15 @@
     }
   },
   "$defs": {
+    "stringArrayMinOne": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
     "objectRef": {
       "type": "string",
       "pattern": "^OBJ-[0-9]{6}$"

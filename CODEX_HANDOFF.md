@@ -104,9 +104,9 @@ Current Repository State
   milestone for Organization Intelligence and the core `ODT` schema
   baseline, `PUB-011` now publishes the Organization Intelligence
   architecture baseline, `AXI-SCH-029` and `AXI-SCH-030` are
-  published, `PUB-012` and `PUB-013` are published, and `DGM-008`
-  now publishes the first canonical Organization Intelligence / `ODT`
-  foundation diagram.
+  published, `PUB-012`, `PUB-013`, and `PUB-014` are published, and
+  `DGM-008` now publishes the first canonical Organization
+  Intelligence / `ODT` foundation diagram.
 - Decision Intelligence architecture status:
   the Decision is now the primary governed object, the canonical
   decision lifecycle is published, the Organizational Digital Twin is a
@@ -119,10 +119,11 @@ Current Repository State
   first-class presentation services, Organization Intelligence
   architecture is now published through `PUB-011`, Organization and
   Knowledge governance artifacts are now published through
-  `AXI-SCH-029`, `AXI-SCH-030`, `PUB-012`, and `PUB-013`, governed
-  canonical diagrams now exist for every current major architectural
-  domain, and no decision-domain runtime implementation is yet
-  claimed.
+  `AXI-SCH-029`, `AXI-SCH-030`, `PUB-012`, and `PUB-013`, the
+  Organization Profile and Decision Context foundation is now
+  published through `PUB-014`, governed canonical diagrams now exist
+  for every current major architectural domain, and no
+  decision-domain runtime implementation is yet claimed.
 - Runtime freeze status:
   `Runtime-v1.2` is the accepted freeze tag through `M13`; current
   repository state extends beyond that freeze with `M14`, `M15`,
@@ -130,9 +131,10 @@ Current Repository State
 - Next governed phase:
   `M22` remains the active governance-only milestone. Its
   architecture plus first Organization and Knowledge schema, register,
-  and diagram outputs are now published, while the remaining core
-  Organizational Digital Twin schemas and registers remain pending.
-  No runtime implementation is yet authorized beyond `M18`.
+  diagram, and profile-model outputs are now published, while the
+  remaining core Organizational Digital Twin schemas and registers
+  remain pending. No runtime implementation is yet authorized beyond
+  `M18`.
 - Runtime milestone progression:
   `M9` through `M18` are complete.
 

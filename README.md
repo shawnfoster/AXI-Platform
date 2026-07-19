@@ -34,10 +34,11 @@ Current platform status:
 - `Governance/Publications/AXI_Organization_Intelligence_Architecture.md`
   (`PUB-011`) now publishes the Organization Intelligence architecture
   baseline.
-- `AXI-SCH-029`, `AXI-SCH-030`, `PUB-012`, `PUB-013`, and `DGM-008`
-  now publish the first constitutional Organization and Knowledge
-  artifacts within `M22`; the remaining core `ODT` schemas and
-  registers are still pending.
+- `AXI-SCH-029`, `PUB-012`, and `PUB-014` now publish the
+  constitutional Organization Profile and Decision Context foundation,
+  while `AXI-SCH-030`, `PUB-013`, and `DGM-008` continue the first
+  Knowledge and diagram baseline within `M22`; the remaining core
+  `ODT` schemas and registers are still pending.
 - No decision-domain runtime implementation is claimed by the
   repository.
 - No runtime implementation is claimed beyond `M18`.
