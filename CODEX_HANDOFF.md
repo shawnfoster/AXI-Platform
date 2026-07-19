@@ -106,7 +106,10 @@ Current Repository State
   architecture baseline, `AXI-SCH-029` and `AXI-SCH-030` are
   published, `PUB-012`, `PUB-013`, and `PUB-014` are published, and
   `DGM-008` now publishes the first canonical Organization
-  Intelligence / `ODT` foundation diagram.
+  Intelligence / `ODT` foundation diagram, `ADR-0020` is accepted,
+  `M23` is approved as the next planned governance-only milestone for
+  Knowledge Expansion and Repository Operationalization, and `DGM-009`
+  now publishes the canonical diagram for that planned domain.
 - Decision Intelligence architecture status:
   the Decision is now the primary governed object, the canonical
   decision lifecycle is published, the Organizational Digital Twin is a
@@ -122,7 +125,9 @@ Current Repository State
   `AXI-SCH-029`, `AXI-SCH-030`, `PUB-012`, and `PUB-013`, the
   Organization Profile and Decision Context foundation is now
   published through `PUB-014`, governed canonical diagrams now exist
-  for every current major architectural domain, and no
+  for every current major architectural domain, Knowledge Expansion
+  and Repository Operationalization governance is now published as the
+  next planned domain through `ADR-0020` and `DGM-009`, and no
   decision-domain runtime implementation is yet claimed.
 - Runtime freeze status:
   `Runtime-v1.2` is the accepted freeze tag through `M13`; current
@@ -133,8 +138,10 @@ Current Repository State
   architecture plus first Organization and Knowledge schema, register,
   diagram, and profile-model outputs are now published, while the
   remaining core Organizational Digital Twin schemas and registers
-  remain pending. No runtime implementation is yet authorized beyond
-  `M18`.
+  remain pending. `M23` is now published as the next planned
+  governance-only milestone for Knowledge Expansion and Repository
+  Operationalization. No runtime implementation is yet authorized
+  beyond `M18`.
 - Runtime milestone progression:
   `M9` through `M18` are complete.
 

@@ -31,6 +31,9 @@ Current platform status:
 - The active governance-only repository milestone is
   `Governance/WorkQueue/M22-Core-Organizational-Digital-Twin-and-Knowledge-Object-Schemas.md`,
   governed by `ADR-0019`.
+- The next planned governance-only milestone is
+  `Governance/WorkQueue/M23-Knowledge-Expansion-and-Repository-Operationalization-Planning.md`,
+  governed by `ADR-0020`.
 - `Governance/Publications/AXI_Organization_Intelligence_Architecture.md`
   (`PUB-011`) now publishes the Organization Intelligence architecture
   baseline.
@@ -39,6 +42,10 @@ Current platform status:
   while `AXI-SCH-030`, `PUB-013`, and `DGM-008` continue the first
   Knowledge and diagram baseline within `M22`; the remaining core
   `ODT` schemas and registers are still pending.
+- `ADR-0020`, `M23`, and `DGM-009` now publish the next planned
+  Knowledge Expansion and Repository Operationalization governance
+  baseline without authorizing runtime, connectors, indexing, or
+  persistence changes.
 - No decision-domain runtime implementation is claimed by the
   repository.
 - No runtime implementation is claimed beyond `M18`.

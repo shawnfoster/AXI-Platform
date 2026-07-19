@@ -1,6 +1,6 @@
 # AXI Decision Intelligence Roadmap
 
-**Version:** 1.7.0
+**Version:** 1.8.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
 **Audit Date:** 2026-07-19
@@ -55,6 +55,10 @@ dependencies through `M18`.
   artifact set within `M22`, but the phase remains in progress until
   the remaining core `ODT` object-family schemas and registers are
   published.
+- `ADR-0020`, `M23`, and `DGM-009` now publish the next planned
+  Knowledge Expansion and Repository Operationalization governance
+  baseline without changing `M22` as the repository's current active
+  milestone.
 - No decision-domain runtime implementation is claimed by this roadmap.
 
 ---
@@ -70,9 +74,10 @@ dependencies through `M18`.
 | 5 | Publication and Documentation Governance | Complete | Phases 3 and 4 complete | Publication hierarchy, manual architecture, diagram governance, and documentation quality standards are published |
 | 6 | Presentation Architecture, Design System, and Visualization Governance | Complete | Phase 5 complete plus approved `M21` work item | Dashboard, widget, design-system, artifact-specification, and visualization governance are published with canonical registers and diagrams |
 | 7 | Core Organizational Digital Twin and Knowledge Object Schemas | In Progress | Phase 6 complete plus published `M22` work item and approved `ADR-0019` | Published schemas and registers exist for core organization, person, role, knowledge, expertise, policy, timeline, resource, and dependency domains |
-| 8 | Engine-Specific Governance by Layer | Planned | Phase 7 complete | Engine-specific ADRs, contracts, and work items are published only for implementation-ready engine domains |
-| 9 | Decision Runtime and Application Planning | Planned | Phase 8 complete | Published work items define how decision-domain runtimes or applications reuse the existing AXI runtime foundation |
-| 10 | Decision-Domain Runtime Implementation | Blocked pending governance | Phase 9 complete | Repository evidence demonstrates implemented decision-domain runtime or application milestones |
+| 8 | Knowledge Expansion and Repository Operationalization Governance | Planned | Phase 7 complete plus published `M23` work item and approved `ADR-0020` | Published governance exists for external knowledge expansion, operational workspace boundaries, Operational Pack derivation, and canonical diagram coverage without authorizing runtime |
+| 9 | Engine-Specific Governance by Layer | Planned | Phase 8 complete | Engine-specific ADRs, contracts, and work items are published only for implementation-ready engine domains |
+| 10 | Decision Runtime and Application Planning | Planned | Phase 9 complete | Published work items define how decision-domain runtimes or applications reuse the existing AXI runtime foundation |
+| 11 | Decision-Domain Runtime Implementation | Blocked pending governance | Phase 10 complete | Repository evidence demonstrates implemented decision-domain runtime or application milestones |
 
 ---
 
@@ -94,7 +99,8 @@ flowchart TD
     S --> D
     C --> D
     E --> D
-    D --> G["Engine-Specific Governance by Layer"]
+    D --> K["Knowledge Expansion / Repository Operationalization Governance"]
+    K --> G["Engine-Specific Governance by Layer"]
     G --> P["Decision Runtime and Application Planning"]
     P --> I["Decision-Domain Runtime Implementation"]
 ```
@@ -131,9 +137,13 @@ The next repository-advancement priorities after this roadmap are:
 1. Complete `M22` by publishing the remaining core Organizational
    Digital Twin schemas and registers for person, role, expertise,
    policy, timeline, resource, and dependency domains.
-2. Publish engine-specific ADRs for the first implementation-ready
-   engine domains.
-3. Publish work items for decision-domain runtime reuse only after the
+2. Execute `M23` to keep external knowledge expansion, Pack
+   derivation, and operational workspace governance ahead of future
+   runtime or connector planning.
+3. Publish engine-specific ADRs for the first implementation-ready
+   engine domains only after the upstream knowledge and governance
+   phases remain consistent.
+4. Publish work items for decision-domain runtime reuse only after the
    upstream governance exists.
 
 ---
@@ -145,10 +155,13 @@ The next repository-advancement priorities after this roadmap are:
 - `Governance/ADR/ADR-0016_Decision_Support_Context_Governance.md`
 - `Governance/ADR/ADR-0018_Presentation_Services_Governance.md`
 - `Governance/ADR/ADR-0019_Organization_Intelligence_and_Core_ODT_Schema_Governance.md`
+- `Governance/ADR/ADR-0020_Knowledge_Expansion_and_Repository_Operationalization_Governance.md`
+- `Governance/WorkQueue/M23-Knowledge-Expansion-and-Repository-Operationalization-Planning.md`
 - `Governance/Publications/AXI_Organization_Intelligence_Architecture.md`
 - `Governance/Publications/AXI_Organization_Register.md`
 - `Governance/Publications/AXI_Knowledge_Register.md`
 - `Governance/Publications/AXI_Organization_Profile_Model.md`
+- `Governance/Publications/Diagrams/DGM-009_Knowledge_Expansion_and_Operationalization_Topology.md`
 - `Governance/Publications/Diagrams/DGM-008_Organization_Intelligence_ODT_Foundation_Map.md`
 - `Governance/RuntimeRoadmap.md`
 - `Governance/DependencyMatrix.md`
