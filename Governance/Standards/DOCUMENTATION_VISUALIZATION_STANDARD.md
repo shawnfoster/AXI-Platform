@@ -2,7 +2,7 @@
 
 **Publication ID:** `PUB-005`
 **Publication Type:** `Standard`
-**Version:** `1.0.0`
+**Version:** `1.1.0`
 **Status:** `Approved`
 **Lifecycle State:** `Active`
 **Owner:** `AXI Platform Governance`
@@ -44,6 +44,10 @@ The approved diagram categories are:
 - Data Flow
 - Dependency Graphs
 - Organizational Operating Context
+- Presentation Architecture
+- Dashboard Architecture
+- Design System Architecture
+- Visualization Standards
 
 ---
 
@@ -140,5 +144,6 @@ architectural domain is published.
 # Related
 
 - `Governance/ADR/ADR-0017_Publication_and_Documentation_Governance.md`
+- `Governance/ADR/ADR-0018_Presentation_Services_Governance.md`
 - `Governance/Publications/DIAGRAM_REGISTER.md`
 - `Governance/Schemas/AXI-SCH-023_Diagram.json`

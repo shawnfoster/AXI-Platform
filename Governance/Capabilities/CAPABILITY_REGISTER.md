@@ -1,6 +1,6 @@
 # AXI Capability Register
 
-**Version:** 1.1.0
+**Version:** 1.2.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
 **Audit Date:** 2026-07-19
@@ -39,6 +39,10 @@ services, applications, and decision workflows shall trace to.
 | `CAP-016` | Regulatory Knowledge Surfacing | Assess Context, Evaluate Ethics, Recommend | Surface potentially applicable federal, state, local, industry, professional, internal, and contractual considerations without asserting legal conclusions. |
 | `CAP-017` | Multidimensional Readiness Assessment | Recommend, Human Approval, Execute | Assess strategic, leadership, capacity, technology, governance, regulatory, financial, change, calendar, and knowledge readiness and translate the result into governed recommendation effects. |
 | `CAP-018` | Publication and Diagram Governance | Repository Stewardship | Govern publication hierarchy, manual architecture, cross-reference integrity, diagram lifecycle, and synchronized visual authority so AXI documentation remains an authoritative platform subsystem. |
+| `CAP-019` | Dashboard And Decision Surface Governance | Recommend, Human Approval, Execute, Monitor, Measure | Govern dashboard composition, lifecycle, permissions, inheritance, customization, and validation while ensuring dashboards consume governed platform objects rather than owning business data. |
+| `CAP-020` | Design System And Brand Governance | Repository Stewardship, Recommend, Human Approval, Execute | Govern brand kits, themes, typography, color, iconography, layout grids, accessibility, export styles, and white-label overlays across all rendered AXI artifacts. |
+| `CAP-021` | Visualization And Insight Communication | Observe, Discover, Situational Assessment, Recommend, Measure | Govern approved visualization families, interpretability rules, executive-summary patterns, and governed visualization-to-data-source traceability. |
+| `CAP-022` | Artifact Specification And Export Governance | Repository Stewardship, Human Approval, Execute | Govern canonical rendering requirements, responsive variants, export formats, safe areas, typography scale, icon sizes, and accessibility across dashboards, documents, diagrams, reports, and presentations. |
 
 ---
 
@@ -86,6 +90,7 @@ claim runtime implementation.
 - `Governance/ADR/ADR-0015_Repository_Stewardship_Governance.md`
 - `Governance/ADR/ADR-0016_Decision_Support_Context_Governance.md`
 - `Governance/ADR/ADR-0017_Publication_and_Documentation_Governance.md`
+- `Governance/ADR/ADR-0018_Presentation_Services_Governance.md`
 - `Governance/Decisions/DECISION_REGISTER.md`
 - `Governance/Schemas/AXI-SCH-006_Decisions.json`
 - `Governance/Schemas/AXI-SCH-008_Capability.json`

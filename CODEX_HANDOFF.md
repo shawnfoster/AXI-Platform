@@ -96,7 +96,10 @@ Current Repository State
   `AXI-SCH-023` are published, and publication and diagram governance
   artifacts are published through `PUBLICATION_REGISTER`,
   `DIAGRAM_REGISTER`, the Operating Manual architecture, the Field
-  Manual architecture, and the documentation standards.
+  Manual architecture, and the documentation standards, `M21` is
+  approved, `ADR-0018` is accepted, `AXI-SCH-024` through
+  `AXI-SCH-028` are published, and presentation-services governance is
+  published through `PUB-007` through `PUB-010` and `DGM-007`.
 - Decision Intelligence architecture status:
   the Decision is now the primary governed object, the canonical
   decision lifecycle is published, the Organizational Digital Twin is a
@@ -104,20 +107,22 @@ Current Repository State
   is published, imported-content review and quarantine governance is
   published, operating context, regulatory knowledge, and readiness
   governance are published, publication hierarchy and diagram
-  governance are published, governed canonical diagrams now exist for
-  every current major architectural domain, and no decision-domain
-  runtime implementation is yet claimed.
+  governance are published, dashboards, widgets, design-system assets,
+  artifact specifications, and visualizations are now governed as
+  first-class presentation services, governed canonical diagrams now
+  exist for every current major architectural domain, and no
+  decision-domain runtime implementation is yet claimed.
 - Runtime freeze status:
   `Runtime-v1.2` is the accepted freeze tag through `M13`; current
   repository state extends beyond that freeze with `M14`, `M15`,
   `M16`, `M17`, and `M18` implemented.
 - Next governed phase:
-  No later runtime work item is published after
-  `Governance/WorkQueue/M18-Runtime-API.md`; post-`M18` repository
-  advancement is governed by
-  `Governance/Roadmap/AXI_Roadmap_v1.0.md`, with core Organizational
-  Digital Twin object schemas and engine-specific governance still
-  planned before runtime expansion.
+  `M21` is now published as an architecture-only presentation
+  milestone; post-`M21` repository advancement remains governed by
+  `Governance/Roadmap/AXI_Roadmap_v1.0.md`, with
+  organization-intelligence and core Organizational Digital Twin object
+  schemas and engine-specific governance still planned before runtime
+  expansion.
 - Runtime milestone progression:
   `M9` through `M18` are complete.
 

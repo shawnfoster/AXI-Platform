@@ -1,9 +1,9 @@
 # AXI Runtime Roadmap
 
-**Version:** 1.5.0
+**Version:** 1.6.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
-**Audit Date:** 2026-07-18
+**Audit Date:** 2026-07-19
 
 ---
 
@@ -34,6 +34,8 @@ required upstream module is only a placeholder.
 - Runtime CLI is implemented and tested.
 - Runtime API is implemented and tested.
 - Runtime Foundation is complete through `M18`.
+- `M21` now publishes presentation-services governance, but it does not
+  authorize GUI runtime implementation.
 - No runtime implementation is claimed beyond `M18`.
 
 ---
@@ -53,9 +55,10 @@ already published:
 - `ADR-0013`, `API_CONTRACT`, and `AXI-SCH-014` are now published.
 - `Runtime/API/` is now implemented.
 
-GUI is not included in Phase II because the repository contains only
-placeholder GUI governance and no published downstream runtime milestone
-or dependency evidence beyond the shared object taxonomy.
+GUI runtime is not included in Phase II because `M21` publishes
+presentation governance only, and the repository still contains no
+published downstream GUI runtime milestone or implementation evidence
+beyond the shared object taxonomy.
 
 ---
 

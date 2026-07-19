@@ -116,7 +116,11 @@
           "Sequence Diagrams",
           "Data Flow",
           "Dependency Graphs",
-          "Organizational Operating Context"
+          "Organizational Operating Context",
+          "Presentation Architecture",
+          "Dashboard Architecture",
+          "Design System Architecture",
+          "Visualization Standards"
         ]
       },
       "minItems": 1,

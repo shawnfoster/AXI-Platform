@@ -1,6 +1,6 @@
 # AXI Schema Registry
 
-**Version:** 1.6.0
+**Version:** 1.7.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
 
@@ -39,6 +39,11 @@ Published schema files with approved content:
 | `AXI-SCH-021` | Readiness Profile | `Governance/Schemas/AXI-SCH-021_Readiness_Profile.json` | Published |
 | `AXI-SCH-022` | Publication | `Governance/Schemas/AXI-SCH-022_Publication.json` | Published |
 | `AXI-SCH-023` | Diagram | `Governance/Schemas/AXI-SCH-023_Diagram.json` | Published |
+| `AXI-SCH-024` | Dashboard | `Governance/Schemas/AXI-SCH-024_Dashboard.json` | Published |
+| `AXI-SCH-025` | Widget | `Governance/Schemas/AXI-SCH-025_Widget.json` | Published |
+| `AXI-SCH-026` | Design System Asset | `Governance/Schemas/AXI-SCH-026_Design_System_Asset.json` | Published |
+| `AXI-SCH-027` | Artifact Specification | `Governance/Schemas/AXI-SCH-027_Artifact_Specification.json` | Published |
+| `AXI-SCH-028` | Visualization | `Governance/Schemas/AXI-SCH-028_Visualization.json` | Published |
 
 ---
 
@@ -71,6 +76,11 @@ artifacts.
 
 `AXI-SCH-015` through `AXI-SCH-023` publish governance structures for
 repository stewardship, decision-support context, publications, and
-diagrams. Publication of those schemas does not, by itself, authorize
-runtime implementation or claim runtime validation support for those
-domains.
+diagrams.
+
+`AXI-SCH-024` through `AXI-SCH-028` publish governance structures for
+dashboards, widgets, design-system assets, artifact specifications, and
+visualizations.
+
+Publication of those schemas does not, by itself, authorize runtime
+implementation or claim runtime validation support for those domains.

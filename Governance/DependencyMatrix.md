@@ -1,16 +1,16 @@
 # AXI Runtime Dependency Matrix
 
-**Version:** 1.5.0
+**Version:** 1.6.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
-**Audit Date:** 2026-07-18
+**Audit Date:** 2026-07-19
 
 ---
 
 # Purpose
 
 This document audits the AXI runtime work queue against the repository
-state present on 2026-07-18 and records the governed Phase II runtime
+state present on 2026-07-19 and records the governed Phase II runtime
 state after implementation of `M18`.
 
 The audit distinguishes between:
@@ -79,7 +79,9 @@ active work queue:
 15. `M18 Runtime API` is now implemented with published API
     governance, runtime code, documentation, runtime tests, and
     integration tests, completing `M18`.
-16. GUI governance remains placeholder-only, so no GUI milestone is
+16. `M21` now publishes dashboard, design-system, visualization, and
+    artifact-specification governance as architecture-only repository
+    evidence, but no GUI runtime milestone or implementation is
     published in this audit.
 
 ---
@@ -148,3 +150,5 @@ active work queue:
    upstream runtime foundations through `M16` remain validated.
 9. Do not claim runtime implementation beyond `M18` without new
    published work queue and milestone-specific governance.
+10. Treat `M21` as architecture-only repository evidence that does not
+    authorize GUI runtime implementation beyond `M18`.

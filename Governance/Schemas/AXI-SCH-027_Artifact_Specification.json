@@ -1,0 +1,236 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "AXI-SCH-027",
+  "title": "AXI Artifact Specification",
+  "description": "Canonical rendering specification for governed AXI artifact families.",
+  "type": "object",
+  "required": [
+    "artifact_spec_id",
+    "title",
+    "artifact_family",
+    "channels",
+    "canonical_dimensions",
+    "responsive_variants",
+    "minimum_size",
+    "maximum_size",
+    "aspect_ratio",
+    "margins",
+    "safe_areas",
+    "typography_scale",
+    "icon_size_scale",
+    "diagram_sizing_rules",
+    "supported_export_formats",
+    "accessibility_requirements",
+    "rendering_rules"
+  ],
+  "properties": {
+    "artifact_spec_id": {
+      "type": "string",
+      "pattern": "^AS-[0-9]{3}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "artifact_family": {
+      "type": "string",
+      "enum": [
+        "Dashboard",
+        "Executive Brief",
+        "Diagnostic Report",
+        "Procedure",
+        "Architecture Diagram",
+        "Workflow Diagram",
+        "Decision Tree",
+        "Presentation",
+        "PDF",
+        "Word Document",
+        "Mobile View",
+        "Web View",
+        "Printed Report"
+      ]
+    },
+    "channels": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Web",
+          "Mobile",
+          "Tablet",
+          "PDF",
+          "Print",
+          "Presentation",
+          "Document"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "canonical_dimensions": {
+      "$ref": "#/$defs/size"
+    },
+    "responsive_variants": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "minimum_width",
+          "maximum_width"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minimum_width": {
+            "type": "string",
+            "minLength": 1
+          },
+          "maximum_width": {
+            "type": "string",
+            "minLength": 1
+          },
+          "orientation": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "minimum_size": {
+      "$ref": "#/$defs/size"
+    },
+    "maximum_size": {
+      "$ref": "#/$defs/size"
+    },
+    "aspect_ratio": {
+      "type": "string",
+      "minLength": 1
+    },
+    "margins": {
+      "$ref": "#/$defs/box"
+    },
+    "safe_areas": {
+      "$ref": "#/$defs/box"
+    },
+    "typography_scale": {
+      "type": "string",
+      "minLength": 1
+    },
+    "icon_size_scale": {
+      "type": "string",
+      "minLength": 1
+    },
+    "diagram_sizing_rules": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "supported_export_formats": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "HTML",
+          "PDF",
+          "PPTX",
+          "DOCX",
+          "PNG",
+          "SVG"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "accessibility_requirements": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "rendering_rules": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "related_template_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^TPL-[0-9]{3}$"
+      },
+      "uniqueItems": true
+    }
+  },
+  "$defs": {
+    "size": {
+      "type": "object",
+      "required": [
+        "width",
+        "height",
+        "unit"
+      ],
+      "properties": {
+        "width": {
+          "type": "string",
+          "minLength": 1
+        },
+        "height": {
+          "type": "string",
+          "minLength": 1
+        },
+        "unit": {
+          "type": "string",
+          "enum": [
+            "px",
+            "in",
+            "mm"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "box": {
+      "type": "object",
+      "required": [
+        "top",
+        "right",
+        "bottom",
+        "left"
+      ],
+      "properties": {
+        "top": {
+          "type": "string",
+          "minLength": 1
+        },
+        "right": {
+          "type": "string",
+          "minLength": 1
+        },
+        "bottom": {
+          "type": "string",
+          "minLength": 1
+        },
+        "left": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
