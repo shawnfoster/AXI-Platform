@@ -16,9 +16,14 @@ Current platform status:
 - `M18 Runtime API` is implemented, validated, and extends the current
   governed runtime through the local programmatic execution surface.
 - Decision Intelligence architecture is published through
-  `ADR-0014`, `ADR-0015`, `ADR-0016`, `AXI-SCH-006`,
-  `AXI-SCH-015` through `AXI-SCH-021`, `DECISION_REGISTER`,
-  `CAPABILITY_REGISTER`, and `AXI_Roadmap_v1.0`.
+  `ADR-0014`, `ADR-0015`, `ADR-0016`, `ADR-0017`,
+  `AXI-SCH-006`, `AXI-SCH-015` through `AXI-SCH-023`,
+  `DECISION_REGISTER`, `CAPABILITY_REGISTER`, and
+  `AXI_Roadmap_v1.0`.
+- Publication and documentation governance is published through
+  `PUBLICATION_REGISTER`, `DIAGRAM_REGISTER`, the Operating Manual
+  architecture, the Field Manual architecture, and the documentation
+  visualization and quality standards.
 - No decision-domain runtime implementation is claimed by the
   repository.
 - No runtime implementation is claimed beyond `M18`.

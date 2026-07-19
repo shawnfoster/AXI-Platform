@@ -1,0 +1,252 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "AXI-SCH-022",
+  "title": "AXI Publication",
+  "description": "Canonical metadata definition for governed AXI publications, manuals, standards, and related documentation artifacts.",
+  "type": "object",
+
+  "required": [
+    "publication_id",
+    "title",
+    "publication_type",
+    "version",
+    "status",
+    "lifecycle_state",
+    "owner",
+    "review_cycle",
+    "approval_authority",
+    "traceability"
+  ],
+
+  "properties": {
+    "publication_id": {
+      "type": "string",
+      "pattern": "^PUB-[0-9]{3}$"
+    },
+
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+
+    "publication_type": {
+      "type": "string",
+      "enum": [
+        "Constitution",
+        "Operating System",
+        "Operating Manual",
+        "Field Manual",
+        "ADR",
+        "Standard",
+        "Policy",
+        "Procedure (SOP)",
+        "Workflow",
+        "Playbook",
+        "Schema",
+        "Register",
+        "Checklist",
+        "Guide",
+        "Reference",
+        "Training Module",
+        "Tutorial",
+        "Architecture Diagram",
+        "Flow Diagram",
+        "Decision Tree"
+      ]
+    },
+
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+
+    "status": {
+      "type": "string",
+      "enum": [
+        "Draft",
+        "Proposed",
+        "Approved",
+        "Frozen",
+        "Deprecated",
+        "Superseded",
+        "Archived"
+      ]
+    },
+
+    "lifecycle_state": {
+      "type": "string",
+      "enum": [
+        "Active",
+        "Review",
+        "Deprecated",
+        "Archive Candidate",
+        "Archived",
+        "Historical",
+        "Eligible for Disposal"
+      ]
+    },
+
+    "owner": {
+      "type": "string",
+      "minLength": 1
+    },
+
+    "review_cycle": {
+      "type": "string",
+      "minLength": 1
+    },
+
+    "approval_authority": {
+      "type": "string",
+      "minLength": 1
+    },
+
+    "repository_path": {
+      "type": "string"
+    },
+
+    "summary": {
+      "type": "string"
+    },
+
+    "audience": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+
+    "traceability": {
+      "type": "object",
+      "properties": {
+        "governing_adrs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^ADR-[0-9]{4}$"
+          },
+          "uniqueItems": true
+        },
+
+        "related_schemas": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^AXI-SCH-[0-9]{3}$"
+          },
+          "uniqueItems": true
+        },
+
+        "related_capabilities": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^CAP-[0-9]{3}$"
+          },
+          "uniqueItems": true
+        },
+
+        "related_diagrams": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^DGM-[0-9]{3}$"
+          },
+          "uniqueItems": true
+        },
+
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+
+        "supersedes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+
+        "superseded_by": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "revision_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "version",
+          "changed_at",
+          "summary",
+          "authority"
+        ],
+        "properties": {
+          "version": {
+            "type": "string"
+          },
+          "changed_at": {
+            "type": "string",
+            "format": "date"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "authority": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+
+    "review_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "reviewed_at",
+          "reviewer",
+          "outcome"
+        ],
+        "properties": {
+          "reviewed_at": {
+            "type": "string",
+            "format": "date"
+          },
+          "reviewer": {
+            "type": "string"
+          },
+          "outcome": {
+            "type": "string",
+            "enum": [
+              "Approved",
+              "Changes Required",
+              "Informational"
+            ]
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+
+  "additionalProperties": false
+}

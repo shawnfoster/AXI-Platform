@@ -1,6 +1,6 @@
 # AXI Capability Register
 
-**Version:** 1.0.0
+**Version:** 1.1.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
 **Audit Date:** 2026-07-19
@@ -38,6 +38,7 @@ services, applications, and decision workflows shall trace to.
 | `CAP-015` | Operating Context Assessment | Assess Context, Evaluate Calendar, Execute | Evaluate decisions against fiscal, board, audit, reporting, maintenance, freeze, renewal, payroll, and other operational timing conditions before execution planning. |
 | `CAP-016` | Regulatory Knowledge Surfacing | Assess Context, Evaluate Ethics, Recommend | Surface potentially applicable federal, state, local, industry, professional, internal, and contractual considerations without asserting legal conclusions. |
 | `CAP-017` | Multidimensional Readiness Assessment | Recommend, Human Approval, Execute | Assess strategic, leadership, capacity, technology, governance, regulatory, financial, change, calendar, and knowledge readiness and translate the result into governed recommendation effects. |
+| `CAP-018` | Publication and Diagram Governance | Repository Stewardship | Govern publication hierarchy, manual architecture, cross-reference integrity, diagram lifecycle, and synchronized visual authority so AXI documentation remains an authoritative platform subsystem. |
 
 ---
 
@@ -84,6 +85,7 @@ claim runtime implementation.
 - `Governance/ADR/ADR-0014_Decision_Intelligence_Architecture.md`
 - `Governance/ADR/ADR-0015_Repository_Stewardship_Governance.md`
 - `Governance/ADR/ADR-0016_Decision_Support_Context_Governance.md`
+- `Governance/ADR/ADR-0017_Publication_and_Documentation_Governance.md`
 - `Governance/Decisions/DECISION_REGISTER.md`
 - `Governance/Schemas/AXI-SCH-006_Decisions.json`
 - `Governance/Schemas/AXI-SCH-008_Capability.json`

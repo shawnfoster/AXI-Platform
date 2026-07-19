@@ -92,15 +92,21 @@ Current Repository State
   and `CAPABILITY_REGISTER` are published, and
   `Governance/Roadmap/AXI_Roadmap_v1.0.md` sequences the post-`M18`
   Decision Intelligence architecture, `ADR-0015` and `ADR-0016` are
-  accepted, and `AXI-SCH-015` through `AXI-SCH-021` are published.
+  accepted, `ADR-0017` is accepted, `AXI-SCH-015` through
+  `AXI-SCH-023` are published, and publication and diagram governance
+  artifacts are published through `PUBLICATION_REGISTER`,
+  `DIAGRAM_REGISTER`, the Operating Manual architecture, the Field
+  Manual architecture, and the documentation standards.
 - Decision Intelligence architecture status:
   the Decision is now the primary governed object, the canonical
   decision lifecycle is published, the Organizational Digital Twin is a
   first-class architectural domain, repository stewardship governance
   is published, imported-content review and quarantine governance is
   published, operating context, regulatory knowledge, and readiness
-  governance are published, and no decision-domain runtime
-  implementation is yet claimed.
+  governance are published, publication hierarchy and diagram
+  governance are published, governed canonical diagrams now exist for
+  every current major architectural domain, and no decision-domain
+  runtime implementation is yet claimed.
 - Runtime freeze status:
   `Runtime-v1.2` is the accepted freeze tag through `M13`; current
   repository state extends beyond that freeze with `M14`, `M15`,
@@ -109,8 +115,8 @@ Current Repository State
   No later runtime work item is published after
   `Governance/WorkQueue/M18-Runtime-API.md`; post-`M18` repository
   advancement is governed by
-  `Governance/Roadmap/AXI_Roadmap_v1.0.md`, with engine-specific
-  governance and core Organizational Digital Twin object schemas still
+  `Governance/Roadmap/AXI_Roadmap_v1.0.md`, with core Organizational
+  Digital Twin object schemas and engine-specific governance still
   planned before runtime expansion.
 - Runtime milestone progression:
   `M9` through `M18` are complete.

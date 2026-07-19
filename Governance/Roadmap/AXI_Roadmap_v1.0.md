@@ -1,6 +1,6 @@
 # AXI Decision Intelligence Roadmap
 
-**Version:** 1.1.0
+**Version:** 1.2.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
 **Audit Date:** 2026-07-19
@@ -34,6 +34,11 @@ dependencies through `M18`.
   knowledge, and readiness governance.
 - `AXI-SCH-015` through `AXI-SCH-021` now publish the corresponding
   architectural data structures.
+- `ADR-0017`, `AXI-SCH-022`, `AXI-SCH-023`,
+  `PUBLICATION_REGISTER`, `DIAGRAM_REGISTER`, the Operating Manual
+  architecture, the Field Manual architecture, and documentation
+  standards now publish the documentation and diagram governance
+  baseline.
 - No decision-domain runtime implementation is claimed by this roadmap.
 
 ---
@@ -46,10 +51,11 @@ dependencies through `M18`.
 | 2 | Decision Intelligence Architecture Baseline | Complete | Runtime foundation through `M18` plus published decision-centric ADR | Canonical lifecycle, object topology, capability map, and decision schema are published |
 | 3 | Repository Stewardship and Import Governance | Complete | Phase 2 complete | Information lifecycle, repository health, archive, and review/quarantine governance are published |
 | 4 | Operating Context, Regulatory Knowledge, and Readiness Governance | Complete | Phase 2 complete | Operating context, regulatory knowledge, and readiness governance are published and connected to the decision model |
-| 5 | Core Organizational Digital Twin and Knowledge Object Schemas | Planned | Phases 3 and 4 complete | Published schemas and registers exist for core organization, person, role, knowledge, expertise, policy, timeline, resource, and dependency domains |
-| 6 | Engine-Specific Governance by Layer | Planned | Phase 5 complete | Engine-specific ADRs, contracts, and work items are published only for implementation-ready engine domains |
-| 7 | Decision Runtime and Application Planning | Planned | Phase 6 complete | Published work items define how decision-domain runtimes or applications reuse the existing AXI runtime foundation |
-| 8 | Decision-Domain Runtime Implementation | Blocked pending governance | Phase 7 complete | Repository evidence demonstrates implemented decision-domain runtime or application milestones |
+| 5 | Publication and Documentation Governance | Complete | Phases 3 and 4 complete | Publication hierarchy, manual architecture, diagram governance, and documentation quality standards are published |
+| 6 | Core Organizational Digital Twin and Knowledge Object Schemas | Planned | Phase 5 complete | Published schemas and registers exist for core organization, person, role, knowledge, expertise, policy, timeline, resource, and dependency domains |
+| 7 | Engine-Specific Governance by Layer | Planned | Phase 6 complete | Engine-specific ADRs, contracts, and work items are published only for implementation-ready engine domains |
+| 8 | Decision Runtime and Application Planning | Planned | Phase 7 complete | Published work items define how decision-domain runtimes or applications reuse the existing AXI runtime foundation |
+| 9 | Decision-Domain Runtime Implementation | Blocked pending governance | Phase 8 complete | Repository evidence demonstrates implemented decision-domain runtime or application milestones |
 
 ---
 
@@ -61,7 +67,11 @@ flowchart TD
     A --> S["Repository Stewardship and Import Governance"]
     A --> C["Operating Context / Regulatory / Readiness Governance"]
     A --> E["Capability and Decision Registers"]
-    S --> D["Core Organizational Digital Twin and Knowledge Object Schemas"]
+    S --> P0["Publication and Documentation Governance"]
+    C --> P0
+    E --> P0
+    P0 --> D["Core Organizational Digital Twin and Knowledge Object Schemas"]
+    S --> D
     C --> D
     E --> D
     D --> G["Engine-Specific Governance by Layer"]
@@ -85,6 +95,8 @@ flowchart TD
    approved ADR defines a narrower exception.
 7. Reuse the existing runtime foundation through `M18`; do not create a
    competing execution substrate for decision-domain work.
+8. Do not treat diagrams as informal illustrations; governed diagrams
+   shall remain synchronized with the publications they visualize.
 
 ---
 

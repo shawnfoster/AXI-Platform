@@ -1,0 +1,267 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "AXI-SCH-023",
+  "title": "AXI Diagram",
+  "description": "Canonical metadata definition for governed AXI diagrams that visualize approved architecture, operations, or expertise artifacts.",
+  "type": "object",
+
+  "required": [
+    "diagram_id",
+    "title",
+    "version",
+    "status",
+    "lifecycle_state",
+    "owner",
+    "review_cycle",
+    "approval_authority",
+    "source_publication_ref",
+    "notation",
+    "categories",
+    "canonical_coverage",
+    "traceability"
+  ],
+
+  "properties": {
+    "diagram_id": {
+      "type": "string",
+      "pattern": "^DGM-[0-9]{3}$"
+    },
+
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+
+    "status": {
+      "type": "string",
+      "enum": [
+        "Draft",
+        "Proposed",
+        "Approved",
+        "Frozen",
+        "Deprecated",
+        "Superseded",
+        "Archived"
+      ]
+    },
+
+    "lifecycle_state": {
+      "type": "string",
+      "enum": [
+        "Active",
+        "Review",
+        "Deprecated",
+        "Archive Candidate",
+        "Archived",
+        "Historical",
+        "Eligible for Disposal"
+      ]
+    },
+
+    "owner": {
+      "type": "string",
+      "minLength": 1
+    },
+
+    "review_cycle": {
+      "type": "string",
+      "minLength": 1
+    },
+
+    "approval_authority": {
+      "type": "string",
+      "minLength": 1
+    },
+
+    "source_publication_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+
+    "notation": {
+      "type": "string",
+      "enum": [
+        "Mermaid",
+        "UML",
+        "BPMN",
+        "Hybrid"
+      ]
+    },
+
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Platform Architecture",
+          "Object Relationships",
+          "Decision Lifecycle",
+          "Organizational Digital Twin",
+          "Knowledge Architecture",
+          "Repository Lifecycle",
+          "Information Lifecycle",
+          "Archive Lifecycle",
+          "Review and Quarantine Workflow",
+          "Readiness Framework",
+          "Decision Pipelines",
+          "Capability Maps",
+          "Engine Layering",
+          "Workflow Diagrams",
+          "State Machines",
+          "Sequence Diagrams",
+          "Data Flow",
+          "Dependency Graphs",
+          "Organizational Operating Context"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+
+    "canonical_coverage": {
+      "type": "object",
+      "required": [
+        "major_domains",
+        "counts_toward_completeness"
+      ],
+      "properties": {
+        "major_domains": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "counts_toward_completeness": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "traceability": {
+      "type": "object",
+      "required": [
+        "related_adrs",
+        "related_schemas"
+      ],
+      "properties": {
+        "related_adrs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^ADR-[0-9]{4}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+
+        "related_schemas": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^AXI-SCH-[0-9]{3}$"
+          },
+          "uniqueItems": true
+        },
+
+        "related_capabilities": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^CAP-[0-9]{3}$"
+          },
+          "uniqueItems": true
+        },
+
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "synchronization_triggers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+
+    "revision_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "version",
+          "changed_at",
+          "summary",
+          "authority"
+        ],
+        "properties": {
+          "version": {
+            "type": "string"
+          },
+          "changed_at": {
+            "type": "string",
+            "format": "date"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "authority": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+
+    "review_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "reviewed_at",
+          "reviewer",
+          "outcome"
+        ],
+        "properties": {
+          "reviewed_at": {
+            "type": "string",
+            "format": "date"
+          },
+          "reviewer": {
+            "type": "string"
+          },
+          "outcome": {
+            "type": "string",
+            "enum": [
+              "Approved",
+              "Changes Required",
+              "Informational"
+            ]
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+
+  "additionalProperties": false
+}

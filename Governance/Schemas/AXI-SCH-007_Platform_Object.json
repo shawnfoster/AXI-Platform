@@ -41,7 +41,9 @@
         "AXI-API",
         "AXI-GUI",
         "AXI-CLI",
-        "AXI-CAP"
+        "AXI-CAP",
+        "AXI-PUB",
+        "AXI-DGM"
       ]
     },
 
@@ -89,6 +91,8 @@
         "OperatingContext",
         "RegulatoryKnowledge",
         "ReadinessProfile",
+        "Publication",
+        "Diagram",
         "API",
         "CLI",
         "GUI",

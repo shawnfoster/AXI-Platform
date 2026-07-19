@@ -1,6 +1,6 @@
 # AXI Schema Registry
 
-**Version:** 1.5.0
+**Version:** 1.6.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
 
@@ -37,6 +37,8 @@ Published schema files with approved content:
 | `AXI-SCH-019` | Operating Context | `Governance/Schemas/AXI-SCH-019_Operating_Context.json` | Published |
 | `AXI-SCH-020` | Regulatory Knowledge | `Governance/Schemas/AXI-SCH-020_Regulatory_Knowledge.json` | Published |
 | `AXI-SCH-021` | Readiness Profile | `Governance/Schemas/AXI-SCH-021_Readiness_Profile.json` | Published |
+| `AXI-SCH-022` | Publication | `Governance/Schemas/AXI-SCH-022_Publication.json` | Published |
+| `AXI-SCH-023` | Diagram | `Governance/Schemas/AXI-SCH-023_Diagram.json` | Published |
 
 ---
 
@@ -67,7 +69,8 @@ Publication of that schema does not, by itself, authorize runtime
 implementation or claim runtime validation support for decision-domain
 artifacts.
 
-`AXI-SCH-015` through `AXI-SCH-021` publish governance structures for
-repository stewardship and decision-support context. Publication of
-those schemas does not, by itself, authorize runtime implementation or
-claim runtime validation support for those domains.
+`AXI-SCH-015` through `AXI-SCH-023` publish governance structures for
+repository stewardship, decision-support context, publications, and
+diagrams. Publication of those schemas does not, by itself, authorize
+runtime implementation or claim runtime validation support for those
+domains.
