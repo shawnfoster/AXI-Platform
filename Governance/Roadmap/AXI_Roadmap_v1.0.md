@@ -1,6 +1,6 @@
 # AXI Decision Intelligence Roadmap
 
-**Version:** 1.3.0
+**Version:** 1.4.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
 **Audit Date:** 2026-07-19
@@ -43,6 +43,10 @@ dependencies through `M18`.
   `PUB-007` through `PUB-010`, and `DGM-007` now publish the
   presentation-services governance baseline for dashboards, widgets,
   design-system assets, artifact specifications, and visualizations.
+- `ADR-0019` and `M22` now publish the readiness governance required
+  to begin the next Organization Intelligence and core `ODT`
+  schema-and-register milestone without authorizing runtime
+  implementation.
 - No decision-domain runtime implementation is claimed by this roadmap.
 
 ---
@@ -57,7 +61,7 @@ dependencies through `M18`.
 | 4 | Operating Context, Regulatory Knowledge, and Readiness Governance | Complete | Phase 2 complete | Operating context, regulatory knowledge, and readiness governance are published and connected to the decision model |
 | 5 | Publication and Documentation Governance | Complete | Phases 3 and 4 complete | Publication hierarchy, manual architecture, diagram governance, and documentation quality standards are published |
 | 6 | Presentation Architecture, Design System, and Visualization Governance | Complete | Phase 5 complete plus approved `M21` work item | Dashboard, widget, design-system, artifact-specification, and visualization governance are published with canonical registers and diagrams |
-| 7 | Core Organizational Digital Twin and Knowledge Object Schemas | Planned | Phase 6 complete | Published schemas and registers exist for core organization, person, role, knowledge, expertise, policy, timeline, resource, and dependency domains |
+| 7 | Core Organizational Digital Twin and Knowledge Object Schemas | Ready | Phase 6 complete plus published `M22` work item and approved `ADR-0019` | Published schemas and registers exist for core organization, person, role, knowledge, expertise, policy, timeline, resource, and dependency domains |
 | 8 | Engine-Specific Governance by Layer | Planned | Phase 7 complete | Engine-specific ADRs, contracts, and work items are published only for implementation-ready engine domains |
 | 9 | Decision Runtime and Application Planning | Planned | Phase 8 complete | Published work items define how decision-domain runtimes or applications reuse the existing AXI runtime foundation |
 | 10 | Decision-Domain Runtime Implementation | Blocked pending governance | Phase 9 complete | Repository evidence demonstrates implemented decision-domain runtime or application milestones |
@@ -116,10 +120,10 @@ flowchart TD
 
 The next repository-advancement priorities after this roadmap are:
 
-1. Publish organization-intelligence and core Organizational Digital
-   Twin schemas and registers for organization, person, role,
-   knowledge, expertise, policy, timeline, resource, and dependency
-   domains.
+1. Execute `M22` by publishing organization-intelligence and core
+   Organizational Digital Twin schemas and registers for organization,
+   person, role, knowledge, expertise, policy, timeline, resource, and
+   dependency domains.
 2. Publish engine-specific ADRs for the first implementation-ready
    engine domains.
 3. Publish work items for decision-domain runtime reuse only after the
@@ -133,6 +137,7 @@ The next repository-advancement priorities after this roadmap are:
 - `Governance/ADR/ADR-0015_Repository_Stewardship_Governance.md`
 - `Governance/ADR/ADR-0016_Decision_Support_Context_Governance.md`
 - `Governance/ADR/ADR-0018_Presentation_Services_Governance.md`
+- `Governance/ADR/ADR-0019_Organization_Intelligence_and_Core_ODT_Schema_Governance.md`
 - `Governance/RuntimeRoadmap.md`
 - `Governance/DependencyMatrix.md`
 - `Governance/Capabilities/CAPABILITY_REGISTER.md`

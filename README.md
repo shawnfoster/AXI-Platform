@@ -17,6 +17,7 @@ Current platform status:
   governed runtime through the local programmatic execution surface.
 - Decision Intelligence architecture is published through
   `ADR-0014`, `ADR-0015`, `ADR-0016`, `ADR-0017`, `ADR-0018`,
+  `ADR-0019`,
   `AXI-SCH-006`, `AXI-SCH-015` through `AXI-SCH-028`,
   `DECISION_REGISTER`, `CAPABILITY_REGISTER`, and
   `AXI_Roadmap_v1.0`.
@@ -27,6 +28,9 @@ Current platform status:
 - Presentation-services governance is published through
   `Governance/WorkQueue/M21-Dashboard-Design-System-Visualization-Services.md`,
   `ADR-0018`, `PUB-007` through `PUB-010`, and `DGM-007`.
+- The next repository-ready governance milestone is
+  `Governance/WorkQueue/M22-Core-Organizational-Digital-Twin-and-Knowledge-Object-Schemas.md`,
+  governed by `ADR-0019`.
 - No decision-domain runtime implementation is claimed by the
   repository.
 - No runtime implementation is claimed beyond `M18`.

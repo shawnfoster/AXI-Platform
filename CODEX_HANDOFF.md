@@ -99,7 +99,10 @@ Current Repository State
   Manual architecture, and the documentation standards, `M21` is
   approved, `ADR-0018` is accepted, `AXI-SCH-024` through
   `AXI-SCH-028` are published, and presentation-services governance is
-  published through `PUB-007` through `PUB-010` and `DGM-007`.
+  published through `PUB-007` through `PUB-010` and `DGM-007`,
+  `ADR-0019` is accepted, and `M22` is approved as the next
+  governance-only milestone for Organization Intelligence and the core
+  `ODT` schema baseline.
 - Decision Intelligence architecture status:
   the Decision is now the primary governed object, the canonical
   decision lifecycle is published, the Organizational Digital Twin is a
@@ -117,12 +120,10 @@ Current Repository State
   repository state extends beyond that freeze with `M14`, `M15`,
   `M16`, `M17`, and `M18` implemented.
 - Next governed phase:
-  `M21` is now published as an architecture-only presentation
-  milestone; post-`M21` repository advancement remains governed by
-  `Governance/Roadmap/AXI_Roadmap_v1.0.md`, with
-  organization-intelligence and core Organizational Digital Twin object
-  schemas and engine-specific governance still planned before runtime
-  expansion.
+  `M22` is now the next ready milestone. It is governance-only and
+  publishes the readiness boundary for Organization Intelligence and
+  the core Organizational Digital Twin schema baseline. No runtime
+  implementation is yet authorized beyond `M18`.
 - Runtime milestone progression:
   `M9` through `M18` are complete.
 
