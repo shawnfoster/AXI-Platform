@@ -2,7 +2,7 @@
 
 **Publication ID:** `PUB-017`
 **Publication Type:** `Register`
-**Version:** `1.2.0`
+**Version:** `1.3.0`
 **Status:** `Approved`
 **Lifecycle State:** `Active`
 **Owner:** `AXI Platform Governance`
@@ -19,9 +19,9 @@ Publish the canonical route index for approved AXI prompt operations.
 This register records prompt-route identifiers, the governing artifacts
 they route into, and the current route state.
 
-It distinguishes published routes from closed, planned, and absent
-routes so future sessions do not infer authority that the repository
-has not published.
+It distinguishes published, historical-complete, planned, closed, and
+absent routes so future sessions do not infer authority that the
+repository has not published.
 
 ---
 
@@ -34,7 +34,7 @@ has not published.
 | `POM-GOV-001` | Governance | Milestone Governance Execution | `.ai/workflows/milestone.md` plus assigned governed objective | Published | Governs repository-advancement and milestone work only. |
 | `POM-GOV-002` | Governance | Constitutional Transition Gate Review | `.ai/workflows/milestone.md`, `ADR-0021`, active CTG artifact, roadmap, status surfaces | Published | Evaluates repository evidence only; does not authorize implementation beyond the gate boundary. |
 | `POM-GOV-003` | Governance | Executive Architecture Review | `.ai/START_HERE.md`, `.ai/workflows/milestone.md`, repository governance corpus | Published | Review-only route; no repository changes unless a genuine constitutional deficiency is found. |
-| `POM-OVAL-001` | Operational Validation | Post-M22 Validation Eligibility Review | `CTG-001`, `M22`, roadmap, repository status artifacts | Published | Eligible because `CTG-001` is satisfied by repository evidence; scope remains limited to Post-`M22` Executive Transition Validation and does not authorize `M23`. |
+| `POM-OVAL-001` | Operational Validation | Post-M22 Validation Eligibility Review | `CTG-001`, `PUB-021`, `M22`, roadmap, repository status artifacts | Historical Complete | Historical validation route only; `PUB-021` permanently records completion and does not authorize later milestones without explicit assignment. |
 | `POM-EXEC-001` | Executive | Executive Operational Briefing | `CODEX_HANDOFF.md`, `README.md`, roadmap, dependency matrix, active CTGs | Published | Summarizes state only; live repository evidence remains authoritative. |
 | `POM-EMERG-001` | Emergency | Repository Consistency Triage | `.ai/governance/DEVELOPMENT_RULES.md`, `.ai/governance/REVIEW_CHECKLIST.md`, repository status artifacts | Published | Supports validation failure or governance-conflict handling; does not authorize destructive changes. |
 
@@ -57,8 +57,8 @@ has not published.
 | `M18` | `POM-M18-001` | Runtime API Milestone Route | `Governance/WorkQueue/M18-Runtime-API.md` | Historical Complete | Historical reference only unless explicitly reassigned. |
 | `M21` | `POM-M21-001` | Dashboard Design System And Visualization Services Route | `Governance/WorkQueue/M21-Dashboard-Design-System-Visualization-Services.md` | Historical Complete | Historical reference only unless explicitly reassigned. |
 | `M22` | `POM-M22-001` | Core Organizational Digital Twin And Knowledge Object Schemas Route | `Governance/WorkQueue/M22-Core-Organizational-Digital-Twin-and-Knowledge-Object-Schemas.md` | Historical Complete | Historical reference only unless explicitly reassigned. |
-| `M23` | `POM-M23-001` | Knowledge Expansion And Repository Operationalization Planning Route | `Governance/WorkQueue/M23-Knowledge-Expansion-and-Repository-Operationalization-Planning.md` | Published Planned | Planning-only route; it does not supersede active `M22` authority. |
-| `M24` | `POM-M24-001` | Architecture Core Constitutional Foundation Route | `Governance/WorkQueue/M24-Architecture-Core.md` | Published Planned | Governance-only publication route; it does not supersede active `M22` authority or planned `M23` sequencing. |
+| `M23` | `POM-M23-001` | Knowledge Expansion And Repository Operationalization Planning Route | `Governance/WorkQueue/M23-Knowledge-Expansion-and-Repository-Operationalization-Planning.md` | Historical Complete | Historical reference only unless explicitly reassigned by later repository evidence. |
+| `M24` | `POM-M24-001` | Architecture Core Constitutional Foundation Route | `Governance/WorkQueue/M24-Architecture-Core.md` | Published Planned | Governance-only publication route; it does not supersede completed `M23` or authorize execution without explicit assignment. |
 
 ---
 

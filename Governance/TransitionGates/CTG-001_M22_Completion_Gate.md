@@ -3,7 +3,7 @@
 **Gate ID:** `CTG-001`
 **Publication ID:** `PUB-015`
 **Publication Type:** `Transition Gate`
-**Version:** `1.1.0`
+**Version:** `1.2.0`
 **Status:** `Approved`
 **Lifecycle State:** `Active`
 **Gate State:** `Satisfied`
@@ -44,6 +44,9 @@ The repository already publishes the following relevant evidence:
   class governance artifact family.
 - `M22` publishes the acceptance criteria for the current active
   governance-only milestone.
+- `PUB-021` records successful completion of the Post-M22 Executive
+  Transition Validation and the explicit Executive authorization that
+  assigned `M23`.
 - `README.md`, `CODEX_HANDOFF.md`, and
   `Governance/Roadmap/AXI_Roadmap_v1.0.md` publish the current
   repository status evidence.
@@ -172,17 +175,32 @@ The current repository evaluation on `2026-07-19` is:
 
 No current deficiencies are recorded.
 
+The evaluation table above records the repository state required to
+satisfy `CTG-001` at the `M22` completion boundary.
+
+Later repository evidence for the completed Post-M22 Executive
+Transition Validation and explicit `M23` assignment is recorded in
+`PUB-021` and the synchronized status surfaces updated after that
+validation completed.
+
 ---
 
 # Determination
 
 `CTG-001` is satisfied as of `2026-07-19`.
 
-The Post-M22 Executive Transition Directive is therefore eligible for
-execution when explicitly assigned.
+The Post-M22 Executive Transition Directive therefore became eligible
+for execution when explicitly assigned.
 
-`M23` remains published only as the next planned governance-only
-milestone and is not authorized by this gate.
+Subsequent repository evidence now records that the Post-M22 Executive
+Transition Validation completed successfully in `PUB-021` and that
+`M23` was explicitly assigned and completed under synchronized
+repository evidence.
+
+This gate remains the authoritative `M22` completion gate.
+
+It did not, by itself, authorize `M23`; later explicit assignment and
+closeout are recorded separately.
 
 ---
 
@@ -248,6 +266,7 @@ authorization.
 - `Governance/ADR/ADR-0021_Constitutional_Transition_Gate_Governance.md`
 - `Governance/WorkQueue/M22-Core-Organizational-Digital-Twin-and-Knowledge-Object-Schemas.md`
 - `Governance/WorkQueue/M23-Knowledge-Expansion-and-Repository-Operationalization-Planning.md`
+- `Governance/Publications/AXI_Post_M22_Executive_Transition_Validation_Record.md`
 - `Governance/Publications/PUBLICATION_REGISTER.md`
 - `Governance/Roadmap/AXI_Roadmap_v1.0.md`
 - `README.md`

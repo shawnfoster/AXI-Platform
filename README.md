@@ -28,25 +28,24 @@ Current platform status:
   `Governance/WorkQueue/M21-Dashboard-Design-System-Visualization-Services.md`,
   `ADR-0018`, `PUB-007` through `PUB-010`, and `DGM-007`.
 - The most recently completed governance-only repository milestone is
-  `Governance/WorkQueue/M22-Core-Organizational-Digital-Twin-and-Knowledge-Object-Schemas.md`,
-  governed by `ADR-0019`.
-- No later governance-only milestone is active by default.
-- The next planned governance-only milestone is
   `Governance/WorkQueue/M23-Knowledge-Expansion-and-Repository-Operationalization-Planning.md`,
   governed by `ADR-0020`.
-- The next planned post-`M23` constitutional milestone is
+- No later governance-only milestone is active by default.
+- The next planned governance-only milestone is
   `Governance/WorkQueue/M24-Architecture-Core.md`,
   governed by `ADR-0024`.
 - `ADR-0021` and
   `Governance/TransitionGates/CTG-001_M22_Completion_Gate.md`
   now publish Constitutional Transition Gate governance, and
-  `CTG-001` is now satisfied, authorizing Post-`M22` Executive
-  Transition Validation only.
+  `CTG-001` remains satisfied; `PUB-021` now permanently records
+  successful completion of the Post-`M22` Executive Transition
+  Validation and the explicit Executive authorization that assigned
+  `M23`.
 - `ADR-0022`, `PUB-016`, `PUB-017`, and `CODEX_HANDOFF.md`
   now publish the governed Prompt Operations and executive handoff
   baseline for startup, architecture, governance, milestone,
   operational-validation, executive, and emergency routes without
-  authorizing `M23` or runtime beyond `M18`.
+  authorizing runtime beyond `M18` or later milestones by implication.
 - `ADR-0023`, `CAP-023`, `AXI-SCH-031`, `PUB-018`, and the updated
   `AXI-SCH-030` / `PUB-013` now publish governed Information
   Governance and Knowledge Protection for canonical `Knowledge`
@@ -62,16 +61,17 @@ Current platform status:
   `AXI-SCH-032` through `AXI-SCH-038`, `PUB-020`, and the updated
   `DGM-008` now complete the first core `ODT` schema-and-register
   baseline within `M22`.
-- `ADR-0020`, `M23`, and `DGM-009` now publish the next planned
+- `ADR-0020`, `M23`, `DGM-009`, and `PUB-021` now complete the
   Knowledge Expansion and Repository Operationalization governance
-  baseline without authorizing runtime, connectors, indexing, or
+  baseline after successful Post-`M22` Executive Transition
+  Validation, without authorizing runtime, connectors, indexing, or
   persistence changes.
 - `ADR-0024`, `M24`, `PUB-019`, and `DGM-010` now publish the
   Architecture Core as the constitutional foundation for shared
   primitives, state surfaces, operations, transformations, identity,
   lineage, authority, evidence, and relationship rules across governed
-  AXI families without authorizing `M23`, runtime, schema, or
-  implementation work.
+  AXI families without authorizing runtime, schema, or implementation
+  work.
 - No decision-domain runtime implementation is claimed by the
   repository.
 - No runtime implementation is claimed beyond `M18`.

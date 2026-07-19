@@ -30,8 +30,8 @@ The repository now publishes:
   Prompt Operations, and Information Governance baselines through
   `ADR-0014` through `ADR-0023`
 - canonical publication and diagram registers
-- the next planned Knowledge Expansion and Repository
-  Operationalization milestone through `M23`
+- the completed Knowledge Expansion and Repository Operationalization
+  milestone through `M23`
 
 Those publications establish multiple governed object families,
 state-separation rules, downstream-consumer rules, provenance
@@ -43,8 +43,8 @@ consolidates the shared architectural rules already implied across
 those domains.
 
 This work-item numbering follows the published milestone sequence after
-`M23` and preserves the already established Architecture Core boundary
-as `M24`.
+completed `M23` and preserves the already established Architecture
+Core boundary as `M24`.
 
 It does not introduce a new numbering gap after `M23`.
 

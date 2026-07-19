@@ -1,6 +1,6 @@
 # AXI Runtime Dependency Matrix
 
-**Version:** 1.8.0
+**Version:** 1.9.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
 **Audit Date:** 2026-07-19
@@ -88,7 +88,15 @@ active work queue:
     `AXI-SCH-038`, `PUB-012`, `PUB-013`, `PUB-020`, and the updated
     `DGM-008`, but it does not authorize runtime implementation beyond
     `M18` or alter runtime dependency ordering.
-18. `M24` now publishes the Architecture Core constitutional
+18. `PUB-021` now records successful completion of the Post-M22
+    Executive Transition Validation and the explicit Executive
+    authorization that assigned `M23`.
+19. `M23` is now complete as governance-only repository evidence
+    through `ADR-0020`, `DGM-009`, `PUB-021`, the completed `M23`
+    work item, and synchronized repository status artifacts, but it
+    does not authorize runtime implementation beyond `M18` or alter
+    runtime dependency ordering.
+20. `M24` now publishes the Architecture Core constitutional
     foundation as architecture-only repository evidence, but it does
     not authorize runtime implementation, schema creation, or any
     runtime dependency change beyond the current `M18` boundary.
@@ -161,9 +169,13 @@ active work queue:
    published work queue and milestone-specific governance.
 10. Treat `M21` as architecture-only repository evidence that does not
     authorize GUI runtime implementation beyond `M18`.
-11. Treat `M24` as architecture-only repository evidence that does not
-    authorize runtime implementation beyond `M18` or alter runtime
-    readiness ordering by itself.
-12. Treat completed `M22` as governance-only repository evidence that
+11. Treat completed `M22` as governance-only repository evidence that
     restores constitutional sequencing without changing the runtime
     boundary beyond `M18`.
+12. Treat completed `M23` and `PUB-021` as governance-only repository
+    evidence that record Post-M22 validation completion and restore
+    post-`M22` milestone sequencing without changing the runtime
+    boundary beyond `M18`.
+13. Treat `M24` as architecture-only repository evidence that does not
+    authorize runtime implementation beyond `M18` or alter runtime
+    readiness ordering by itself.

@@ -1,6 +1,6 @@
 # AXI Decision Intelligence Roadmap
 
-**Version:** 1.13.0
+**Version:** 1.14.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
 **Audit Date:** 2026-07-19
@@ -55,10 +55,10 @@ dependencies through `M18`.
   `PUB-020`, and the updated `DGM-008` now complete the first
   constitutional Organization Intelligence and core `ODT`
   schema-and-register baseline within `M22`.
-- `ADR-0020`, `M23`, and `DGM-009` now publish the next planned
+- `ADR-0020`, `M23`, `DGM-009`, and `PUB-021` now complete the
   Knowledge Expansion and Repository Operationalization governance
-  baseline and remain the next planned governance-only milestone after
-  completed `M22`.
+  baseline after successful Post-`M22` Executive Transition
+  Validation and explicit Executive assignment of `M23`.
 - `ADR-0021`, `PUB-015`, and the updated publication-governance
   baseline now publish Constitutional Transition Gates as first-class
   governance artifacts, and `CTG-001` is now satisfied because
@@ -66,7 +66,7 @@ dependencies through `M18`.
 - `ADR-0022`, `PUB-016`, and `PUB-017` now publish the Prompt
   Operations and executive handoff governance baseline for future AI
   sessions without authorizing runtime beyond `M18` or automatically
-  opening `M23`.
+  opening later milestones.
 - `ADR-0023`, `CAP-023`, `AXI-SCH-031`, `PUB-018`, and the updated
   `AXI-SCH-030` / `PUB-013` now publish the Information Governance and
   protected-knowledge baseline for canonical `Knowledge` objects within
@@ -76,7 +76,7 @@ dependencies through `M18`.
   Architecture Core as the post-`M23` constitutional foundation for
   shared primitives, state surfaces, operations, transformations,
   identity, lineage, authority, evidence, and relationship rules
-  without authorizing `M23`, runtime, schema, or implementation work.
+  without authorizing runtime, schema, or implementation work.
 - No decision-domain runtime implementation is claimed by this roadmap.
 
 ---
@@ -92,7 +92,7 @@ dependencies through `M18`.
 | 5 | Publication and Documentation Governance | Complete | Phases 3 and 4 complete | Publication hierarchy, manual architecture, diagram governance, and documentation quality standards are published |
 | 6 | Presentation Architecture, Design System, and Visualization Governance | Complete | Phase 5 complete plus approved `M21` work item | Dashboard, widget, design-system, artifact-specification, and visualization governance are published with canonical registers and diagrams |
 | 7 | Core Organizational Digital Twin and Knowledge Object Schemas | Complete | Phase 6 complete plus published `M22` work item and approved `ADR-0019` | Published schemas and registers exist for core organization, person, role, knowledge, expertise, policy, timeline, resource, and dependency domains |
-| 8 | Knowledge Expansion and Repository Operationalization Governance | Planned | Phase 7 complete plus published `M23` work item and approved `ADR-0020` | Published governance exists for external knowledge expansion, operational workspace boundaries, Operational Pack derivation, and canonical diagram coverage without authorizing runtime |
+| 8 | Knowledge Expansion and Repository Operationalization Governance | Complete | Phase 7 complete plus published `M23` work item, approved `ADR-0020`, and successful Post-`M22` Executive Transition Validation recorded in `PUB-021` | Published governance exists for external knowledge expansion, operational workspace boundaries, Operational Pack derivation, and canonical diagram coverage without authorizing runtime |
 | 9 | Architecture Core Constitutional Foundation | Planned | Phase 8 complete plus published `M24` work item and approved `ADR-0024` | Published constitutional governance exists for the shared primitive set, Architecture Core layers, invariants, state surfaces, operation vocabulary, transformation vocabulary, identity rules, lineage rules, authority rules, and relationship rules without authorizing runtime or schema implementation |
 | 10 | Engine-Specific Governance by Layer | Planned | Phase 9 complete | Engine-specific ADRs, contracts, and work items are published only for implementation-ready engine domains |
 | 11 | Decision Runtime and Application Planning | Planned | Phase 10 complete | Published work items define how decision-domain runtimes or applications reuse the existing AXI runtime foundation |
@@ -108,9 +108,11 @@ dependencies through `M18`.
   assertions.
 - `CTG-001` is satisfied because repository evidence now shows `M22`
   complete and synchronized.
-- Satisfaction of `CTG-001` authorizes validation only; it does not
-  authorize `M23`, runtime implementation, or bypass later roadmap
-  governance.
+- Satisfaction of `CTG-001` authorized validation only.
+- `PUB-021` now records successful completion of that validation and
+  the explicit Executive authorization that assigned `M23`.
+- Neither `CTG-001` nor `PUB-021` authorizes runtime implementation or
+  bypass of later roadmap governance.
 
 ---
 
@@ -175,11 +177,11 @@ flowchart TD
 
 The next repository-advancement priorities after this roadmap are:
 
-1. Use `CTG-001` to govern any future Post-`M22` Executive Transition
-   Validation assignment; do not begin that validation implicitly.
-2. Keep `M23` as the next planned governance-only milestone until it is
-   explicitly assigned after the gate-governed validation posture is
-   handled.
+1. Preserve `PUB-021` as the permanent repository record of completed
+   Post-`M22` Executive Transition Validation and explicit `M23`
+   assignment.
+2. Keep `M24` as the next planned governance-only milestone until it is
+   explicitly assigned.
 3. Use `M24` as the constitutional foundation for future cross-domain
    governance so later milestones reuse the shared primitive, state,
    operation, lineage, and authority model rather than inventing new

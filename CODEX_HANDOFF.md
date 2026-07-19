@@ -15,23 +15,23 @@ Conversation history is not authoritative.
 
 # Repository Status
 
-- Current Active Milestone: None (`M22` Complete)
+- Current Active Milestone: None (`M23` Complete)
 - Current Repository Version: `AXI-Platform-v2.1`
 - Current Constitutional Baseline:
   `ADR-0006` through `ADR-0024`, `AXI-SCH-006` through `AXI-SCH-038`,
-  `PUB-001` through `PUB-020`, and `DGM-001` through `DGM-010`
+  `PUB-001` through `PUB-021`, and `DGM-001` through `DGM-010`
 - Current Active CTG: `CTG-001` (`Satisfied`)
 - Current Runtime Boundary: `M18 Runtime API`
 - Current Repository State:
   `M22` governance is complete, `CTG-001` is satisfied, Post-`M22`
-  Executive Transition Validation is eligible when explicitly assigned,
-  `M23` remains planned, `M24` Architecture Core remains the published
-  downstream constitutional foundation after `M23`, and no runtime
-  implementation is authorized beyond `M18`
+  Executive Transition Validation is complete and recorded in
+  `PUB-021`, `M23` is complete, `M24` remains the next planned
+  constitutional milestone, and no runtime implementation is
+  authorized beyond `M18`
 - Current Branch: `main`
 - Last Approved ADR: `ADR-0024`
-- Last Approved Publication: `PUB-020`
-- Last Completed Work Item: `M22`
+- Last Approved Publication: `PUB-021`
+- Last Completed Work Item: `M23`
 - Last Commit:
   verify live repository state during startup with
   `git log -1 --oneline`
@@ -59,9 +59,9 @@ Every Codex session shall:
 
 Primary Objective
 
-- Preserve the completed `M22` baseline and synchronized `CTG-001`
-  satisfaction evidence until a later governed objective is explicitly
-  assigned.
+- Preserve the completed Post-`M22` Executive Transition Validation
+  record, the completed `M23` baseline, and synchronized `CTG-001`
+  evidence until a later governed objective is explicitly assigned.
 
 Secondary Objective
 
@@ -72,8 +72,9 @@ Secondary Objective
 Explicitly Unauthorized
 
 - Runtime expansion
-- Automatic `M23` start
-- Automatic Post-`M22` validation start
+- Automatic `M24` start
+- Reopening completed Post-`M22` validation without new repository
+  evidence
 - Operational implementation
 - Any work outside repository authority
 
@@ -153,8 +154,9 @@ Runtime Boundary
 - Repository Evidence:
   `Governance/TransitionGates/CTG-001_M22_Completion_Gate.md`
 - Authorized Next Step:
-  Post-`M22` Executive Transition Validation is eligible when
-  explicitly assigned; do not begin `M23` automatically
+  Historical next step fulfilled by
+  `Governance/Publications/AXI_Post_M22_Executive_Transition_Validation_Record.md`;
+  do not begin `M24` automatically
 
 ---
 
@@ -188,8 +190,9 @@ Operational rule:
 - POM routes govern prompt references and route-state visibility.
 - POM routes do not override repository authority or protected-
   knowledge posture.
-- Dependent operational-validation routes remain closed until their
-  governing CTGs are satisfied by repository evidence.
+- Dependent operational-validation routes remain gated until their
+  governing CTGs are satisfied, then become historical only when a
+  completion record is published.
 
 ---
 
@@ -224,13 +227,13 @@ Current risks:
 
 - Placeholder standards continue to leave a known governance gap for
   foundational repository normalization.
-- Later milestone work could drift if future sessions treat satisfied
-  `CTG-001` as implicit authorization for `M23`.
+- Later milestone work could drift if future sessions treat completed
+  `M23` as implicit authorization for `M24`.
 
 Current opportunities:
 
-- Use satisfied `CTG-001` to govern any future Post-`M22` validation
-  assignment.
+- Use `PUB-021` to keep future startup and transition review entirely
+  repository-driven.
 - Use the Prompt Operations baseline to keep future reviews and
   milestone work repository-driven.
 - Use `M24` to keep future cross-domain governance aligned to one
@@ -239,9 +242,8 @@ Current opportunities:
 
 Outstanding governance work:
 
-- Post-`M22` Executive Transition Validation when explicitly assigned
-- Eventual `M23` planning execution after explicit authorization, with
-  `M24` preserved as the downstream constitutional foundation
+- Eventual `M24` execution after explicit authorization, with the
+  completed `M23` baseline preserved as upstream authority
 - Future transition-gate expansion only when repository evidence
   requires it
 
@@ -249,9 +251,9 @@ Outstanding governance work:
 
 # Executive Recommendations
 
-- Preserve synchronized evidence for completed `M22` and satisfied
-  `CTG-001`.
-- Do not auto-open `M23` or later milestone work without explicit
+- Preserve synchronized evidence for completed Post-`M22` validation,
+  completed `M23`, and satisfied `CTG-001`.
+- Do not auto-open `M24` or later milestone work without explicit
   authorization.
 - Use `M24` as the constitutional foundation for future cross-domain
   governance instead of introducing new architectural abstractions.
@@ -272,11 +274,11 @@ The current objective remains complete only when:
 - schema and publication numbering remain valid
 - any CTG-dependent transition is validated through the governing gate
 
-For the completed `M22` state, success remains governed by the
-published work item, the synchronized repository status surfaces, and
-the satisfied `CTG-001` artifact.
+For the completed Post-`M22` transition and `M23` state, success
+remains governed by `CTG-001`, `PUB-021`, the published `M23` work
+item, and the synchronized repository status surfaces.
 
-Completion of this handoff does not authorize `M23` or any later
+Completion of this handoff does not authorize `M24` or any later
 milestone automatically.
 
 ---

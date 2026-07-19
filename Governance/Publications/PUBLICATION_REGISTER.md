@@ -2,7 +2,7 @@
 
 **Publication ID:** `PUB-001`
 **Publication Type:** `Register`
-**Version:** `1.9.0`
+**Version:** `1.10.0`
 **Status:** `Approved`
 **Lifecycle State:** `Active`
 **Owner:** `AXI Platform Governance`
@@ -61,6 +61,7 @@ publications.
 | `PUB-018` | AXI Information Governance And Knowledge Protection Model | Reference | `Governance/Publications/AXI_Information_Governance_and_Knowledge_Protection_Model.md` | `ADR-0015`, `ADR-0016`, `ADR-0018`, `ADR-0019`, `ADR-0023` | `AXI-SCH-015`, `AXI-SCH-020`, `AXI-SCH-030`, `AXI-SCH-031` | `CAP-002`, `CAP-004`, `CAP-011`, `CAP-023` | Semiannual and change-triggered |
 | `PUB-019` | AXI Architecture Core Operating System | Operating System | `Governance/Publications/AXI_Architecture_Core_Operating_System.md` | `ADR-0014`, `ADR-0015`, `ADR-0017`, `ADR-0018`, `ADR-0019`, `ADR-0020`, `ADR-0021`, `ADR-0022`, `ADR-0023`, `ADR-0024` | `AXI-SCH-006`, `AXI-SCH-007`, `AXI-SCH-015`, `AXI-SCH-018`, `AXI-SCH-022`, `AXI-SCH-023`, `AXI-SCH-029`, `AXI-SCH-030`, `AXI-SCH-031` | `CAP-002`, `CAP-003`, `CAP-010`, `CAP-011`, `CAP-018`, `CAP-023` | Annual and change-triggered |
 | `PUB-020` | AXI Organizational Digital Twin Supporting Object Register | Register | `Governance/Publications/AXI_Organizational_Digital_Twin_Supporting_Object_Register.md` | `ADR-0014`, `ADR-0015`, `ADR-0016`, `ADR-0017`, `ADR-0019` | `AXI-SCH-032` through `AXI-SCH-038` | `CAP-003`, `CAP-010`, `CAP-018` | Semiannual and change-triggered |
+| `PUB-021` | AXI Post-M22 Executive Transition Validation Record | Reference | `Governance/Publications/AXI_Post_M22_Executive_Transition_Validation_Record.md` | `ADR-0017`, `ADR-0020`, `ADR-0021`, `ADR-0022` | `AXI-SCH-022` | `CAP-012`, `CAP-018` | Change-triggered and milestone-closeout |
 
 ---
 
