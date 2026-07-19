@@ -1,6 +1,6 @@
 # AI-006 — Development Rules
 
-**Version:** 1.3.0
+**Version:** 1.4.0
 **Status:** Approved
 
 ---
@@ -138,6 +138,18 @@ Update documentation whenever implementation changes affect:
 - contracts,
 - workflows,
 - public interfaces.
+
+When repository documentation requires temporal evidence:
+
+- prefer immutable repository evidence such as commit IDs, version
+  identifiers, ADR numbers, milestone numbers, publication identifiers,
+  status, and lifecycle state over conversational or relative dates
+- use the execution-environment date consistently when an `Audit Date`
+  or equivalent timestamp is required by published governance
+- do not infer repository dates from chat conversation timing
+- do not rewrite historical repository timestamps solely because the
+  conversation references a different clock; note the discrepancy in
+  the completion summary when it is relevant
 
 ---
 

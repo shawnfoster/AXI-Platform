@@ -2,7 +2,7 @@
 
 **Publication ID:** `PUB-005`
 **Publication Type:** `Standard`
-**Version:** `1.1.0`
+**Version:** `1.2.0`
 **Status:** `Approved`
 **Lifecycle State:** `Active`
 **Owner:** `AXI Platform Governance`
@@ -86,6 +86,24 @@ Every governed diagram shall preserve:
 
 ---
 
+# Diagram Timestamp And Evidence Policy
+
+- Diagram revision and review histories shall prefer immutable
+  repository evidence wherever practical.
+- Prefer diagram identifiers, version identifiers, source publication
+  identifiers, governing ADR identifiers, milestone identifiers,
+  publication status, and commit identifiers over narrative date prose
+  when those identifiers are sufficient.
+- When date-based traceability is required, use ISO `YYYY-MM-DD`
+  values rather than natural-language dates.
+- When a changed diagram set requires an `Audit Date` or equivalent
+  review timestamp, use the execution environment date consistently
+  across the changed artifacts.
+- Do not rewrite historical revision or review entries solely because a
+  conversational reference uses a different clock.
+
+---
+
 # Diagram Placement and Storage
 
 - Canonical architectural diagrams shall be stored as source-controlled
@@ -145,5 +163,6 @@ architectural domain is published.
 
 - `Governance/ADR/ADR-0017_Publication_and_Documentation_Governance.md`
 - `Governance/ADR/ADR-0018_Presentation_Services_Governance.md`
+- `Governance/Standards/DOCUMENTATION_QUALITY_STANDARD.md`
 - `Governance/Publications/DIAGRAM_REGISTER.md`
 - `Governance/Schemas/AXI-SCH-023_Diagram.json`

@@ -2,7 +2,7 @@
 
 **Publication ID:** `PUB-006`
 **Publication Type:** `Standard`
-**Version:** `1.0.0`
+**Version:** `1.1.0`
 **Status:** `Approved`
 **Lifecycle State:** `Active`
 **Owner:** `AXI Platform Governance`
@@ -48,6 +48,25 @@ than an informal editorial judgment.
   `Healthy`, `Watch`, `At Risk`, `Critical`.
 - Metric-level detail shall be preserved even when an aggregate
   documentation-quality summary is reported.
+
+---
+
+# Timestamp And Evidence Policy
+
+- Repository audit claims shall be grounded in immutable repository
+  evidence wherever practical.
+- Prefer commit identifiers, version identifiers, publication
+  identifiers, ADR identifiers, schema identifiers, milestone
+  identifiers, and approved status or lifecycle state over narrative or
+  conversational dates when those identifiers are sufficient.
+- Natural-language dates should be avoided wherever a stable repository
+  identifier or status can express the same fact.
+- When a publication family requires an `Audit Date`, use the execution
+  environment date in ISO `YYYY-MM-DD` form consistently across the
+  changed artifact set.
+- Do not infer repository dates from chat conversation timing.
+- Do not rewrite historical repository timestamps solely because a
+  conversational reference uses a different clock.
 
 ---
 

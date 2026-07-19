@@ -1,6 +1,6 @@
 # AI Governance Version
 
-Version: 1.3.0
+Version: 1.4.0
 
 Status: Frozen Baseline
 
@@ -38,3 +38,6 @@ Recent Updates:
   Policy
 - AI governance architecture baseline published in `AI-002
   ARCHITECTURE`
+- Repository timestamp handling now prefers immutable repository
+  evidence over conversational time, with execution-environment dates
+  used only when a governed timestamp is required

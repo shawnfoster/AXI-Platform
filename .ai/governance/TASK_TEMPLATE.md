@@ -35,7 +35,15 @@ Relevant Schemas:
 
 Relevant Contracts:
 
+Relevant Publications:
+
+Relevant Milestones:
+
+Relevant Commits:
+
 Applicable Workflow:
+
+Repository Evidence Basis:
 
 ---
 

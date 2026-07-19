@@ -22,6 +22,18 @@ Explain why this work exists.
 
 Describe where it fits within the AXI Platform.
 
+Prefer immutable repository evidence over narrative chronology where
+practical.
+
+Examples:
+
+- governing ADR identifiers
+- schema identifiers
+- milestone identifiers
+- publication identifiers
+- commit identifiers
+- approved status and lifecycle state
+
 ---
 
 # Existing Components
@@ -99,6 +111,7 @@ Record the dependency audit for this milestone.
 - Required implemented runtime modules:
 - Downstream consumers:
 - Repository readiness gate:
+- Repository evidence references:
 
 Readiness may not rely on placeholder directories, empty files, or
 intended future work.
