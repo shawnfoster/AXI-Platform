@@ -8,7 +8,8 @@ AXI-Platform-v2.1
 
 Mission
 
-Implement governed objectives while preserving AXI governance.
+Implement governed objectives while preserving AXI governance and the
+Decision Intelligence architecture baseline.
 
 ---
 
@@ -86,14 +87,25 @@ Current Repository State
   `M13 Plugin Loader`, `M14 Application Registry`,
   `M15 Engine Registry`, and `M16 Pipeline Runtime` are implemented and
   validated, `M17 Runtime CLI` is implemented and validated, and
-  `M18 Runtime API` is implemented and validated.
+  `M18 Runtime API` is implemented and validated, `ADR-0014` is
+  accepted, `AXI-SCH-006 Decision` is published, `DECISION_REGISTER`
+  and `CAPABILITY_REGISTER` are published, and
+  `Governance/Roadmap/AXI_Roadmap_v1.0.md` sequences the post-`M18`
+  Decision Intelligence architecture.
+- Decision Intelligence architecture status:
+  the Decision is now the primary governed object, the canonical
+  decision lifecycle is published, the Organizational Digital Twin is a
+  first-class architectural domain, and no decision-domain runtime
+  implementation is yet claimed.
 - Runtime freeze status:
   `Runtime-v1.2` is the accepted freeze tag through `M13`; current
   repository state extends beyond that freeze with `M14`, `M15`,
   `M16`, `M17`, and `M18` implemented.
 - Next governed phase:
   No later runtime work item is published after
-  `Governance/WorkQueue/M18-Runtime-API.md`.
+  `Governance/WorkQueue/M18-Runtime-API.md`; post-`M18` repository
+  advancement is governed by
+  `Governance/Roadmap/AXI_Roadmap_v1.0.md`.
 - Runtime milestone progression:
   `M9` through `M18` are complete.
 

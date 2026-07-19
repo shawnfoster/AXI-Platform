@@ -1,0 +1,611 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "AXI-SCH-006",
+  "title": "AXI Decision",
+  "description": "Canonical definition for governed decisions in the AXI Decision Intelligence Platform.",
+  "type": "object",
+  "required": [
+    "decision_id",
+    "title",
+    "mission_id",
+    "decision_context_id",
+    "lifecycle_stage",
+    "status",
+    "owner",
+    "strategic_alignment",
+    "context",
+    "knowledge_collections",
+    "evidence",
+    "assumptions",
+    "alternatives",
+    "recommendation",
+    "approval",
+    "execution",
+    "outcomes",
+    "observations",
+    "lessons",
+    "metrics",
+    "expertise_updates",
+    "organizational_digital_twin_updates",
+    "governance",
+    "created_at",
+    "updated_at"
+  ],
+  "properties": {
+    "decision_id": {
+      "type": "string",
+      "pattern": "^DEC-[0-9]{6}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string"
+    },
+    "mission_id": {
+      "$ref": "#/$defs/objectRef"
+    },
+    "decision_context_id": {
+      "$ref": "#/$defs/objectRef"
+    },
+    "lifecycle_stage": {
+      "type": "string",
+      "enum": [
+        "Observe",
+        "Discover",
+        "Situational Assessment",
+        "Gather Evidence",
+        "Assess Context",
+        "Frame Decision",
+        "Generate Alternatives",
+        "Analyze Tradeoffs",
+        "Evaluate Constraints",
+        "Evaluate Human Factors",
+        "Evaluate Capacity",
+        "Evaluate Calendar",
+        "Evaluate Ethics",
+        "Recommend",
+        "Human Approval",
+        "Execute",
+        "Monitor",
+        "Measure",
+        "Learn",
+        "Improve Expertise",
+        "Update Organizational Digital Twin"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Draft",
+        "Proposed",
+        "Approved",
+        "Frozen",
+        "Deprecated",
+        "Superseded",
+        "Archived"
+      ]
+    },
+    "owner": {
+      "type": "string"
+    },
+    "strategic_alignment": {
+      "type": "object",
+      "required": [
+        "objective_ids",
+        "policy_ids"
+      ],
+      "properties": {
+        "objective_ids": {
+          "$ref": "#/$defs/objectRefArray"
+        },
+        "policy_ids": {
+          "$ref": "#/$defs/objectRefArray"
+        }
+      },
+      "additionalProperties": false
+    },
+    "context": {
+      "type": "object",
+      "required": [
+        "organization_ids",
+        "person_ids",
+        "role_ids",
+        "resource_ids",
+        "timeline_ids",
+        "dependency_ids"
+      ],
+      "properties": {
+        "organization_ids": {
+          "$ref": "#/$defs/objectRefArray"
+        },
+        "person_ids": {
+          "$ref": "#/$defs/objectRefArray"
+        },
+        "role_ids": {
+          "$ref": "#/$defs/objectRefArray"
+        },
+        "resource_ids": {
+          "$ref": "#/$defs/objectRefArray"
+        },
+        "timeline_ids": {
+          "$ref": "#/$defs/objectRefArray"
+        },
+        "dependency_ids": {
+          "$ref": "#/$defs/objectRefArray"
+        }
+      },
+      "additionalProperties": false
+    },
+    "knowledge_collections": {
+      "type": "object",
+      "required": [
+        "axi_methodology_ids",
+        "external_knowledge_ids",
+        "organizational_knowledge_ids",
+        "learned_knowledge_ids",
+        "governed_expertise_ids"
+      ],
+      "properties": {
+        "axi_methodology_ids": {
+          "$ref": "#/$defs/objectRefArray"
+        },
+        "external_knowledge_ids": {
+          "$ref": "#/$defs/objectRefArray"
+        },
+        "organizational_knowledge_ids": {
+          "$ref": "#/$defs/objectRefArray"
+        },
+        "learned_knowledge_ids": {
+          "$ref": "#/$defs/objectRefArray"
+        },
+        "governed_expertise_ids": {
+          "$ref": "#/$defs/objectRefArray"
+        }
+      },
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "evidence_id",
+          "source_reference",
+          "provenance_complete",
+          "confidence",
+          "uncertainty"
+        ],
+        "properties": {
+          "evidence_id": {
+            "$ref": "#/$defs/objectRef"
+          },
+          "source_reference": {
+            "type": "string",
+            "minLength": 1
+          },
+          "provenance_complete": {
+            "type": "boolean"
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "uncertainty": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "assumption_id",
+          "statement",
+          "confidence",
+          "uncertainty",
+          "status"
+        ],
+        "properties": {
+          "assumption_id": {
+            "$ref": "#/$defs/objectRef"
+          },
+          "statement": {
+            "type": "string",
+            "minLength": 1
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "uncertainty": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Active",
+              "Validated",
+              "Invalidated",
+              "Deferred"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "alternatives": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "alternative_id",
+          "summary",
+          "tradeoff_summary",
+          "constraint_ids",
+          "risk_ids",
+          "opportunity_ids"
+        ],
+        "properties": {
+          "alternative_id": {
+            "$ref": "#/$defs/objectRef"
+          },
+          "summary": {
+            "type": "string",
+            "minLength": 1
+          },
+          "tradeoff_summary": {
+            "type": "string",
+            "minLength": 1
+          },
+          "constraint_ids": {
+            "$ref": "#/$defs/objectRefArray"
+          },
+          "risk_ids": {
+            "$ref": "#/$defs/objectRefArray"
+          },
+          "opportunity_ids": {
+            "$ref": "#/$defs/objectRefArray"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "recommendation": {
+      "type": "object",
+      "required": [
+        "recommended_alternative_id",
+        "rationale",
+        "confidence",
+        "uncertainty",
+        "tradeoff_summary"
+      ],
+      "properties": {
+        "recommended_alternative_id": {
+          "$ref": "#/$defs/objectRef"
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "uncertainty": {
+          "type": "string"
+        },
+        "tradeoff_summary": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "approval": {
+      "type": "object",
+      "required": [
+        "required",
+        "approved",
+        "approver_ids",
+        "accountable_role_ids"
+      ],
+      "properties": {
+        "required": {
+          "type": "boolean"
+        },
+        "approved": {
+          "type": "boolean"
+        },
+        "approver_ids": {
+          "$ref": "#/$defs/objectRefArray"
+        },
+        "accountable_role_ids": {
+          "$ref": "#/$defs/objectRefArray"
+        },
+        "approved_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "additionalProperties": false
+    },
+    "execution": {
+      "type": "object",
+      "required": [
+        "execution_id",
+        "status",
+        "timeline_ids",
+        "resource_ids",
+        "dependency_ids"
+      ],
+      "properties": {
+        "execution_id": {
+          "$ref": "#/$defs/objectRef"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "Planned",
+            "Ready",
+            "InProgress",
+            "Paused",
+            "Completed",
+            "Failed",
+            "Cancelled"
+          ]
+        },
+        "timeline_ids": {
+          "$ref": "#/$defs/objectRefArray"
+        },
+        "resource_ids": {
+          "$ref": "#/$defs/objectRefArray"
+        },
+        "dependency_ids": {
+          "$ref": "#/$defs/objectRefArray"
+        }
+      },
+      "additionalProperties": false
+    },
+    "outcomes": {
+      "$ref": "#/$defs/objectRefArray"
+    },
+    "observations": {
+      "$ref": "#/$defs/objectRefArray"
+    },
+    "lessons": {
+      "$ref": "#/$defs/objectRefArray"
+    },
+    "metrics": {
+      "$ref": "#/$defs/objectRefArray"
+    },
+    "expertise_updates": {
+      "$ref": "#/$defs/objectRefArray"
+    },
+    "organizational_digital_twin_updates": {
+      "$ref": "#/$defs/objectRefArray"
+    },
+    "governance": {
+      "type": "object",
+      "required": [
+        "provenance",
+        "traceability",
+        "explainability",
+        "human_accountability",
+        "confidence",
+        "uncertainty",
+        "ethics",
+        "capacity",
+        "calendar",
+        "human_factors"
+      ],
+      "properties": {
+        "provenance": {
+          "type": "object",
+          "required": [
+            "created_by",
+            "source",
+            "source_reference"
+          ],
+          "properties": {
+            "created_by": {
+              "type": "string"
+            },
+            "source": {
+              "type": "string"
+            },
+            "source_reference": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "traceability": {
+          "type": "object",
+          "required": [
+            "adr_refs",
+            "policy_ids",
+            "evidence_ids"
+          ],
+          "properties": {
+            "adr_refs": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^ADR-[0-9]{4}$"
+              },
+              "uniqueItems": true
+            },
+            "policy_ids": {
+              "$ref": "#/$defs/objectRefArray"
+            },
+            "evidence_ids": {
+              "$ref": "#/$defs/objectRefArray"
+            }
+          },
+          "additionalProperties": false
+        },
+        "explainability": {
+          "type": "object",
+          "required": [
+            "rationale_summary",
+            "evidence_chain_complete",
+            "alternative_analysis_complete"
+          ],
+          "properties": {
+            "rationale_summary": {
+              "type": "string",
+              "minLength": 1
+            },
+            "evidence_chain_complete": {
+              "type": "boolean"
+            },
+            "alternative_analysis_complete": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        },
+        "human_accountability": {
+          "type": "object",
+          "required": [
+            "decision_owner",
+            "accountable_person_ids",
+            "accountable_role_ids"
+          ],
+          "properties": {
+            "decision_owner": {
+              "type": "string"
+            },
+            "accountable_person_ids": {
+              "$ref": "#/$defs/objectRefArray"
+            },
+            "accountable_role_ids": {
+              "$ref": "#/$defs/objectRefArray"
+            }
+          },
+          "additionalProperties": false
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "uncertainty": {
+          "type": "string"
+        },
+        "ethics": {
+          "type": "object",
+          "required": [
+            "assessment",
+            "issues",
+            "policy_ids"
+          ],
+          "properties": {
+            "assessment": {
+              "type": "string"
+            },
+            "issues": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "policy_ids": {
+              "$ref": "#/$defs/objectRefArray"
+            }
+          },
+          "additionalProperties": false
+        },
+        "capacity": {
+          "type": "object",
+          "required": [
+            "assessment",
+            "resource_ids"
+          ],
+          "properties": {
+            "assessment": {
+              "type": "string"
+            },
+            "resource_ids": {
+              "$ref": "#/$defs/objectRefArray"
+            }
+          },
+          "additionalProperties": false
+        },
+        "calendar": {
+          "type": "object",
+          "required": [
+            "assessment",
+            "timeline_ids"
+          ],
+          "properties": {
+            "assessment": {
+              "type": "string"
+            },
+            "timeline_ids": {
+              "$ref": "#/$defs/objectRefArray"
+            }
+          },
+          "additionalProperties": false
+        },
+        "human_factors": {
+          "type": "object",
+          "required": [
+            "assessment",
+            "person_ids",
+            "role_ids"
+          ],
+          "properties": {
+            "assessment": {
+              "type": "string"
+            },
+            "person_ids": {
+              "$ref": "#/$defs/objectRefArray"
+            },
+            "role_ids": {
+              "$ref": "#/$defs/objectRefArray"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "objectRef": {
+      "type": "string",
+      "pattern": "^OBJ-[0-9]{6}$"
+    },
+    "objectRefArray": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/objectRef"
+      },
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false
+}

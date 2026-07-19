@@ -1,6 +1,6 @@
 # AXI Schema Registry
 
-**Version:** 1.3.0
+**Version:** 1.4.0
 **Status:** Approved
 **Authority:** AXI Platform Governance
 
@@ -21,6 +21,7 @@ Published schema files with approved content:
 
 | Schema ID | Title | Path | Status |
 | --- | --- | --- | --- |
+| `AXI-SCH-006` | Decision | `Governance/Schemas/AXI-SCH-006_Decisions.json` | Published |
 | `AXI-SCH-007` | Platform Object | `Governance/Schemas/AXI-SCH-007_Platform_Object.json` | Published |
 | `AXI-SCH-008` | Capability | `Governance/Schemas/AXI-SCH-008_Capability.json` | Published |
 | `AXI-SCH-009` | Plugin Manifest | `Governance/Schemas/AXI-SCH-009_Plugin_Manifest.json` | Published |
@@ -42,7 +43,6 @@ approved schema content:
 - `AXI-SCH-003_Duplicates.json`
 - `AXI-SCH-004_Provenance.json`
 - `AXI-SCH-005_Canonical.json`
-- `AXI-SCH-006_Decisions.json`
 
 Placeholder schemas are not authoritative and shall not be treated as
 published validation inputs.
@@ -54,3 +54,8 @@ published validation inputs.
 If a future runtime validation framework performs schema validation, it
 should use only schema artifacts listed as `Published` in this registry
 unless later governance approves additional schemas.
+
+`AXI-SCH-006` publishes the governed structure for decision records.
+Publication of that schema does not, by itself, authorize runtime
+implementation or claim runtime validation support for decision-domain
+artifacts.
