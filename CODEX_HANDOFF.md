@@ -91,11 +91,15 @@ Current Repository State
   accepted, `AXI-SCH-006 Decision` is published, `DECISION_REGISTER`
   and `CAPABILITY_REGISTER` are published, and
   `Governance/Roadmap/AXI_Roadmap_v1.0.md` sequences the post-`M18`
-  Decision Intelligence architecture.
+  Decision Intelligence architecture, `ADR-0015` and `ADR-0016` are
+  accepted, and `AXI-SCH-015` through `AXI-SCH-021` are published.
 - Decision Intelligence architecture status:
   the Decision is now the primary governed object, the canonical
   decision lifecycle is published, the Organizational Digital Twin is a
-  first-class architectural domain, and no decision-domain runtime
+  first-class architectural domain, repository stewardship governance
+  is published, imported-content review and quarantine governance is
+  published, operating context, regulatory knowledge, and readiness
+  governance are published, and no decision-domain runtime
   implementation is yet claimed.
 - Runtime freeze status:
   `Runtime-v1.2` is the accepted freeze tag through `M13`; current
@@ -105,7 +109,9 @@ Current Repository State
   No later runtime work item is published after
   `Governance/WorkQueue/M18-Runtime-API.md`; post-`M18` repository
   advancement is governed by
-  `Governance/Roadmap/AXI_Roadmap_v1.0.md`.
+  `Governance/Roadmap/AXI_Roadmap_v1.0.md`, with engine-specific
+  governance and core Organizational Digital Twin object schemas still
+  planned before runtime expansion.
 - Runtime milestone progression:
   `M9` through `M18` are complete.
 

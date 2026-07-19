@@ -59,9 +59,13 @@ Every governed decision record shall preserve at minimum:
 - one current lifecycle stage
 - one accountable owner
 - explicit strategic alignment
+- operating context references when execution timing is affected
 - evidence with provenance
+- imported-content review references when evidence is not yet governed
 - assumptions with confidence and uncertainty
 - alternatives with tradeoff analysis
+- regulatory knowledge considerations where potentially applicable
+- readiness profile inputs before execution planning
 - one recommendation
 - explicit human approval state
 - governed execution state
@@ -83,7 +87,9 @@ The minimum canonical object map for governed decisions is:
 | --- | --- | --- |
 | Decision Core | `Decision`, `DecisionContext`, `Alternative`, `Recommendation`, `Assumption`, `Constraint`, `Risk`, `Opportunity` | Prefer `AXI-DEC` |
 | Mission and Organizational Digital Twin | `Mission`, `Organization`, `Person`, `Role`, `Objective`, `Policy`, `Timeline`, `Resource`, `Dependency`, `Capability` | Prefer `AXI-PLT` and `AXI-CAP` |
+| Decision Support Context | `OperatingContext`, `RegulatoryKnowledge`, `ReadinessProfile` | Prefer `AXI-PLT` and `AXI-DEC` |
 | Evidence and Knowledge | `Evidence`, `Knowledge`, `Expertise`, `Observation`, `Metric` | Prefer `AXI-DEC` for decision-bound evidence and `AXI-PLT` for reusable knowledge and expertise |
+| Repository Stewardship and Review | `LifecycleRecord`, `HealthAssessment`, `ArchivePackage`, `ReviewCase` | Prefer `AXI-RVW` and `AXI-PLT` |
 | Execution and Learning | `Execution`, `Outcome`, `Lesson` | Prefer `AXI-DEC` |
 
 Future implementation may refine namespace allocations through later
@@ -109,6 +115,7 @@ organization's:
 - expertise
 - outcomes
 - metrics
+- operating context and operational timing
 
 Decision outcomes and lessons shall be capable of updating this domain
 through explicit, traceable records rather than implicit side effects.
@@ -122,6 +129,7 @@ The following knowledge domains shall remain logically separate:
 - AXI Methodology
 - External Knowledge
 - Organizational Knowledge
+- Regulatory Knowledge
 - Learned Knowledge
 - Governed Expertise
 
@@ -156,6 +164,8 @@ Free-form narrative alone is not sufficient.
 # Related
 
 - `Governance/ADR/ADR-0014_Decision_Intelligence_Architecture.md`
+- `Governance/ADR/ADR-0015_Repository_Stewardship_Governance.md`
+- `Governance/ADR/ADR-0016_Decision_Support_Context_Governance.md`
 - `Governance/Schemas/AXI-SCH-006_Decisions.json`
 - `Governance/Schemas/AXI-SCH-007_Platform_Object.json`
 - `Governance/Capabilities/CAPABILITY_REGISTER.md`

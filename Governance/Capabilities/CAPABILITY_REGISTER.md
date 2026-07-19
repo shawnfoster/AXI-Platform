@@ -19,18 +19,25 @@ services, applications, and decision workflows shall trace to.
 
 # Published Capabilities
 
-| Capability ID | Name | Primary Lifecycle Coverage | Purpose |
+| Capability ID | Name | Primary Coverage | Purpose |
 | --- | --- | --- | --- |
 | `CAP-001` | Observation and Discovery | Observe, Discover, Situational Assessment | Detect signals, events, metrics, and anomalies that may require governed decisions. |
 | `CAP-002` | Evidence and Provenance Management | Gather Evidence | Collect evidence with source references, provenance, and confidence context. |
-| `CAP-003` | Decision Context Assembly | Assess Context | Assemble mission, organization, role, resource, dependency, timeline, and policy context for decisions. |
-| `CAP-004` | Assumption and Constraint Governance | Evaluate Constraints, Evaluate Capacity, Evaluate Calendar, Evaluate Ethics | Keep assumptions explicit and apply binding governance limits. |
+| `CAP-003` | Decision and Operating Context Assembly | Assess Context | Assemble mission, organization, operating context, role, resource, dependency, timeline, and policy context for decisions. |
+| `CAP-004` | Assumption, Constraint, and Regulatory Governance | Evaluate Constraints, Evaluate Capacity, Evaluate Calendar, Evaluate Ethics | Keep assumptions explicit, surface potentially applicable regulatory considerations, and apply binding governance limits. |
 | `CAP-005` | Alternative and Scenario Generation | Frame Decision, Generate Alternatives | Produce distinct alternatives and plausible future scenarios. |
 | `CAP-006` | Forecast, Simulation, and Tradeoff Analysis | Analyze Tradeoffs | Estimate outcomes, test scenarios, and analyze tradeoffs across alternatives. |
 | `CAP-007` | Recommendation and Explainability | Recommend | Produce recommendations with rationale, traceability, and alternative analysis. |
 | `CAP-008` | Human Factors and Collaborative Approval | Evaluate Human Factors, Human Approval | Preserve human accountability and collaborative review before execution. |
 | `CAP-009` | Governed Execution and Measurement | Execute, Monitor, Measure | Coordinate approved execution and record monitored outcomes and metrics. |
 | `CAP-010` | Learning, Expertise Improvement, and Digital Twin Update | Learn, Improve Expertise, Update Organizational Digital Twin | Convert outcomes into lessons, governed expertise, and Organizational Digital Twin updates. |
+| `CAP-011` | Information Lifecycle Governance | Repository Stewardship | Govern Active, Review, Deprecated, Archive Candidate, Archived, Historical, and Eligible for Disposal transitions with traceability. |
+| `CAP-012` | Repository Health Assessment | Repository Stewardship | Measure repository health through governed dimensions including quality, entropy, duplicate risk, provenance, integrity, compliance, placeholders, canonical coverage, documentation waste, and import readiness. |
+| `CAP-013` | Archive and Restoration Governance | Repository Stewardship | Preserve governed history through archive packages, manifests, snapshots, dependency preservation, provenance preservation, and restoration requirements. |
+| `CAP-014` | Imported Content Review and Quarantine | Repository Stewardship | Review imported content through explicit workflow status, risk classification, severity, review authority, quarantine, and governed release boundaries. |
+| `CAP-015` | Operating Context Assessment | Assess Context, Evaluate Calendar, Execute | Evaluate decisions against fiscal, board, audit, reporting, maintenance, freeze, renewal, payroll, and other operational timing conditions before execution planning. |
+| `CAP-016` | Regulatory Knowledge Surfacing | Assess Context, Evaluate Ethics, Recommend | Surface potentially applicable federal, state, local, industry, professional, internal, and contractual considerations without asserting legal conclusions. |
+| `CAP-017` | Multidimensional Readiness Assessment | Recommend, Human Approval, Execute | Assess strategic, leadership, capacity, technology, governance, regulatory, financial, change, calendar, and knowledge readiness and translate the result into governed recommendation effects. |
 
 ---
 
@@ -75,6 +82,8 @@ claim runtime implementation.
 # Related
 
 - `Governance/ADR/ADR-0014_Decision_Intelligence_Architecture.md`
+- `Governance/ADR/ADR-0015_Repository_Stewardship_Governance.md`
+- `Governance/ADR/ADR-0016_Decision_Support_Context_Governance.md`
 - `Governance/Decisions/DECISION_REGISTER.md`
 - `Governance/Schemas/AXI-SCH-006_Decisions.json`
 - `Governance/Schemas/AXI-SCH-008_Capability.json`

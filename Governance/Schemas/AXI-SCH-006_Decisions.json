@@ -134,6 +134,9 @@
         },
         "dependency_ids": {
           "$ref": "#/$defs/objectRefArray"
+        },
+        "operating_context_ids": {
+          "$ref": "#/$defs/objectRefArray"
         }
       },
       "additionalProperties": false
@@ -161,6 +164,9 @@
           "$ref": "#/$defs/objectRefArray"
         },
         "governed_expertise_ids": {
+          "$ref": "#/$defs/objectRefArray"
+        },
+        "regulatory_knowledge_ids": {
           "$ref": "#/$defs/objectRefArray"
         }
       },
@@ -196,6 +202,9 @@
           },
           "uncertainty": {
             "type": "string"
+          },
+          "review_case_ids": {
+            "$ref": "#/$defs/objectRefArray"
           }
         },
         "additionalProperties": false
@@ -375,6 +384,9 @@
         }
       },
       "additionalProperties": false
+    },
+    "readiness_profile_ids": {
+      "$ref": "#/$defs/objectRefArray"
     },
     "outcomes": {
       "$ref": "#/$defs/objectRefArray"
